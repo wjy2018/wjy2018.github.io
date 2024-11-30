@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="一、 cloudflare worker搭配meting-api配置 网上能搜到的搭建教程大多都是github项目上自带的说明，最新的版本说明中只有docker、deno、本地node、vercel以及反向代理等。\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="主要记录在Cloudflare相关部署过程遇到的问题和解决方法">
 <title>Cloudflare相关部署配置</title>
 
 <link rel='canonical' href='https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Cloudflare相关部署配置">
-<meta property='og:description' content="一、 cloudflare worker搭配meting-api配置 网上能搜到的搭建教程大多都是github项目上自带的说明，最新的版本说明中只有docker、deno、本地node、vercel以及反向代理等。\n">
+<meta property='og:description' content="主要记录在Cloudflare相关部署过程遇到的问题和解决方法">
 <meta property='og:url' content='https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/'>
 <meta property='og:site_name' content='lastfantasy的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-30T18:32:30&#43;08:00'/><meta property='article:modified_time' content='2024-11-30T18:32:30&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='cloudflare' /><meta property='article:tag' content='meting-api' /><meta property='article:tag' content='hugo blog' /><meta property='article:published_time' content='2024-11-30T18:32:30&#43;08:00'/><meta property='article:modified_time' content='2024-11-30T18:32:30&#43;08:00'/>
 <meta name="twitter:title" content="Cloudflare相关部署配置">
-<meta name="twitter:description" content="一、 cloudflare worker搭配meting-api配置 网上能搜到的搭建教程大多都是github项目上自带的说明，最新的版本说明中只有docker、deno、本地node、vercel以及反向代理等。\n">
+<meta name="twitter:description" content="主要记录在Cloudflare相关部署过程遇到的问题和解决方法">
     <link rel="shortcut icon" href="/static/favicon.ico" />
 
     </head>
@@ -281,18 +281,18 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#1-本地尝试以及cloudflare-pages搭建方案">1. 本地尝试以及cloudflare pages搭建方案</a></li>
-    <li><a href="#2-cloudflare-worker方案探索">2. cloudflare worker方案探索</a></li>
+    <li><a href="#本地尝试以及cloudflare-pages搭建方案">本地尝试以及cloudflare pages搭建方案</a></li>
+    <li><a href="#cloudflare-worker方案探索">cloudflare worker方案探索</a></li>
   </ol>
 
   <ol>
-    <li><a href="#1-dns解析修改">1. DNS解析修改</a></li>
-    <li><a href="#2-cloudflare-设置域名301转发重定向">2. cloudflare 设置域名301转发重定向</a></li>
+    <li><a href="#dns解析修改">DNS解析修改</a></li>
+    <li><a href="#cloudflare-设置域名301转发重定向">cloudflare 设置域名301转发重定向</a></li>
   </ol>
 
   <ol>
-    <li><a href="#1使用-cloudflare-workers-自建节点科学上网">1.使用 Cloudflare Workers 自建节点科学上网</a></li>
-    <li><a href="#2-自定义导航">2. 自定义导航</a></li>
+    <li><a href="#使用-cloudflare-workers-自建节点科学上网">使用 Cloudflare Workers 自建节点科学上网</a></li>
+    <li><a href="#自定义导航">自定义导航</a></li>
   </ol>
 </nav>
         </div>
@@ -309,12 +309,32 @@
 
     <div class="article-details">
     
+    <header class="article-category">
+        
+            <a href="/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" >
+                网站搭建
+            </a>
+        
+            <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" >
+                技术分享
+            </a>
+        
+            <a href="/categories/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" >
+                问题记录
+            </a>
+        
+    </header>
+    
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
             <a href="/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/">Cloudflare相关部署配置</a>
         </h2>
     
+        
+        <h3 class="article-subtitle">
+            主要记录在Cloudflare相关部署过程遇到的问题和解决方法
+        </h3>
         
     </div>
 
@@ -364,13 +384,13 @@
     <section class="article-content">
     
     
-    <h1 id="一-cloudflare-worker搭配meting-api配置">一、 cloudflare worker搭配meting-api配置
+    <h1 id="cloudflare-worker搭配meting-api配置">cloudflare worker搭配meting-api配置
 </h1><p>网上能搜到的搭建教程大多都是github项目上自带的说明，最新的版本说明中只有docker、deno、本地node、vercel以及反向代理等。</p>
 <p>具体原文如下：</p>
 <p><a class="link" href="https://github.com/xizeyoupan/Meting-API"  target="_blank" rel="noopener"
     >xizeyoupan/Meting-API: 🐳 Meting API 的容器化与部署</a></p>
 <p>（本地尝试多种方法部署，只有vercel以及本地node node.js命令可以成功，node命令使用时不能<code>CTRL+C</code>不然就会退出）</p>
-<h2 id="1-本地尝试以及cloudflare-pages搭建方案">1. 本地尝试以及cloudflare pages搭建方案
+<h2 id="本地尝试以及cloudflare-pages搭建方案">本地尝试以及cloudflare pages搭建方案
 </h2><p>本地尝试如下步骤手动部署，发现在执行第二步时会报错</p>
 <p><code>npm i npm run build:all</code></p>
 <p>报错如下：</p>
@@ -382,7 +402,7 @@
 <p><code>outfile: './dist/cloudflare-workers-min.js',</code></p>
 <p><code>outfile: './dist/deno.js',</code></p>
 <p>也就是说实际生成的是dist目录下的三个文件，本地使用node xxx.js（xxx为对应上述js文件），可以实现对应功能，本地在对应<code>PORT</code>链接中可以直接访问到对应网站且test成功，但实际单独部署到cloudflare上是失败的（cloudflare最初是打算部署到pages里面然后结合github实现自动部署，不过实际上不论采用哪种命令都无法正常部署成功，该node命令一旦主动停止，服务也就自己停了，而自动部署对应的就是正常退出后实际部署内容可以正常使用，因此pages不太符合当前的要求）</p>
-<h2 id="2-cloudflare-worker方案探索">2. cloudflare worker方案探索
+<h2 id="cloudflare-worker方案探索">cloudflare worker方案探索
 </h2><p>在上述最新的部署说明中没有cloudflare相关的描述，但经过不懈探索，在另一个github上看到有历史版本对于cloudflare相关部署描述（具体链接如下）</p>
 <p><a class="link" href="https://github.com/cky008/Meting-API"  target="_blank" rel="noopener"
     >cky008/Meting-API: 🐳 Meting API 的容器化与部署</a></p>
@@ -429,32 +449,43 @@
 		data-flex-basis="461px"
 	
 ></p>
-<h1 id="二-cloudflare相关配置">二、 cloudflare相关配置
-</h1><h2 id="1-dns解析修改">1. DNS解析修改
+<h1 id="cloudflare相关配置">cloudflare相关配置
+</h1><h2 id="dns解析修改">DNS解析修改
 </h2><p><a class="link" href="https://blog.csdn.net/dreamingsleeping/article/details/139745997"  target="_blank" rel="noopener"
     >详细图文手把手教你阿里云注册域名如何托管到CloudFlare DNS服务_阿里云域名转移到cloud-CSDN博客</a></p>
-<h2 id="2-cloudflare-设置域名301转发重定向">2. cloudflare 设置域名301转发重定向
+<h2 id="cloudflare-设置域名301转发重定向">cloudflare 设置域名301转发重定向
 </h2><p><a class="link" href="https://blog.csdn.net/GeorgeSteven/article/details/127151470"  target="_blank" rel="noopener"
     >Cloudflare设置301重定向，附常见问题和解决方法_dns cname的作用 301重定向-CSDN博客</a></p>
 <p><a class="link" href="https://zhuanlan.zhihu.com/p/495264377"  target="_blank" rel="noopener"
     >使用 Cloudflare 进行域名跳转(重定向) - 知乎</a></p>
-<h1 id="三cloudflare-workers优秀项目收集">三、Cloudflare Workers优秀项目收集
+<h1 id="cloudflare-workers优秀项目收集">Cloudflare Workers优秀项目收集
 </h1><p>这里直接放上大佬的整理链接</p>
 <p><a class="link" href="https://www.igdux.com/workers?locale=zh"  target="_blank" rel="noopener"
     >Cloudflare Workers优秀项目收集（持续更新） - iGdux</a></p>
 <p>目前个人在尝试下面的东西，不过还没成功，后续有进展再更新</p>
-<h2 id="1使用-cloudflare-workers-自建节点科学上网">1.使用 Cloudflare Workers 自建节点科学上网
+<h2 id="使用-cloudflare-workers-自建节点科学上网">使用 Cloudflare Workers 自建节点科学上网
 </h2><p><a class="link" href="https://voxsay.com/posts/using-cloudflare-workers-build-proxy-for-internet-access/"  target="_blank" rel="noopener"
     >使用 Cloudflare Workers 自建节点科学上网 | 言外之音</a></p>
-<h2 id="2-自定义导航">2. 自定义导航
+<h2 id="自定义导航">自定义导航
 </h2><p><a class="link" href="https://github.com/sleepwood/CF-Worker-Dir?tab=readme-ov-file"  target="_blank" rel="noopener"
-    >sleepwood/CF-Worker-Dir: A web directories base on Cloudflare worker.</a></p>
+    >sleepwood/CF-Worker-Dir: A web directories base on Cloudflare worker.</a>
+（其实已经通过cf worker搞好了，只不过一开始部署需要等好一段时间才能访问网站）</p>
 
 </section>
 
 
     <footer class="article-footer">
     
+    <section class="article-tags">
+        
+            <a href="/tags/cloudflare/">Cloudflare</a>
+        
+            <a href="/tags/meting-api/">Meting-Api</a>
+        
+            <a href="/tags/hugo-blog/">Hugo Blog</a>
+        
+    </section>
+
 
     </footer>
 

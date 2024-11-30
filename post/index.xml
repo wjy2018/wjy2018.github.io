@@ -13,13 +13,13 @@
         <pubDate>Sat, 30 Nov 2024 18:32:30 +0800</pubDate>
         
         <guid>https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/</guid>
-        <description>&lt;h1 id=&#34;一-cloudflare-worker搭配meting-api配置&#34;&gt;一、 cloudflare worker搭配meting-api配置
+        <description>&lt;h1 id=&#34;cloudflare-worker搭配meting-api配置&#34;&gt;cloudflare worker搭配meting-api配置
 &lt;/h1&gt;&lt;p&gt;网上能搜到的搭建教程大多都是github项目上自带的说明，最新的版本说明中只有docker、deno、本地node、vercel以及反向代理等。&lt;/p&gt;
 &lt;p&gt;具体原文如下：&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/xizeyoupan/Meting-API&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;xizeyoupan/Meting-API: 🐳 Meting API 的容器化与部署&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;（本地尝试多种方法部署，只有vercel以及本地node node.js命令可以成功，node命令使用时不能&lt;code&gt;CTRL+C&lt;/code&gt;不然就会退出）&lt;/p&gt;
-&lt;h2 id=&#34;1-本地尝试以及cloudflare-pages搭建方案&#34;&gt;1. 本地尝试以及cloudflare pages搭建方案
+&lt;h2 id=&#34;本地尝试以及cloudflare-pages搭建方案&#34;&gt;本地尝试以及cloudflare pages搭建方案
 &lt;/h2&gt;&lt;p&gt;本地尝试如下步骤手动部署，发现在执行第二步时会报错&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;npm i npm run build:all&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;报错如下：&lt;/p&gt;
@@ -31,7 +31,7 @@
 &lt;p&gt;&lt;code&gt;outfile: &#39;./dist/cloudflare-workers-min.js&#39;,&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;outfile: &#39;./dist/deno.js&#39;,&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;也就是说实际生成的是dist目录下的三个文件，本地使用node xxx.js（xxx为对应上述js文件），可以实现对应功能，本地在对应&lt;code&gt;PORT&lt;/code&gt;链接中可以直接访问到对应网站且test成功，但实际单独部署到cloudflare上是失败的（cloudflare最初是打算部署到pages里面然后结合github实现自动部署，不过实际上不论采用哪种命令都无法正常部署成功，该node命令一旦主动停止，服务也就自己停了，而自动部署对应的就是正常退出后实际部署内容可以正常使用，因此pages不太符合当前的要求）&lt;/p&gt;
-&lt;h2 id=&#34;2-cloudflare-worker方案探索&#34;&gt;2. cloudflare worker方案探索
+&lt;h2 id=&#34;cloudflare-worker方案探索&#34;&gt;cloudflare worker方案探索
 &lt;/h2&gt;&lt;p&gt;在上述最新的部署说明中没有cloudflare相关的描述，但经过不懈探索，在另一个github上看到有历史版本对于cloudflare相关部署描述（具体链接如下）&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/cky008/Meting-API&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;cky008/Meting-API: 🐳 Meting API 的容器化与部署&lt;/a&gt;&lt;/p&gt;
@@ -78,26 +78,27 @@
 		data-flex-basis=&#34;461px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h1 id=&#34;二-cloudflare相关配置&#34;&gt;二、 cloudflare相关配置
-&lt;/h1&gt;&lt;h2 id=&#34;1-dns解析修改&#34;&gt;1. DNS解析修改
+&lt;h1 id=&#34;cloudflare相关配置&#34;&gt;cloudflare相关配置
+&lt;/h1&gt;&lt;h2 id=&#34;dns解析修改&#34;&gt;DNS解析修改
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/dreamingsleeping/article/details/139745997&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;详细图文手把手教你阿里云注册域名如何托管到CloudFlare DNS服务_阿里云域名转移到cloud-CSDN博客&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;2-cloudflare-设置域名301转发重定向&#34;&gt;2. cloudflare 设置域名301转发重定向
+&lt;h2 id=&#34;cloudflare-设置域名301转发重定向&#34;&gt;cloudflare 设置域名301转发重定向
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/GeorgeSteven/article/details/127151470&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Cloudflare设置301重定向，附常见问题和解决方法_dns cname的作用 301重定向-CSDN博客&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/495264377&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;使用 Cloudflare 进行域名跳转(重定向) - 知乎&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;三cloudflare-workers优秀项目收集&#34;&gt;三、Cloudflare Workers优秀项目收集
+&lt;h1 id=&#34;cloudflare-workers优秀项目收集&#34;&gt;Cloudflare Workers优秀项目收集
 &lt;/h1&gt;&lt;p&gt;这里直接放上大佬的整理链接&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.igdux.com/workers?locale=zh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Cloudflare Workers优秀项目收集（持续更新） - iGdux&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;目前个人在尝试下面的东西，不过还没成功，后续有进展再更新&lt;/p&gt;
-&lt;h2 id=&#34;1使用-cloudflare-workers-自建节点科学上网&#34;&gt;1.使用 Cloudflare Workers 自建节点科学上网
+&lt;h2 id=&#34;使用-cloudflare-workers-自建节点科学上网&#34;&gt;使用 Cloudflare Workers 自建节点科学上网
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://voxsay.com/posts/using-cloudflare-workers-build-proxy-for-internet-access/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;使用 Cloudflare Workers 自建节点科学上网 | 言外之音&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;2-自定义导航&#34;&gt;2. 自定义导航
+&lt;h2 id=&#34;自定义导航&#34;&gt;自定义导航
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/sleepwood/CF-Worker-Dir?tab=readme-ov-file&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;sleepwood/CF-Worker-Dir: A web directories base on Cloudflare worker.&lt;/a&gt;&lt;/p&gt;
+    &gt;sleepwood/CF-Worker-Dir: A web directories base on Cloudflare worker.&lt;/a&gt;
+（其实已经通过cf worker搞好了，只不过一开始部署需要等好一段时间才能访问网站）&lt;/p&gt;
 </description>
         </item>
         

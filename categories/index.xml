@@ -6,7 +6,32 @@
         <description>Recent content in Categories on lastfantasy的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>liunianmolian@163.com</copyright><atom:link href="https://blog.lastfantasy.top/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>liunianmolian@163.com</copyright>
+        <lastBuildDate>Sat, 30 Nov 2024 18:32:30 +0800</lastBuildDate><atom:link href="https://blog.lastfantasy.top/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>技术分享</title>
+        <link>https://blog.lastfantasy.top/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</link>
+        <pubDate>Sat, 30 Nov 2024 18:32:30 +0800</pubDate>
+        
+        <guid>https://blog.lastfantasy.top/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>网站搭建</title>
+        <link>https://blog.lastfantasy.top/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/</link>
+        <pubDate>Sat, 30 Nov 2024 18:32:30 +0800</pubDate>
+        
+        <guid>https://blog.lastfantasy.top/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>问题记录</title>
+        <link>https://blog.lastfantasy.top/categories/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</link>
+        <pubDate>Sat, 30 Nov 2024 18:32:30 +0800</pubDate>
+        
+        <guid>https://blog.lastfantasy.top/categories/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Test</title>
         <link>https://blog.lastfantasy.top/categories/test/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

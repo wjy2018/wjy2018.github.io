@@ -6,6 +6,31 @@
         <description>Recent content in Tags on lastfantasy的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>liunianmolian@163.com</copyright><atom:link href="https://blog.lastfantasy.top/tags/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>liunianmolian@163.com</copyright>
+        <lastBuildDate>Sat, 30 Nov 2024 18:32:30 +0800</lastBuildDate><atom:link href="https://blog.lastfantasy.top/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Cloudflare</title>
+        <link>https://blog.lastfantasy.top/tags/cloudflare/</link>
+        <pubDate>Sat, 30 Nov 2024 18:32:30 +0800</pubDate>
+        
+        <guid>https://blog.lastfantasy.top/tags/cloudflare/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Hugo Blog</title>
+        <link>https://blog.lastfantasy.top/tags/hugo-blog/</link>
+        <pubDate>Sat, 30 Nov 2024 18:32:30 +0800</pubDate>
+        
+        <guid>https://blog.lastfantasy.top/tags/hugo-blog/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Meting-Api</title>
+        <link>https://blog.lastfantasy.top/tags/meting-api/</link>
+        <pubDate>Sat, 30 Nov 2024 18:32:30 +0800</pubDate>
+        
+        <guid>https://blog.lastfantasy.top/tags/meting-api/</guid>
+        <description></description>
+        </item>
+        
     </channel>
 </rss>
