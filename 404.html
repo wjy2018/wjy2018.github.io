@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
-    <head><meta charset='utf-8'>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="欢迎来到我的博客">
 <title>404 Page not found</title>
 
-<link rel='canonical' href='https://blog.lastfantasy.top/404.html'>
+<link rel='canonical' href='http://localhost:1313/404.html'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="404 Page not found">
+<link rel="stylesheet" href="/scss/style.min.6d5997354bdc1458d488378db86fdfa9188dda0fe019230ee23061eadb0527da.css"><meta property='og:title' content="404 Page not found">
 <meta property='og:description' content="欢迎来到我的博客">
-<meta property='og:url' content='https://blog.lastfantasy.top/404.html'>
+<meta property='og:url' content='http://localhost:1313/404.html'>
 <meta property='og:site_name' content='lastfantasy的博客'>
 <meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-12-08T10:15:43&#43;08:00 '/>
 <meta name="twitter:title" content="404 Page not found">
@@ -273,7 +273,7 @@
     <div class="not-found-card">
         <h1 class="article-title">404 错误</h1>
         <h2 class="article-subtitle">页面不存在</h2>
-    </div><form action="/search/" class="search-form widget" data-json="https://blog.lastfantasy.top/search/index.json">
+    </div><form action="/search/" class="search-form widget" data-json="http://localhost:1313/search/index.json">
             <p>
                 <label>搜索</label>
                 <input id="searchInput" name="keyword" required placeholder="输入关键词..." />
@@ -327,7 +327,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.acb860605b1ae6c7821826c8f24d0360e3f636134b76d6255ec9d85aa54253e9.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
@@ -340,5 +340,131 @@
     }());
 </script>
 
+
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+
+
+
+
+<div id="aplayer"></div>
+
+<script>
+
+
+
+
+
+
+
+
+
+
+
+
+    const musicDir = "http://localhost:1313/" + 'music/';
+    console.log(musicDir);
+    const songs = [
+        '8 Legged Dreams - Unlike Pluto',
+        'Grace - Jannik',
+        "If I Can't Have You - Shawn Mendes",
+        'Lemon - 米津玄師',
+        'Let Me Down Slowly - Alec Benjamin Alessia Cara',
+        'Lose Control - Hedley',
+        'Not Angry - Chris James',
+        'Summer Dream (feat. Chevy) - Kirara Magic Chevy',
+        '爱一点 - 莫艳琳',
+        '广寒宫 - 何杰玲',
+        '群青 - YOASOBI',
+        '想想念念 - 锦零',
+        '形容 (Gamer Version) - 沈以诚',
+    ];
+    let audios = [];
+    songs.forEach((item) => {
+        console.log(item);
+        const songInfo = item.split(' - ');
+
+        audios.push({
+            name: songInfo[0],
+            artist: songInfo[1],
+            url: musicDir + item + '/' + item + '.mp3',
+            cover: musicDir + item + '/' + 'cover.jpg',
+            lrc: musicDir + item + '/' + 'lyric.lrc'
+        })
+
+    })
+    const ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: true,
+        lrcType: 3,
+        audio: audios
+    });
+
+    
+    audios.forEach(audio => {
+        const img = new Image();
+        img.onload = function () {
+            console.log('Image loaded successfully:', audio.cover);
+        };
+        img.onerror = function () {
+            console.error('Failed to load image:', audio.cover);
+            
+            audio.cover = audio.cover.replace(/\.jpg$/, '.png');
+            img.src = audio.cover;
+        };
+        img.src = audio.cover;
+    });
+ 
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script>
+
+
+    
+    <script src=http://localhost:1313/js/topbar.min.js></script>
+
+
+<script>
+    var pjax = new Pjax({
+        selectors: ['.main-container'],
+    })
+
+    pjax._handleResponse = pjax.handleResponse;
+
+    pjax.handleResponse = function (responseText, request, href, options) {
+        if (request.responseText.match("<html")) {
+            
+            let newDom = new DOMParser().parseFromString(responseText, "text/html");
+            
+            let bodyClass = newDom.body.className;
+            document.body.setAttribute("class", bodyClass);
+            
+            pjax._handleResponse(responseText, request, href, options);
+        } else {
+            
+        }
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    document.addEventListener('pjax:send', ()  => {
+        
+        topbar.show();
+    })
+
+    document.addEventListener('pjax:complete', ()  => {
+        window.Stack.init();
+        
+        topbar.hide();
+    })
+</script>
     </body>
 </html>
