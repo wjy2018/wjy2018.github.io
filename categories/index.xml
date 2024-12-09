@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on lastfantasy的博客</title>
-        <link>http://localhost:1313/categories/</link>
+        <link>https://blog.lastfantasy.top/categories/</link>
         <description>Recent content in Categories on lastfantasy的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>liunianmolian@163.com</copyright>
-        <lastBuildDate>Sun, 08 Dec 2024 10:15:43 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 08 Dec 2024 10:15:43 +0800</lastBuildDate><atom:link href="https://blog.lastfantasy.top/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>技术分享</title>
-        <link>http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</link>
+        <link>https://blog.lastfantasy.top/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</link>
         <pubDate>Sun, 08 Dec 2024 10:15:43 +0800</pubDate>
         
-        <guid>http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</guid>
+        <guid>https://blog.lastfantasy.top/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</guid>
         <description></description>
         </item>
         <item>
         <title>Test</title>
-        <link>http://localhost:1313/categories/test/</link>
+        <link>https://blog.lastfantasy.top/categories/test/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/test/</guid>
-        <description>&lt;img src="http://localhost:1313/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
+        <guid>https://blog.lastfantasy.top/categories/test/</guid>
+        <description>&lt;img src="https://blog.lastfantasy.top/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
         </item>
         
     </channel>
