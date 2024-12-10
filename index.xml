@@ -166,19 +166,19 @@ swap 10G
         </item>
         <item>
         <title>关于</title>
-        <link>http://localhost:1313/%E5%85%B3%E4%BA%8E/</link>
+        <link>http://localhost:1313/about/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/%E5%85%B3%E4%BA%8E/</guid>
+        <guid>http://localhost:1313/about/</guid>
         <description>&lt;p&gt;This is a test page for i18n support.&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>近期计划</title>
-        <link>http://localhost:1313/%E8%BF%91%E6%9C%9F%E8%AE%A1%E5%88%92/</link>
+        <link>http://localhost:1313/plan/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/%E8%BF%91%E6%9C%9F%E8%AE%A1%E5%88%92/</guid>
+        <guid>http://localhost:1313/plan/</guid>
         <description>&lt;p&gt;近期学习计划有些乱，经常为了一两个小事情搞一晚上，尤其是装双系统搭建ubuntu服务器这几天搞到两三点，有点扛不住。为了后续学习能够有效进行，这里需要列出一些当下做的还有计划做的事情。&lt;/p&gt;
 &lt;p&gt;目前的很多东西都是网上开源的东西，涉及到的技术栈多而杂，个人精力实在有限，趁着还有兴趣，规划一下后续的技术发展方向。&lt;/p&gt;
 &lt;p&gt;当前需要做几个网站来学习前后端：&lt;/p&gt;
@@ -282,10 +282,10 @@ swap 10G
         </item>
         <item>
         <title>友情链接</title>
-        <link>http://localhost:1313/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/</link>
+        <link>http://localhost:1313/links/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/</guid>
+        <guid>http://localhost:1313/links/</guid>
         <description></description>
         </item>
         

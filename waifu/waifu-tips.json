@@ -24,10 +24,10 @@
 		"selector": "#waifu-tool-quit",
 		"text": ["到了要说再见的时候了吗？", "呜呜 QAQ 后会有期……", "不要抛弃我呀……", "我们，还能再见面吗……", "哼，你会后悔的！"]
 	}, {
-		"selector": ".menu-item-home a",
+		"selector": "a[href='/']",
 		"text": ["点击前往首页，想回到上一页可以使用浏览器的后退功能哦。", "点它就可以回到首页啦！", "回首页看看吧。"]
 	}, {
-		"selector": ".menu-item-about a",
+		"selector": "a[href^='/about/']",
 		"text": ["你想知道我家主人是谁吗？", "这里有一些关于我家主人的秘密哦，要不要看看呢？", "发现主人出没地点！"]
 	}, {
 		"selector": ".menu-item-tags a",
@@ -36,14 +36,17 @@
 		"selector": ".menu-item-categories a",
 		"text": ["文章都分类好啦～", "点击来查看文章分类哦。"]
 	}, {
-		"selector": ".menu-item-archives a",
+		"selector": "a[href^='/archives/']",
 		"text": ["翻页比较麻烦吗，那就来看看文章归档吧。", "文章目录都整理在这里啦！"]
 	}, {
-		"selector": ".menu-item-friends a",
+		"selector": "a[href^='/links/']",
 		"text": ["这是我的朋友们哦ヾ(◍°∇°◍)ﾉﾞ", "要去大佬们的家看看吗？", "要去拜访一下我的朋友们吗？"]
 	}, {
-		"selector": ".menu-item-search a",
+		"selector": "a[href^='/search/']",
 		"text": ["找不到想看的内容？搜索看看吧！", "在找什么东西呢，需要帮忙吗？"]
+	}, {
+		"selector": "a[href^='/plan/']",
+		"text": ["看看主人最近有什么打算！", "偷偷瞄一眼主人最近在干嘛"]
 	}, {
 		"selector": ".menu-item a",
 		"text": ["快看看这里都有什么呢？"]
