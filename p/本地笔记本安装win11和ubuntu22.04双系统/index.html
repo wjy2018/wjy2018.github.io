@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
-    <head><meta charset='utf-8'>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=7469&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="联想thinkbook 15 iil现有win11的基础上安装ubuntu22.04系统">
 <title>本地笔记本安装win11和ubuntu22.04双系统</title>
 
-<link rel='canonical' href='https://wjy2018.github.io/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/'>
+<link rel='canonical' href='http://localhost:7469/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/'>
 
 <link rel="stylesheet" href="/scss/style.min.df05e96b7236db331de27a2aa0abd683f410227fb29dfa7fba5a1ab3f52f25e8.css"><meta property='og:title' content="本地笔记本安装win11和ubuntu22.04双系统">
 <meta property='og:description' content="联想thinkbook 15 iil现有win11的基础上安装ubuntu22.04系统">
-<meta property='og:url' content='https://wjy2018.github.io/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/'>
+<meta property='og:url' content='http://localhost:7469/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/'>
 <meta property='og:site_name' content='lastfantasy的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='ubuntu' /><meta property='article:tag' content='双系统' /><meta property='article:published_time' content='2024-12-08T10:15:43&#43;08:00'/><meta property='article:modified_time' content='2024-12-08T16:37:58&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='ubuntu' /><meta property='article:tag' content='双系统' /><meta property='article:published_time' content='2024-12-08T10:15:43&#43;08:00'/><meta property='article:modified_time' content='2024-12-13T23:18:22&#43;08:00'/>
 <meta name="twitter:title" content="本地笔记本安装win11和ubuntu22.04双系统">
 <meta name="twitter:description" content="联想thinkbook 15 iil现有win11的基础上安装ubuntu22.04系统">
     <link rel="shortcut icon" href="/static/favicon.ico" />
@@ -293,14 +293,14 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#实现windows11及ubuntu2204双系统">实现windows11及ubuntu22.04双系统</a>
+    <li><a href="#实现windows11及ubuntu2204双系统联想thinkbook-15-iil">实现windows11及ubuntu22.04双系统（联想thinkbook 15 iil）</a>
       <ol>
         <li><a href="#背景">背景</a></li>
-        <li><a href="#0-关于系统选择">0. 关于系统选择</a></li>
-        <li><a href="#1-规划空间">1. 规划空间</a></li>
-        <li><a href="#2-安装ubuntu相关">2. 安装ubuntu相关</a></li>
-        <li><a href="#3-踩坑盘点">3. 踩坑盘点</a></li>
-        <li><a href="#4-后续">4. 后续</a></li>
+        <li><a href="#关于系统选择">关于系统选择</a></li>
+        <li><a href="#规划空间">规划空间</a></li>
+        <li><a href="#安装ubuntu相关">安装ubuntu相关</a></li>
+        <li><a href="#踩坑盘点">踩坑盘点</a></li>
+        <li><a href="#后续">后续</a></li>
       </ol>
     </li>
   </ol>
@@ -370,7 +370,7 @@
 
 
             <time>
-                2024-12-08 16:37 CST
+                2024-12-13 23:18 CST
             </time>
         </div>
             <div>
@@ -398,45 +398,56 @@
     <section class="article-content">
     
     
-    <h1 id="ubuntu-2204版本在联想thinkbook-15-iil上的安装">ubuntu 22.04版本在联想thinkbook 15 iil上的安装
-</h1><h2 id="实现windows11及ubuntu2204双系统">实现windows11及ubuntu22.04双系统
+    <h1 id="heading">
+</h1><h2 id="实现windows11及ubuntu2204双系统联想thinkbook-15-iil">实现windows11及ubuntu22.04双系统（联想thinkbook 15 iil）
 </h2><h3 id="背景">背景
 </h3><p>闲置笔记本电脑一直不开机容易落灰，而近期有服务器搭建的需求，当前笔记本win11系统使用频率也不高，恰好还有一些硬盘空间可以预留（500G固态+2T机械），因此考虑重新规划一下硬盘分配。
 当前的硬盘是500G固态分了两个盘，2T分了三个盘（实际就是1.8T左右，因此一个盘大约620MB）。win11系统盘是放在了固态上，对于双系统方案，根据网上的建议需要将引导盘分开以防一个其中一个系统出现异常。因此这次装机选择在机械盘上留出一定空间来专门装ubuntu系统。</p>
 <p>所以 第一步需要从现有系统中分出一定空闲的空间，最初这边只分出了100G，但实际装了一次之后发现分区规划存在一些问题，根目录很容易就被占满了，而在重新规划过程中因为搞了个jenkins，处理一些权限问题时候把系统搞挂了，导致bash相关命令都无法正常使用（也有可能是搜狗输入法搞得问题），因此直接重装一下，就当练手了。</p>
 <p>刚好温习一下，踩踩坑，记录一下。</p>
-<h3 id="0-关于系统选择">0. 关于系统选择
+<h3 id="关于系统选择">关于系统选择
 </h3><p>其实这个最开始规划的时候是根据个人的习惯来选的，上班和自行学习的话接触最多的就是ubuntu。而ubuntu的社区环境对于新手也是比较友好的，基本上有问题的话网上都可以搜到类似解决方案。 不过ubuntu这边是分桌面版和服务器版的，安装完之后才反应过来，自己可能更需要的是服务器这边的功能，理论上把笔记本当做服务器的话利用率会更高一些。</p>
 <p>不过，桌面版装了之后，自己也可以更加自由diy了，也挺不错，如果后面还有别的什么需求要搞成ubuntu server版本，也可以再整理一篇文档。</p>
-<h3 id="1-规划空间">1. 规划空间
+<h3 id="规划空间">规划空间
 </h3><p>一个是预留整体的ubuntu系统空间，另一个是对于预留空间的实际大小规划。
 预留整体空间之前留的100G感觉不太够用，因此后续对于三个盘各抽出了100G的空间，通过图吧工具箱的DiskGenius把现有的三个盘数据内容位置都做了一下调整，使三个盘抽出的总计300G空间为一个连续空间，这一步从个人的经验来看应该是必要的。</p>
 <p>对于ubuntu安装的分区规划，这里参考了网上的方案
 <a class="link" href="https://blog.csdn.net/Kefenggewu_/article/details/121186356"  target="_blank" rel="noopener"
     >https://blog.csdn.net/Kefenggewu_/article/details/121186356</a></p>
-<p>上面这个链接介绍的是ubuntu18.04分区方案，本地方案和这个基本一致：
-/home 180G
-swap 10G
-/boot 3G
-/ 60G
-剩余空间不做单独分区，后续需要时候再做拓展</p>
+<p>上面这个链接介绍的是ubuntu18.04分区方案，本地方案和这个基本一致：</p>
+<blockquote>
+<p>/home	180G</p>
+<p>swap 	10G</p>
+<p>/boot  	3G</p>
+<p>/ 		60G</p>
+<p>剩余空间不做单独分区，后续需要时候再做拓展</p>
+</blockquote>
 <p>当然，上述分区方案都是计划，实际要实施还需要下一步的操作。</p>
-<h3 id="2-安装ubuntu相关">2. 安装ubuntu相关
-</h3><p>这个网上找了很多教程，实际上个人认为如下的教程挺全面的，一开始没有看这个视频，后面发现如果安装这个流程来会省去很多麻烦。
-<a class="link" href="https://www.bilibili.com/video/BV1554y1n7zv"  target="_blank" rel="noopener"
+<h3 id="安装ubuntu相关">安装ubuntu相关
+</h3><p>这个网上找了很多教程，实际上个人认为如下的教程挺全面的，一开始没有看这个视频，后面发现如果安装这个流程来会省去很多麻烦。</p>
+<p><a class="link" href="https://www.bilibili.com/video/BV1554y1n7zv"  target="_blank" rel="noopener"
     >https://www.bilibili.com/video/BV1554y1n7zv</a></p>
 <p>装ubuntu的话有好几步，像镜像版本选择前面已经说了，这里选用的是ubuntu22.04版本（至于为什么，下面会提到），下载之后需要做U盘安装盘，网上有人介绍ventoy，这个我试了下，没怎么搞明白，后面有机会可以试试。最后还是用了之前使用过的rufus做了启动盘（注意启动盘的分区类型一定要和安装系统的盘类型一致，否则没法进行正常引导安装）。</p>
 <p>做完启动盘，BIOS这边需要将“Secure Boot”设置为“Disable”，对应硬盘模式从RST改成了AHCI（是不是必须这个不太清楚） 然后将启动顺序调整为U盘启动，然后重启电脑，进入BIOS界面，选择U盘启动。</p>
 <p>安装过程可以先选择英文，在安装结束后再添加中文支持，以免文件夹这边都被默认改成了中文。</p>
 <p>安装之后，由于是双系统，需要考虑时间同步问题，原理参考上面的链接视频即可。</p>
-<h3 id="3-踩坑盘点">3. 踩坑盘点
+<h3 id="踩坑盘点">踩坑盘点
 </h3><p>最开始搞得时候选的镜像是24.04版本，但是在做了启动盘之后，发现进了引导选择“try or install ubuntu”的时候，发现无法进入系统，报错是“Out of Memory”，下面打印了几行之后显示“kernel panic”，担心是24.04版本的镜像有问题，重新找了个18.04的版本，跟着视频看了下，发现在做启动盘的时候启动盘这边有“MBR”和“GPT”两个选项，当时没注意，默认是MBR，而重新看了下我现在windows里面对应的磁盘类型，是GPT，因此对18.04的启动盘做了一次调整，调整成GPT，尝试了一下，这次没有再报错了，但是在点了“try or install ubuntu”之后，发现屏幕虽然亮着，但是没有任何显示，也就是只有背光亮没有实际内容，网上查了一下，怀疑是显卡驱动问题，跟着网上的教程在引导界面按e，在最后一行添加“nomodeset”，然后按ctrl+x启动，实际上并没有解决任何问题。 添加“nomodeset”这个是专门针对NVIDIA显卡驱动的，实际作用是在启动的时候不加载显卡驱动，但我笔记本是thinkbook 15 iil的，对应的显卡是intel的集成显卡，因此这个方法并不能解决问题。 随后我又尝试改bios的东西，比如禁用secure boot, 调整硬盘模式（RST-&gt;AHCI）,使用18.04都没法正常安装。
 <a class="link" href="https://blog.csdn.net/somken/article/details/140091092"  target="_blank" rel="noopener"
     >https://blog.csdn.net/somken/article/details/140091092</a></p>
-<p>后来我考虑到黑屏大概率还是和显卡驱动有关，有可能18.04版本没有集成我当前电脑的显卡驱动，百度了很久终于找到了一篇相关的文章，这里提到了22.04版本的可行性，因此整理了现有踩过的坑，用22.04做启动盘并且选择GPT分区，经过尝试，终于可以进入安装界面了
-<a class="link" href="https://ubuntu.com/certified/laptops?q=thinkbook&#43;15&amp;limit=20&amp;category=Laptop"  target="_blank" rel="noopener"
+<p>后来我考虑到黑屏大概率还是和显卡驱动有关，有可能18.04版本没有集成我当前电脑的显卡驱动，百度了很久终于找到了一篇相关的文章，这里提到了22.04版本的可行性，因此整理了现有踩过的坑，用22.04做启动盘并且选择GPT分区，经过尝试，终于可以进入安装界面了</p>
+<p><a class="link" href="https://ubuntu.com/certified/laptops?q=thinkbook&#43;15&amp;limit=20&amp;category=Laptop"  target="_blank" rel="noopener"
     >https://ubuntu.com/certified/laptops?q=thinkbook+15&limit=20&category=Laptop</a></p>
-<h3 id="4-后续">4. 后续
+<p>这里简单小结一下：</p>
+<blockquote>
+<ol>
+<li>U盘启动盘格式化类型要确保和目标硬盘一致（GPT或MBR，大容量硬盘一般为GPT）</li>
+<li>ubuntu系统选择要考虑到目标机器显卡的驱动是否有集成（NVIDIA显卡需要用“nomodeset”进行操作）</li>
+<li>禁用secure boot</li>
+<li>调整硬盘模式 RST-&gt;AHCI (暂不清楚必要性)</li>
+</ol>
+</blockquote>
+<h3 id="后续">后续
 </h3><p>本地两台电脑，一台windows一台ubuntu，由于ubuntu新装，所以环境上使用起来会有一些不太方便的地方，需要两台电脑之间传送文件或者发送网址，这里找了一下网上的方案，本地测试有效。</p>
 <p>windows与ubuntu内网通信工具：
 <a class="link" href="https://www.ywnz.com/linuxjc/3650.html"  target="_blank" rel="noopener"
@@ -470,7 +481,7 @@ swap 10G
 
 
         <span>
-            最后更新于 2024-12-08 16:37 CST
+            最后更新于 2024-12-13 23:18 CST
         </span>
     </section></footer>
 
@@ -507,47 +518,7 @@ swap 10G
      
     
         
-    <div class="disqus-container">
-    <div id="disqus_thread"></div>
-<script>
-    window.disqus_config = function () {
     
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
-<style>
-    .disqus-container {
-        background-color: var(--card-background);
-        border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
-    }
-</style>
-
-<script>
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (typeof DISQUS == 'object') {
-            DISQUS.reset({
-                reload: true
-            });
-        }
-    })
-</script>
 
     
 
@@ -649,7 +620,7 @@ swap 10G
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.99ce1801c4bad426a42fc436add4721e149159dbb598636e9578fd59cf778c83.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.acb860605b1ae6c7821826c8f24d0360e3f636134b76d6255ec9d85aa54253e9.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
@@ -683,7 +654,7 @@ swap 10G
 
 
 
-    const musicDir = "https://wjy2018.github.io/" + 'music/';
+    const musicDir = "http://localhost:7469/" + 'music/';
     console.log(musicDir);
     const songs = [
         '8 Legged Dreams - Unlike Pluto',
@@ -744,10 +715,10 @@ swap 10G
     
     const live2d_path = "https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/";
     
-    const cssPath = "https://wjy2018.github.io/waifu/waifu.css";
-    const tipsJsonPath = "https://wjy2018.github.io/waifu/waifu-tips.json";
-    const tipsJsPath = "https://wjy2018.github.io/waifu/waifu-tips.js"
-    const live2dMinJsPath = "https://wjy2018.github.io/waifu/live2d.min.js";
+    const cssPath = "http://localhost:7469/waifu/waifu.css";
+    const tipsJsonPath = "http://localhost:7469/waifu/waifu-tips.json";
+    const tipsJsPath = "http://localhost:7469/waifu/waifu-tips.js"
+    const live2dMinJsPath = "http://localhost:7469/waifu/live2d.min.js";
     
     
     function loadExternalResource(url, type) {
@@ -840,7 +811,7 @@ swap 10G
 
 
     
-    <script src=https://wjy2018.github.io/js/topbar.min.js></script>
+    <script src=http://localhost:7469/js/topbar.min.js></script>
 
 
 <script>
@@ -889,7 +860,7 @@ swap 10G
 <style>
     @font-face {
       font-family: '爱点风雅黑';
-      src: url(https://wjy2018.github.io/font/%E7%88%B1%E7%82%B9%E9%A3%8E%E9%9B%85%E9%BB%91.ttf) format('truetype');
+      src: url(http://localhost:7469/font/%E7%88%B1%E7%82%B9%E9%A3%8E%E9%9B%85%E9%BB%91.ttf) format('truetype');
     }
   
     :root {

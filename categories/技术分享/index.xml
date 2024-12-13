@@ -2,56 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>技术分享 on lastfantasy的博客</title>
-        <link>https://wjy2018.github.io/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</link>
+        <link>http://localhost:7469/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</link>
         <description>Recent content in 技术分享 on lastfantasy的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>liunianmolian@163.com</copyright>
-        <lastBuildDate>Sun, 08 Dec 2024 16:37:58 +0800</lastBuildDate><atom:link href="https://wjy2018.github.io/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 13 Dec 2024 23:18:22 +0800</lastBuildDate><atom:link href="http://localhost:7469/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>本地笔记本安装win11和ubuntu22.04双系统</title>
-        <link>https://wjy2018.github.io/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
+        <link>http://localhost:7469/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
         <pubDate>Sun, 08 Dec 2024 10:15:43 +0800</pubDate>
         
-        <guid>https://wjy2018.github.io/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</guid>
-        <description>&lt;h1 id=&#34;ubuntu-2204版本在联想thinkbook-15-iil上的安装&#34;&gt;ubuntu 22.04版本在联想thinkbook 15 iil上的安装
-&lt;/h1&gt;&lt;h2 id=&#34;实现windows11及ubuntu2204双系统&#34;&gt;实现windows11及ubuntu22.04双系统
+        <guid>http://localhost:7469/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</guid>
+        <description>&lt;h1 id=&#34;heading&#34;&gt;
+&lt;/h1&gt;&lt;h2 id=&#34;实现windows11及ubuntu2204双系统联想thinkbook-15-iil&#34;&gt;实现windows11及ubuntu22.04双系统（联想thinkbook 15 iil）
 &lt;/h2&gt;&lt;h3 id=&#34;背景&#34;&gt;背景
 &lt;/h3&gt;&lt;p&gt;闲置笔记本电脑一直不开机容易落灰，而近期有服务器搭建的需求，当前笔记本win11系统使用频率也不高，恰好还有一些硬盘空间可以预留（500G固态+2T机械），因此考虑重新规划一下硬盘分配。
 当前的硬盘是500G固态分了两个盘，2T分了三个盘（实际就是1.8T左右，因此一个盘大约620MB）。win11系统盘是放在了固态上，对于双系统方案，根据网上的建议需要将引导盘分开以防一个其中一个系统出现异常。因此这次装机选择在机械盘上留出一定空间来专门装ubuntu系统。&lt;/p&gt;
 &lt;p&gt;所以 第一步需要从现有系统中分出一定空闲的空间，最初这边只分出了100G，但实际装了一次之后发现分区规划存在一些问题，根目录很容易就被占满了，而在重新规划过程中因为搞了个jenkins，处理一些权限问题时候把系统搞挂了，导致bash相关命令都无法正常使用（也有可能是搜狗输入法搞得问题），因此直接重装一下，就当练手了。&lt;/p&gt;
 &lt;p&gt;刚好温习一下，踩踩坑，记录一下。&lt;/p&gt;
-&lt;h3 id=&#34;0-关于系统选择&#34;&gt;0. 关于系统选择
+&lt;h3 id=&#34;关于系统选择&#34;&gt;关于系统选择
 &lt;/h3&gt;&lt;p&gt;其实这个最开始规划的时候是根据个人的习惯来选的，上班和自行学习的话接触最多的就是ubuntu。而ubuntu的社区环境对于新手也是比较友好的，基本上有问题的话网上都可以搜到类似解决方案。 不过ubuntu这边是分桌面版和服务器版的，安装完之后才反应过来，自己可能更需要的是服务器这边的功能，理论上把笔记本当做服务器的话利用率会更高一些。&lt;/p&gt;
 &lt;p&gt;不过，桌面版装了之后，自己也可以更加自由diy了，也挺不错，如果后面还有别的什么需求要搞成ubuntu server版本，也可以再整理一篇文档。&lt;/p&gt;
-&lt;h3 id=&#34;1-规划空间&#34;&gt;1. 规划空间
+&lt;h3 id=&#34;规划空间&#34;&gt;规划空间
 &lt;/h3&gt;&lt;p&gt;一个是预留整体的ubuntu系统空间，另一个是对于预留空间的实际大小规划。
 预留整体空间之前留的100G感觉不太够用，因此后续对于三个盘各抽出了100G的空间，通过图吧工具箱的DiskGenius把现有的三个盘数据内容位置都做了一下调整，使三个盘抽出的总计300G空间为一个连续空间，这一步从个人的经验来看应该是必要的。&lt;/p&gt;
 &lt;p&gt;对于ubuntu安装的分区规划，这里参考了网上的方案
 &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/Kefenggewu_/article/details/121186356&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://blog.csdn.net/Kefenggewu_/article/details/121186356&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;上面这个链接介绍的是ubuntu18.04分区方案，本地方案和这个基本一致：
-/home 180G
-swap 10G
-/boot 3G
-/ 60G
-剩余空间不做单独分区，后续需要时候再做拓展&lt;/p&gt;
+&lt;p&gt;上面这个链接介绍的是ubuntu18.04分区方案，本地方案和这个基本一致：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;/home	180G&lt;/p&gt;
+&lt;p&gt;swap 	10G&lt;/p&gt;
+&lt;p&gt;/boot  	3G&lt;/p&gt;
+&lt;p&gt;/ 		60G&lt;/p&gt;
+&lt;p&gt;剩余空间不做单独分区，后续需要时候再做拓展&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;当然，上述分区方案都是计划，实际要实施还需要下一步的操作。&lt;/p&gt;
-&lt;h3 id=&#34;2-安装ubuntu相关&#34;&gt;2. 安装ubuntu相关
-&lt;/h3&gt;&lt;p&gt;这个网上找了很多教程，实际上个人认为如下的教程挺全面的，一开始没有看这个视频，后面发现如果安装这个流程来会省去很多麻烦。
-&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1554y1n7zv&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;安装ubuntu相关&#34;&gt;安装ubuntu相关
+&lt;/h3&gt;&lt;p&gt;这个网上找了很多教程，实际上个人认为如下的教程挺全面的，一开始没有看这个视频，后面发现如果安装这个流程来会省去很多麻烦。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1554y1n7zv&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://www.bilibili.com/video/BV1554y1n7zv&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;装ubuntu的话有好几步，像镜像版本选择前面已经说了，这里选用的是ubuntu22.04版本（至于为什么，下面会提到），下载之后需要做U盘安装盘，网上有人介绍ventoy，这个我试了下，没怎么搞明白，后面有机会可以试试。最后还是用了之前使用过的rufus做了启动盘（注意启动盘的分区类型一定要和安装系统的盘类型一致，否则没法进行正常引导安装）。&lt;/p&gt;
 &lt;p&gt;做完启动盘，BIOS这边需要将“Secure Boot”设置为“Disable”，对应硬盘模式从RST改成了AHCI（是不是必须这个不太清楚） 然后将启动顺序调整为U盘启动，然后重启电脑，进入BIOS界面，选择U盘启动。&lt;/p&gt;
 &lt;p&gt;安装过程可以先选择英文，在安装结束后再添加中文支持，以免文件夹这边都被默认改成了中文。&lt;/p&gt;
 &lt;p&gt;安装之后，由于是双系统，需要考虑时间同步问题，原理参考上面的链接视频即可。&lt;/p&gt;
-&lt;h3 id=&#34;3-踩坑盘点&#34;&gt;3. 踩坑盘点
+&lt;h3 id=&#34;踩坑盘点&#34;&gt;踩坑盘点
 &lt;/h3&gt;&lt;p&gt;最开始搞得时候选的镜像是24.04版本，但是在做了启动盘之后，发现进了引导选择“try or install ubuntu”的时候，发现无法进入系统，报错是“Out of Memory”，下面打印了几行之后显示“kernel panic”，担心是24.04版本的镜像有问题，重新找了个18.04的版本，跟着视频看了下，发现在做启动盘的时候启动盘这边有“MBR”和“GPT”两个选项，当时没注意，默认是MBR，而重新看了下我现在windows里面对应的磁盘类型，是GPT，因此对18.04的启动盘做了一次调整，调整成GPT，尝试了一下，这次没有再报错了，但是在点了“try or install ubuntu”之后，发现屏幕虽然亮着，但是没有任何显示，也就是只有背光亮没有实际内容，网上查了一下，怀疑是显卡驱动问题，跟着网上的教程在引导界面按e，在最后一行添加“nomodeset”，然后按ctrl+x启动，实际上并没有解决任何问题。 添加“nomodeset”这个是专门针对NVIDIA显卡驱动的，实际作用是在启动的时候不加载显卡驱动，但我笔记本是thinkbook 15 iil的，对应的显卡是intel的集成显卡，因此这个方法并不能解决问题。 随后我又尝试改bios的东西，比如禁用secure boot, 调整硬盘模式（RST-&amp;gt;AHCI）,使用18.04都没法正常安装。
 &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/somken/article/details/140091092&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://blog.csdn.net/somken/article/details/140091092&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;后来我考虑到黑屏大概率还是和显卡驱动有关，有可能18.04版本没有集成我当前电脑的显卡驱动，百度了很久终于找到了一篇相关的文章，这里提到了22.04版本的可行性，因此整理了现有踩过的坑，用22.04做启动盘并且选择GPT分区，经过尝试，终于可以进入安装界面了
-&lt;a class=&#34;link&#34; href=&#34;https://ubuntu.com/certified/laptops?q=thinkbook&amp;#43;15&amp;amp;limit=20&amp;amp;category=Laptop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;后来我考虑到黑屏大概率还是和显卡驱动有关，有可能18.04版本没有集成我当前电脑的显卡驱动，百度了很久终于找到了一篇相关的文章，这里提到了22.04版本的可行性，因此整理了现有踩过的坑，用22.04做启动盘并且选择GPT分区，经过尝试，终于可以进入安装界面了&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://ubuntu.com/certified/laptops?q=thinkbook&amp;#43;15&amp;amp;limit=20&amp;amp;category=Laptop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://ubuntu.com/certified/laptops?q=thinkbook+15&amp;limit=20&amp;category=Laptop&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;4-后续&#34;&gt;4. 后续
+&lt;p&gt;这里简单小结一下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;U盘启动盘格式化类型要确保和目标硬盘一致（GPT或MBR，大容量硬盘一般为GPT）&lt;/li&gt;
+&lt;li&gt;ubuntu系统选择要考虑到目标机器显卡的驱动是否有集成（NVIDIA显卡需要用“nomodeset”进行操作）&lt;/li&gt;
+&lt;li&gt;禁用secure boot&lt;/li&gt;
+&lt;li&gt;调整硬盘模式 RST-&amp;gt;AHCI (暂不清楚必要性)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;后续&#34;&gt;后续
 &lt;/h3&gt;&lt;p&gt;本地两台电脑，一台windows一台ubuntu，由于ubuntu新装，所以环境上使用起来会有一些不太方便的地方，需要两台电脑之间传送文件或者发送网址，这里找了一下网上的方案，本地测试有效。&lt;/p&gt;
 &lt;p&gt;windows与ubuntu内网通信工具：
 &lt;a class=&#34;link&#34; href=&#34;https://www.ywnz.com/linuxjc/3650.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -64,50 +75,59 @@ swap 10G
         </item>
         <item>
         <title>Cloudflare相关部署配置</title>
-        <link>https://wjy2018.github.io/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/</link>
+        <link>http://localhost:7469/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/</link>
         <pubDate>Sat, 30 Nov 2024 18:32:30 +0800</pubDate>
         
-        <guid>https://wjy2018.github.io/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/</guid>
-        <description>&lt;h1 id=&#34;cloudflare-worker搭配meting-api配置&#34;&gt;cloudflare worker搭配meting-api配置
-&lt;/h1&gt;&lt;p&gt;网上能搜到的搭建教程大多都是github项目上自带的说明，最新的版本说明中只有docker、deno、本地node、vercel以及反向代理等。&lt;/p&gt;
+        <guid>http://localhost:7469/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/</guid>
+        <description>&lt;h2 id=&#34;cloudflare-worker搭配meting-api配置&#34;&gt;cloudflare worker搭配meting-api配置
+&lt;/h2&gt;&lt;p&gt;网上能搜到的搭建教程大多都是github项目上自带的说明，最新的版本说明中只有docker、deno、本地node、vercel以及反向代理等。&lt;/p&gt;
 &lt;p&gt;具体原文如下：&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/xizeyoupan/Meting-API&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;xizeyoupan/Meting-API: 🐳 Meting API 的容器化与部署&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;（本地尝试多种方法部署，只有vercel以及本地node node.js命令可以成功，node命令使用时不能&lt;code&gt;CTRL+C&lt;/code&gt;不然就会退出）&lt;/p&gt;
-&lt;h2 id=&#34;本地尝试以及cloudflare-pages搭建方案&#34;&gt;本地尝试以及cloudflare pages搭建方案
-&lt;/h2&gt;&lt;p&gt;本地尝试如下步骤手动部署，发现在执行第二步时会报错&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;npm i npm run build:all&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;报错如下：&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;[30060:1130/185937.420:ERROR:node_bindings.cc(378)] Most NODE_OPTIONs are not supported in packaged apps. See documentation for more details.&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;本地尝试以及cloudflare-pages搭建方案&#34;&gt;本地尝试以及cloudflare pages搭建方案
+&lt;/h3&gt;&lt;p&gt;本地尝试如下步骤手动部署，发现在执行第二步时会报错&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm i
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm run build:all
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;报错如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[30060:1130/185937.420:ERROR:node_bindings.cc(378)] Most NODE_OPTIONs are not supported in packaged apps. See documentation for more details.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;通过百度发现目前并没有好的解决方案。&lt;/p&gt;
 &lt;p&gt;对package.json研究了下，发现实际“build:all”对应“node esbuild.config.js”命令，我们转而直接使用对应指令，发现就可以直接编译过了。&lt;/p&gt;
 &lt;p&gt;编译生成的部分在对应esbuild.config.js有描述：&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;outfile: &#39;./dist/cloudflare-workers.js&#39;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;outfile: &#39;./dist/cloudflare-workers-min.js&#39;,&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;outfile: &#39;./dist/deno.js&#39;,&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;outfile: &amp;lsquo;./dist/cloudflare-workers.js&amp;rsquo;&lt;/p&gt;
+&lt;p&gt;outfile: &amp;lsquo;./dist/cloudflare-workers-min.js&amp;rsquo;,&lt;/p&gt;
+&lt;p&gt;outfile: &amp;lsquo;./dist/deno.js&amp;rsquo;,&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;也就是说实际生成的是dist目录下的三个文件，本地使用node xxx.js（xxx为对应上述js文件），可以实现对应功能，本地在对应&lt;code&gt;PORT&lt;/code&gt;链接中可以直接访问到对应网站且test成功，但实际单独部署到cloudflare上是失败的（cloudflare最初是打算部署到pages里面然后结合github实现自动部署，不过实际上不论采用哪种命令都无法正常部署成功，该node命令一旦主动停止，服务也就自己停了，而自动部署对应的就是正常退出后实际部署内容可以正常使用，因此pages不太符合当前的要求）&lt;/p&gt;
-&lt;h2 id=&#34;cloudflare-worker方案探索&#34;&gt;cloudflare worker方案探索
-&lt;/h2&gt;&lt;p&gt;在上述最新的部署说明中没有cloudflare相关的描述，但经过不懈探索，在另一个github上看到有历史版本对于cloudflare相关部署描述（具体链接如下）&lt;/p&gt;
+&lt;h3 id=&#34;cloudflare-worker方案探索&#34;&gt;cloudflare worker方案探索
+&lt;/h3&gt;&lt;p&gt;在上述最新的部署说明中没有cloudflare相关的描述，但经过不懈探索，在另一个github上看到有历史版本对于cloudflare相关部署描述（具体链接如下）&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/cky008/Meting-API&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;cky008/Meting-API: 🐳 Meting API 的容器化与部署&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;上述部署描述中有“Cloudflare Workers”相关描述，如果不仔细看的话很容易忽略，因为实际上相关内容被折叠了，打开之后会看到如下描述：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;由于cf会自动去除x-real-ip以及在headers中加shit，网易云可能会失效。使用网易云的同学请尝试其他部署方式。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
 &lt;p&gt;在全球拥有数据中心，提供的域名被阻断，使用自有域名后速度很快。冷启动速度很快。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
 &lt;p&gt;fork本项目，依次点击actions/publish/run workflow。保持默认即可。待CI构建结束后下载cloudflare-workers.js并解压。在Workers创建一个Service，点右上角Quick edit。把cloudflare-workers.js的内容复制进去deploy即可。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;前面一堆描述，应该就是后续版本删掉“Cloudflare Workers”方案的原因，但是为了刚开始学习部署，肯定要自己先尝试一下顺便学习一下worker怎么用，所以直接开整。&lt;/p&gt;
 &lt;p&gt;方法可以参考上面这种，不过既然本地之前已经生成了对应文件，直接copy过来就可以了。&lt;/p&gt;
 &lt;p&gt;不过，按照上述流程操作完之后直接访问依旧是访问不了，因此我这边是反复删除和创建多次尝试，依旧不行。奇怪的是等了一段时间，我把worker自定义域配置了一下，通过自定义域居然就能访问了。&lt;/p&gt;
 &lt;p&gt;效果如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wjy2018.github.io/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:7469/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api.png&#34;
 	width=&#34;670&#34;
 	height=&#34;437&#34;
-	srcset=&#34;https://wjy2018.github.io/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api_hu2679701382117244862.png 480w, https://wjy2018.github.io/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api_hu4374303704572110211.png 1024w&#34;
+	srcset=&#34;http://localhost:7469/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api_hu2679701382117244862.png 480w, http://localhost:7469/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api_hu4374303704572110211.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;meting-api&#34;
@@ -119,10 +139,10 @@ swap 10G
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;相关test也是没有问题的：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wjy2018.github.io/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:7469/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test.png&#34;
 	width=&#34;1251&#34;
 	height=&#34;651&#34;
-	srcset=&#34;https://wjy2018.github.io/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test_hu7066125982939677387.png 480w, https://wjy2018.github.io/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test_hu15829411023214066252.png 1024w&#34;
+	srcset=&#34;http://localhost:7469/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test_hu7066125982939677387.png 480w, http://localhost:7469/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test_hu15829411023214066252.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;meting-api-test&#34;
@@ -133,27 +153,33 @@ swap 10G
 		data-flex-basis=&#34;461px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h1 id=&#34;cloudflare相关配置&#34;&gt;cloudflare相关配置
-&lt;/h1&gt;&lt;h2 id=&#34;dns解析修改&#34;&gt;DNS解析修改
-&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/dreamingsleeping/article/details/139745997&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;hr&gt;
+&lt;h2 id=&#34;cloudflare相关配置&#34;&gt;cloudflare相关配置
+&lt;/h2&gt;&lt;h3 id=&#34;dns解析修改&#34;&gt;DNS解析修改
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/dreamingsleeping/article/details/139745997&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;详细图文手把手教你阿里云注册域名如何托管到CloudFlare DNS服务_阿里云域名转移到cloud-CSDN博客&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;cloudflare-设置域名301转发重定向&#34;&gt;cloudflare 设置域名301转发重定向
-&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/GeorgeSteven/article/details/127151470&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;cloudflare-设置域名301转发重定向&#34;&gt;cloudflare 设置域名301转发重定向
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/GeorgeSteven/article/details/127151470&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Cloudflare设置301重定向，附常见问题和解决方法_dns cname的作用 301重定向-CSDN博客&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/495264377&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;使用 Cloudflare 进行域名跳转(重定向) - 知乎&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;cloudflare-workers优秀项目收集&#34;&gt;Cloudflare Workers优秀项目收集
-&lt;/h1&gt;&lt;p&gt;这里直接放上大佬的整理链接&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;cloudflare-workers优秀项目收集&#34;&gt;Cloudflare Workers优秀项目收集
+&lt;/h2&gt;&lt;p&gt;这里直接放上大佬的整理链接&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.igdux.com/workers?locale=zh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Cloudflare Workers优秀项目收集（持续更新） - iGdux&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;目前个人在尝试下面的东西，不过还没成功，后续有进展再更新&lt;/p&gt;
-&lt;h2 id=&#34;使用-cloudflare-workers-自建节点科学上网&#34;&gt;使用 Cloudflare Workers 自建节点科学上网
-&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://voxsay.com/posts/using-cloudflare-workers-build-proxy-for-internet-access/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;使用-cloudflare-workers-自建节点科学上网&#34;&gt;使用 Cloudflare Workers 自建节点科学上网
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://voxsay.com/posts/using-cloudflare-workers-build-proxy-for-internet-access/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;使用 Cloudflare Workers 自建节点科学上网 | 言外之音&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;自定义导航&#34;&gt;自定义导航
-&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/sleepwood/CF-Worker-Dir?tab=readme-ov-file&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;自定义导航&#34;&gt;自定义导航
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/sleepwood/CF-Worker-Dir?tab=readme-ov-file&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;sleepwood/CF-Worker-Dir: A web directories base on Cloudflare worker.&lt;/a&gt;
 （其实已经通过cf worker搞好了，只不过一开始部署需要等好一段时间才能访问网站）&lt;/p&gt;
+&lt;h3 id=&#34;网站监测&#34;&gt;网站监测
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/lyc8503/UptimeFlare&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;lyc8503/UptimeFlare: ✔ Free and serverless uptime monitoring / status page on Cloudflare Workers, with Geo-specific checks&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;个人使用了lyc8503这个博主的uptimeflare结合cloudflare worker及kv进行了自动部署&lt;/p&gt;
 </description>
         </item>
         

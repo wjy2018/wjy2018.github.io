@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
-    <head><meta charset='utf-8'>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=7469&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="主要记录在Cloudflare相关部署过程遇到的问题和解决方法">
 <title>Cloudflare相关部署配置</title>
 
-<link rel='canonical' href='https://wjy2018.github.io/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/'>
+<link rel='canonical' href='http://localhost:7469/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/'>
 
 <link rel="stylesheet" href="/scss/style.min.df05e96b7236db331de27a2aa0abd683f410227fb29dfa7fba5a1ab3f52f25e8.css"><meta property='og:title' content="Cloudflare相关部署配置">
 <meta property='og:description' content="主要记录在Cloudflare相关部署过程遇到的问题和解决方法">
-<meta property='og:url' content='https://wjy2018.github.io/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/'>
+<meta property='og:url' content='http://localhost:7469/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/'>
 <meta property='og:site_name' content='lastfantasy的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='cloudflare' /><meta property='article:tag' content='meting-api' /><meta property='article:tag' content='hugo blog' /><meta property='article:published_time' content='2024-11-30T18:32:30&#43;08:00'/><meta property='article:modified_time' content='2024-12-08T16:37:58&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='cloudflare' /><meta property='article:tag' content='meting-api' /><meta property='article:tag' content='hugo blog' /><meta property='article:published_time' content='2024-11-30T18:32:30&#43;08:00'/><meta property='article:modified_time' content='2024-12-13T23:18:22&#43;08:00'/>
 <meta name="twitter:title" content="Cloudflare相关部署配置">
 <meta name="twitter:description" content="主要记录在Cloudflare相关部署过程遇到的问题和解决方法">
     <link rel="shortcut icon" href="/static/favicon.ico" />
@@ -293,18 +293,25 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#本地尝试以及cloudflare-pages搭建方案">本地尝试以及cloudflare pages搭建方案</a></li>
-    <li><a href="#cloudflare-worker方案探索">cloudflare worker方案探索</a></li>
-  </ol>
-
-  <ol>
-    <li><a href="#dns解析修改">DNS解析修改</a></li>
-    <li><a href="#cloudflare-设置域名301转发重定向">cloudflare 设置域名301转发重定向</a></li>
-  </ol>
-
-  <ol>
-    <li><a href="#使用-cloudflare-workers-自建节点科学上网">使用 Cloudflare Workers 自建节点科学上网</a></li>
-    <li><a href="#自定义导航">自定义导航</a></li>
+    <li><a href="#cloudflare-worker搭配meting-api配置">cloudflare worker搭配meting-api配置</a>
+      <ol>
+        <li><a href="#本地尝试以及cloudflare-pages搭建方案">本地尝试以及cloudflare pages搭建方案</a></li>
+        <li><a href="#cloudflare-worker方案探索">cloudflare worker方案探索</a></li>
+      </ol>
+    </li>
+    <li><a href="#cloudflare相关配置">cloudflare相关配置</a>
+      <ol>
+        <li><a href="#dns解析修改">DNS解析修改</a></li>
+        <li><a href="#cloudflare-设置域名301转发重定向">cloudflare 设置域名301转发重定向</a></li>
+      </ol>
+    </li>
+    <li><a href="#cloudflare-workers优秀项目收集">Cloudflare Workers优秀项目收集</a>
+      <ol>
+        <li><a href="#使用-cloudflare-workers-自建节点科学上网">使用 Cloudflare Workers 自建节点科学上网</a></li>
+        <li><a href="#自定义导航">自定义导航</a></li>
+        <li><a href="#网站监测">网站监测</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
         </div>
@@ -372,7 +379,7 @@
 
 
             <time>
-                2024-12-08 16:37 CST
+                2024-12-13 23:18 CST
             </time>
         </div>
             <div>
@@ -400,36 +407,45 @@
     <section class="article-content">
     
     
-    <h1 id="cloudflare-worker搭配meting-api配置">cloudflare worker搭配meting-api配置
-</h1><p>网上能搜到的搭建教程大多都是github项目上自带的说明，最新的版本说明中只有docker、deno、本地node、vercel以及反向代理等。</p>
+    <h2 id="cloudflare-worker搭配meting-api配置">cloudflare worker搭配meting-api配置
+</h2><p>网上能搜到的搭建教程大多都是github项目上自带的说明，最新的版本说明中只有docker、deno、本地node、vercel以及反向代理等。</p>
 <p>具体原文如下：</p>
 <p><a class="link" href="https://github.com/xizeyoupan/Meting-API"  target="_blank" rel="noopener"
     >xizeyoupan/Meting-API: 🐳 Meting API 的容器化与部署</a></p>
 <p>（本地尝试多种方法部署，只有vercel以及本地node node.js命令可以成功，node命令使用时不能<code>CTRL+C</code>不然就会退出）</p>
-<h2 id="本地尝试以及cloudflare-pages搭建方案">本地尝试以及cloudflare pages搭建方案
-</h2><p>本地尝试如下步骤手动部署，发现在执行第二步时会报错</p>
-<p><code>npm i npm run build:all</code></p>
-<p>报错如下：</p>
-<p><code>[30060:1130/185937.420:ERROR:node_bindings.cc(378)] Most NODE_OPTIONs are not supported in packaged apps. See documentation for more details.</code></p>
+<h3 id="本地尝试以及cloudflare-pages搭建方案">本地尝试以及cloudflare pages搭建方案
+</h3><p>本地尝试如下步骤手动部署，发现在执行第二步时会报错</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">npm i
+</span></span><span class="line"><span class="cl">npm run build:all
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>报错如下：</p>
+<blockquote>
+<p>[30060:1130/185937.420:ERROR:node_bindings.cc(378)] Most NODE_OPTIONs are not supported in packaged apps. See documentation for more details.</p>
+</blockquote>
 <p>通过百度发现目前并没有好的解决方案。</p>
 <p>对package.json研究了下，发现实际“build:all”对应“node esbuild.config.js”命令，我们转而直接使用对应指令，发现就可以直接编译过了。</p>
 <p>编译生成的部分在对应esbuild.config.js有描述：</p>
-<p><code>outfile: './dist/cloudflare-workers.js'</code></p>
-<p><code>outfile: './dist/cloudflare-workers-min.js',</code></p>
-<p><code>outfile: './dist/deno.js',</code></p>
+<blockquote>
+<p>outfile: &lsquo;./dist/cloudflare-workers.js&rsquo;</p>
+<p>outfile: &lsquo;./dist/cloudflare-workers-min.js&rsquo;,</p>
+<p>outfile: &lsquo;./dist/deno.js&rsquo;,</p>
+</blockquote>
 <p>也就是说实际生成的是dist目录下的三个文件，本地使用node xxx.js（xxx为对应上述js文件），可以实现对应功能，本地在对应<code>PORT</code>链接中可以直接访问到对应网站且test成功，但实际单独部署到cloudflare上是失败的（cloudflare最初是打算部署到pages里面然后结合github实现自动部署，不过实际上不论采用哪种命令都无法正常部署成功，该node命令一旦主动停止，服务也就自己停了，而自动部署对应的就是正常退出后实际部署内容可以正常使用，因此pages不太符合当前的要求）</p>
-<h2 id="cloudflare-worker方案探索">cloudflare worker方案探索
-</h2><p>在上述最新的部署说明中没有cloudflare相关的描述，但经过不懈探索，在另一个github上看到有历史版本对于cloudflare相关部署描述（具体链接如下）</p>
+<h3 id="cloudflare-worker方案探索">cloudflare worker方案探索
+</h3><p>在上述最新的部署说明中没有cloudflare相关的描述，但经过不懈探索，在另一个github上看到有历史版本对于cloudflare相关部署描述（具体链接如下）</p>
 <p><a class="link" href="https://github.com/cky008/Meting-API"  target="_blank" rel="noopener"
     >cky008/Meting-API: 🐳 Meting API 的容器化与部署</a></p>
 <p>上述部署描述中有“Cloudflare Workers”相关描述，如果不仔细看的话很容易忽略，因为实际上相关内容被折叠了，打开之后会看到如下描述：</p>
 <blockquote>
 <p>由于cf会自动去除x-real-ip以及在headers中加shit，网易云可能会失效。使用网易云的同学请尝试其他部署方式。</p>
-</blockquote>
-<blockquote>
 <p>在全球拥有数据中心，提供的域名被阻断，使用自有域名后速度很快。冷启动速度很快。</p>
-</blockquote>
-<blockquote>
 <p>fork本项目，依次点击actions/publish/run workflow。保持默认即可。待CI构建结束后下载cloudflare-workers.js并解压。在Workers创建一个Service，点右上角Quick edit。把cloudflare-workers.js的内容复制进去deploy即可。</p>
 </blockquote>
 <p>前面一堆描述，应该就是后续版本删掉“Cloudflare Workers”方案的原因，但是为了刚开始学习部署，肯定要自己先尝试一下顺便学习一下worker怎么用，所以直接开整。</p>
@@ -465,27 +481,33 @@
 		data-flex-basis="461px"
 	
 ></p>
-<h1 id="cloudflare相关配置">cloudflare相关配置
-</h1><h2 id="dns解析修改">DNS解析修改
-</h2><p><a class="link" href="https://blog.csdn.net/dreamingsleeping/article/details/139745997"  target="_blank" rel="noopener"
+<hr>
+<h2 id="cloudflare相关配置">cloudflare相关配置
+</h2><h3 id="dns解析修改">DNS解析修改
+</h3><p><a class="link" href="https://blog.csdn.net/dreamingsleeping/article/details/139745997"  target="_blank" rel="noopener"
     >详细图文手把手教你阿里云注册域名如何托管到CloudFlare DNS服务_阿里云域名转移到cloud-CSDN博客</a></p>
-<h2 id="cloudflare-设置域名301转发重定向">cloudflare 设置域名301转发重定向
-</h2><p><a class="link" href="https://blog.csdn.net/GeorgeSteven/article/details/127151470"  target="_blank" rel="noopener"
+<h3 id="cloudflare-设置域名301转发重定向">cloudflare 设置域名301转发重定向
+</h3><p><a class="link" href="https://blog.csdn.net/GeorgeSteven/article/details/127151470"  target="_blank" rel="noopener"
     >Cloudflare设置301重定向，附常见问题和解决方法_dns cname的作用 301重定向-CSDN博客</a></p>
 <p><a class="link" href="https://zhuanlan.zhihu.com/p/495264377"  target="_blank" rel="noopener"
     >使用 Cloudflare 进行域名跳转(重定向) - 知乎</a></p>
-<h1 id="cloudflare-workers优秀项目收集">Cloudflare Workers优秀项目收集
-</h1><p>这里直接放上大佬的整理链接</p>
+<hr>
+<h2 id="cloudflare-workers优秀项目收集">Cloudflare Workers优秀项目收集
+</h2><p>这里直接放上大佬的整理链接</p>
 <p><a class="link" href="https://www.igdux.com/workers?locale=zh"  target="_blank" rel="noopener"
     >Cloudflare Workers优秀项目收集（持续更新） - iGdux</a></p>
 <p>目前个人在尝试下面的东西，不过还没成功，后续有进展再更新</p>
-<h2 id="使用-cloudflare-workers-自建节点科学上网">使用 Cloudflare Workers 自建节点科学上网
-</h2><p><a class="link" href="https://voxsay.com/posts/using-cloudflare-workers-build-proxy-for-internet-access/"  target="_blank" rel="noopener"
+<h3 id="使用-cloudflare-workers-自建节点科学上网">使用 Cloudflare Workers 自建节点科学上网
+</h3><p><a class="link" href="https://voxsay.com/posts/using-cloudflare-workers-build-proxy-for-internet-access/"  target="_blank" rel="noopener"
     >使用 Cloudflare Workers 自建节点科学上网 | 言外之音</a></p>
-<h2 id="自定义导航">自定义导航
-</h2><p><a class="link" href="https://github.com/sleepwood/CF-Worker-Dir?tab=readme-ov-file"  target="_blank" rel="noopener"
+<h3 id="自定义导航">自定义导航
+</h3><p><a class="link" href="https://github.com/sleepwood/CF-Worker-Dir?tab=readme-ov-file"  target="_blank" rel="noopener"
     >sleepwood/CF-Worker-Dir: A web directories base on Cloudflare worker.</a>
 （其实已经通过cf worker搞好了，只不过一开始部署需要等好一段时间才能访问网站）</p>
+<h3 id="网站监测">网站监测
+</h3><p><a class="link" href="https://github.com/lyc8503/UptimeFlare"  target="_blank" rel="noopener"
+    >lyc8503/UptimeFlare: ✔ Free and serverless uptime monitoring / status page on Cloudflare Workers, with Geo-specific checks</a></p>
+<p>个人使用了lyc8503这个博主的uptimeflare结合cloudflare worker及kv进行了自动部署</p>
 
 </section>
 
@@ -513,7 +535,7 @@
 
 
         <span>
-            最后更新于 2024-12-08 16:37 CST
+            最后更新于 2024-12-13 23:18 CST
         </span>
     </section></footer>
 
@@ -550,47 +572,7 @@
      
     
         
-    <div class="disqus-container">
-    <div id="disqus_thread"></div>
-<script>
-    window.disqus_config = function () {
     
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
-<style>
-    .disqus-container {
-        background-color: var(--card-background);
-        border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
-    }
-</style>
-
-<script>
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (typeof DISQUS == 'object') {
-            DISQUS.reset({
-                reload: true
-            });
-        }
-    })
-</script>
 
     
 
@@ -692,7 +674,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.99ce1801c4bad426a42fc436add4721e149159dbb598636e9578fd59cf778c83.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.acb860605b1ae6c7821826c8f24d0360e3f636134b76d6255ec9d85aa54253e9.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
@@ -726,7 +708,7 @@
 
 
 
-    const musicDir = "https://wjy2018.github.io/" + 'music/';
+    const musicDir = "http://localhost:7469/" + 'music/';
     console.log(musicDir);
     const songs = [
         '8 Legged Dreams - Unlike Pluto',
@@ -787,10 +769,10 @@
     
     const live2d_path = "https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/";
     
-    const cssPath = "https://wjy2018.github.io/waifu/waifu.css";
-    const tipsJsonPath = "https://wjy2018.github.io/waifu/waifu-tips.json";
-    const tipsJsPath = "https://wjy2018.github.io/waifu/waifu-tips.js"
-    const live2dMinJsPath = "https://wjy2018.github.io/waifu/live2d.min.js";
+    const cssPath = "http://localhost:7469/waifu/waifu.css";
+    const tipsJsonPath = "http://localhost:7469/waifu/waifu-tips.json";
+    const tipsJsPath = "http://localhost:7469/waifu/waifu-tips.js"
+    const live2dMinJsPath = "http://localhost:7469/waifu/live2d.min.js";
     
     
     function loadExternalResource(url, type) {
@@ -883,7 +865,7 @@
 
 
     
-    <script src=https://wjy2018.github.io/js/topbar.min.js></script>
+    <script src=http://localhost:7469/js/topbar.min.js></script>
 
 
 <script>
@@ -932,7 +914,7 @@
 <style>
     @font-face {
       font-family: '爱点风雅黑';
-      src: url(https://wjy2018.github.io/font/%E7%88%B1%E7%82%B9%E9%A3%8E%E9%9B%85%E9%BB%91.ttf) format('truetype');
+      src: url(http://localhost:7469/font/%E7%88%B1%E7%82%B9%E9%A3%8E%E9%9B%85%E9%BB%91.ttf) format('truetype');
     }
   
     :root {
