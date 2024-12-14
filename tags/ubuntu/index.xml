@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Ubuntu on lastfantasy的博客</title>
-        <link>https://blog.lastfantasy.top/tags/ubuntu/</link>
+        <link>https://wjy2018.github.io/tags/ubuntu/</link>
         <description>Recent content in Ubuntu on lastfantasy的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>liunianmolian@163.com</copyright>
-        <lastBuildDate>Fri, 13 Dec 2024 23:18:22 +0800</lastBuildDate><atom:link href="https://blog.lastfantasy.top/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 14 Dec 2024 13:51:31 +0800</lastBuildDate><atom:link href="https://wjy2018.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>本地笔记本安装win11和ubuntu22.04双系统</title>
-        <link>https://blog.lastfantasy.top/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
+        <link>https://wjy2018.github.io/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
         <pubDate>Sun, 08 Dec 2024 10:15:43 +0800</pubDate>
         
-        <guid>https://blog.lastfantasy.top/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</guid>
+        <guid>https://wjy2018.github.io/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</guid>
         <description>&lt;h1 id=&#34;heading&#34;&gt;
 &lt;/h1&gt;&lt;h2 id=&#34;实现windows11及ubuntu2204双系统联想thinkbook-15-iil&#34;&gt;实现windows11及ubuntu22.04双系统（联想thinkbook 15 iil）
 &lt;/h2&gt;&lt;h3 id=&#34;背景&#34;&gt;背景
