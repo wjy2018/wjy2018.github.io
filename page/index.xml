@@ -2,34 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Pages on lastfantasy的博客</title>
-        <link>https://blog.lastfantasy.top/page/</link>
+        <link>https://wjy2018.github.io/page/</link>
         <description>Recent content in Pages on lastfantasy的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>liunianmolian@163.com</copyright>
-        <lastBuildDate>Sat, 14 Dec 2024 13:49:35 +0800</lastBuildDate><atom:link href="https://blog.lastfantasy.top/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 14 Dec 2024 13:49:35 +0800</lastBuildDate><atom:link href="https://wjy2018.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>归档</title>
-        <link>https://blog.lastfantasy.top/archives/</link>
+        <link>https://wjy2018.github.io/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.lastfantasy.top/archives/</guid>
+        <guid>https://wjy2018.github.io/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>关于</title>
-        <link>https://blog.lastfantasy.top/about/</link>
+        <link>https://wjy2018.github.io/about/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.lastfantasy.top/about/</guid>
+        <guid>https://wjy2018.github.io/about/</guid>
         <description>&lt;p&gt;人生不是一条轨道，而是一片旷野。如果有想法，就尝试去做，趁着你还有激情还有梦。&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>近期计划</title>
-        <link>https://blog.lastfantasy.top/plan/</link>
+        <link>https://wjy2018.github.io/plan/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.lastfantasy.top/plan/</guid>
+        <guid>https://wjy2018.github.io/plan/</guid>
         <description>&lt;p&gt;近期学习计划有些乱，经常为了一两个小事情搞一晚上，尤其是装双系统搭建ubuntu服务器这几天搞到两三点，有点扛不住。为了后续学习能够有效进行，这里需要列出一些当下做的还有计划做的事情。&lt;/p&gt;
 &lt;p&gt;目前的很多东西都是网上开源的东西，涉及到的技术栈多而杂，个人精力实在有限，趁着还有兴趣，规划一下后续的技术发展方向。&lt;/p&gt;
 &lt;p&gt;当前需要做几个网站来学习前后端：&lt;/p&gt;
@@ -125,18 +125,18 @@
         </item>
         <item>
         <title>搜索</title>
-        <link>https://blog.lastfantasy.top/search/</link>
+        <link>https://wjy2018.github.io/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.lastfantasy.top/search/</guid>
+        <guid>https://wjy2018.github.io/search/</guid>
         <description></description>
         </item>
         <item>
         <title>友情链接</title>
-        <link>https://blog.lastfantasy.top/links/</link>
+        <link>https://wjy2018.github.io/links/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.lastfantasy.top/links/</guid>
+        <guid>https://wjy2018.github.io/links/</guid>
         <description></description>
         </item>
         
