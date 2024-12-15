@@ -13,7 +13,7 @@
 <meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-12-15T17:44:59&#43;08:00 '/>
 <meta name="twitter:title" content="Tag: Blog - lastfantasy的博客">
 <meta name="twitter:description" content="欢迎来到我的博客"><link rel="alternate" type="application/rss&#43;xml" href="https://wjy2018.github.io/tags/blog/index.xml">
-    <link rel="shortcut icon" href="/static/favicon.ico" />
+    <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
     <body class="">
@@ -56,13 +56,13 @@
                     
                     
                         
-                        <img src="/img/avatar_hu4192562936903965714.png" width="300"
-                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                        <img src="/img/avatar_new_hu3356469194281127927.gif" width="300"
+                            height="267" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
                 </a>
                 
-                    <span class="emoji">🍥</span>
+                    <span class="emoji">😉</span>
                 
             </figure>
             
@@ -394,6 +394,9 @@
 </section>
             
         
+        <div style="height: 30%;width: 30%">
+            <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=xxxxx"></script>
+        </div>
     </aside>
 
 
@@ -434,12 +437,87 @@
         
         2024 liunianmolian@163.com
     </section>
+
     
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<section class="count_info">
+    <div>
+        本博客已稳定运行
+        <span id="ds" class="running-days"></span>
+        天
+        <span id="hs" class="running-days"></span>
+        小时
+        <span id="ms" class="running-days"></span>
+        分钟
+    </div>
+    <div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        共发表 2 篇文章 · 总计 5.50 k 字
+    </div>
+    <div>
+        <span id="busuanzi_container_site_pv">
+            本站总访问量<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span>次
+        </span>
+    </div>
+</section>
+
+
+<script>
+let s1 = '2024-11-30'; 
+s1 = new Date(s1.replace(/-/g, "/"));
+let s2 = new Date();
+let timeDifference = s2.getTime() - s1.getTime();
+
+let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+document.getElementById('ds').innerHTML = days;
+document.getElementById('hs').innerHTML = hours;
+document.getElementById('ms').innerHTML = minutes;
+
+</script>
+
+
+
+
     <section class="powerby">
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
         主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
+
+
+
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var int = setInterval(fixCount, 100);
+        var busuanziSiteOffset =  0 
+        function fixCount() {
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                clearInterval(int);
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + busuanziSiteOffset);
+            }
+        }
+    });
+</script>
 
 
             </main>
