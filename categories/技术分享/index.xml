@@ -2,17 +2,194 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>技术分享 on lastfantasy的博客</title>
-        <link>https://wjy2018.github.io/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</link>
+        <link>https://blog.lastfantasy.top/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</link>
         <description>Recent content in 技术分享 on lastfantasy的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>liunianmolian@163.com</copyright>
-        <lastBuildDate>Sun, 15 Dec 2024 17:44:59 +0800</lastBuildDate><atom:link href="https://wjy2018.github.io/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 22 Dec 2024 17:13:07 +0800</lastBuildDate><atom:link href="https://blog.lastfantasy.top/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ubuntu 22.04配置个人私有云盘NextCloud</title>
+        <link>https://blog.lastfantasy.top/p/ubuntu-22.04%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%A7%81%E6%9C%89%E4%BA%91%E7%9B%98nextcloud/</link>
+        <pubDate>Sun, 22 Dec 2024 15:59:05 +0800</pubDate>
+        
+        <guid>https://blog.lastfantasy.top/p/ubuntu-22.04%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%A7%81%E6%9C%89%E4%BA%91%E7%9B%98nextcloud/</guid>
+        <description>&lt;h2 id=&#34;私有云盘选择&#34;&gt;私有云盘选择
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/44103820&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何搭建自己的私有云盘 - 知乎&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;现有的云盘很多都开始要会员了，奇奇怪怪的收费还有广告无法忍受，出于成本考虑不太想被再次收割（除非完全没招），个人对于云盘的使用主要还是存取数据，比如一些有助于学习提升的资料以及历史数据记录等等。&lt;/p&gt;
+&lt;p&gt;网上的数据现在多多少少都会有安全性问题，而当前本地闲置笔记本刚好没有怎么使用，前段时间还搞了个ubuntu系统，而个人对于后续可能会有配置本地服务器的打算（比如搞个群晖NAS），可以暂时用ubuntu练手。&lt;/p&gt;
+&lt;p&gt;当前主流的私有云盘有如下几个（摘抄自上述知乎链接）&lt;/p&gt;
+&lt;h3 id=&#34;alist&#34;&gt;AList：
+&lt;/h3&gt;&lt;p&gt;演示地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=https%3A//alist.nn.ci&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://alist.nn.ci&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=https%3A//github.com/alist-org/alist-web&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/alist-org/al&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;nextcloud&#34;&gt;Nextcloud
+&lt;/h3&gt;&lt;p&gt;官网地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=https%3A//nextcloud.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://nextcloud.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=https%3A//nextcloud.com/install/%23instructions-server&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://nextcloud.com/install/#&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;cloudreve&#34;&gt;Cloudreve
+&lt;/h3&gt;&lt;p&gt;官网：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=https%3A//cloudreve.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://cloudreve.org&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;owncloud&#34;&gt;ownCloud
+&lt;/h3&gt;&lt;p&gt;了解更多：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=http%3A//www.iplaysoft.com/owncloud.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.iplaysoft.com/owncloud.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;官网地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=https%3A//owncloud.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://owncloud.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=https%3A//owncloud.org/install/%23edition&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://owncloud.org/install/#&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;seafile&#34;&gt;Seafile
+&lt;/h3&gt;&lt;p&gt;官网：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=https%3A//www.seafile.com/home/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.seafile.com/home/&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;dzzoffice-大桌子办公&#34;&gt;DzzOffice-大桌子办公
+&lt;/h3&gt;&lt;p&gt;官网地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=http%3A//www.dzzoffice.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.dzzoffice.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;演示地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=http%3A//dev.dzzoffice.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://dev.dzzoffice.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=http%3A//www.dzzoffice.com/download.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.dzzoffice.com/download.&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;可道云&#34;&gt;可道云
+&lt;/h3&gt;&lt;p&gt;官网地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=http%3A//www.kalcaddle.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.kalcaddle.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;演示地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=http%3A//demo.kalcaddle.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://demo.kalcaddle.com/&lt;/a&gt;（登录用户名与密码都是demo）&lt;/p&gt;
+&lt;p&gt;下载地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=http%3A//www.kalcaddle.com/download.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.kalcaddle.com/download.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;还有很多没完全抄下来，就这样吧，暂时先选了nextcloud来配置，原因就是在B站刚好刷到了&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1ac411w7Kg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.bilibili.com/video/BV1ac411w7Kg&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;nextcloud在ubuntu系统的安装和搭建&#34;&gt;NextCloud在ubuntu系统的安装和搭建
+&lt;/h2&gt;&lt;p&gt;这里是通过snap来安装nextcloud&lt;/p&gt;
+&lt;h3 id=&#34;安装snap&#34;&gt;安装snap
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install snapd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;安装snapcraft&#34;&gt;安装snapcraft
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install snapcraft
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;通过snap安装nextcloud&#34;&gt;通过snap安装nextcloud
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo snap install nextcloud
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;查看snap历史修改确认nextcloud是否安装成功&#34;&gt;查看snap历史修改确认nextcloud是否安装成功
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;snap changes nextcloud
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;修改nextcloud端口可选&#34;&gt;修改nextcloud端口（可选）
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo snap &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; nextcloud ports.http&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;60001&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;启动nextcloud&#34;&gt;启动nextcloud
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo snap start nextcloud
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;此时可以在浏览器上访问127.0.0.1:60001来确认nextcloud开启状态，默认端口是80，这里修改成60001&lt;/p&gt;
+&lt;p&gt;首次进入之后需要设置管理员账户和密码（太过简单不予演示），设置完毕后就可以本地使用了。&lt;/p&gt;
+&lt;h2 id=&#34;内网穿透实现外网访问nextcloud&#34;&gt;内网穿透实现外网访问nextcloud
+&lt;/h2&gt;&lt;p&gt;我这里使用的是樱花穿透（sakura frp），之前搭饥荒服务器有用到，继续复用。
+ubuntu这边的配置需要根据实际情况先搭建sakura frp的服务&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.natfrp.com/launcher/usage.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SakuraFrp 启动器安装 / 使用指南 | SakuraFrp 帮助文档&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;根据教程一步一步来，确保“远程管理”可以正常访问即可。&lt;/p&gt;
+&lt;h3 id=&#34;创建隧道&#34;&gt;创建隧道
+&lt;/h3&gt;&lt;p&gt;这里没有使用http或者https来创建，使用了TCP来创建隧道，设置好本地端口号（我这里是60001），然后同步打开自动https，点击保存即可创建完成&lt;/p&gt;
+&lt;h3 id=&#34;打开隧道&#34;&gt;打开隧道
+&lt;/h3&gt;&lt;p&gt;进入“远程管理”界面，刷新隧道列表，然后把对应隧道打开即可，后续就可以通过特定地址+端口直接访问nextcloud&lt;/p&gt;
+&lt;h2 id=&#34;nextcloud设置http访问&#34;&gt;nextcloud设置http访问
+&lt;/h2&gt;&lt;p&gt;在内网穿透配置完毕后，通过内网穿透地址和端口访问时，会提示“通过不被信任的域名访问”。&lt;/p&gt;
+&lt;p&gt;实际按照参考视频的做法用如下命令行尝试，并不能解决问题：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo nextcloud.occ config:system:set trusted_domains &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; --value&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;*.*.*.*
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;执行上述命令时候，由于本地使用的是zsh而非bash，报了如下错误&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;zsh: no matches found: --value&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;*.*.*.*
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;后续是参考 &lt;a class=&#34;link&#34; href=&#34;https://blog.51cto.com/u_14355665/6099385&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.51cto.com/u_14355665/6099385&lt;/a&gt; 才ok的&lt;/p&gt;
+&lt;p&gt;实际修改内容为&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#最后一行添加如下内容&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;unsetopt nomatch
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#重新source&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;不被信任这个问题通过百度使用类似下面的操作解决了。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/jsrd/p/17488223.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nextcloud允许不被信任的域访问 取消 trusted domains - 极速热度 - 博客园&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;使用app同步访问nextcloud&#34;&gt;使用app同步访问nextcloud
+&lt;/h2&gt;&lt;p&gt;nextcloud的安卓版本链接如下：
+&lt;a class=&#34;link&#34; href=&#34;http://nextcloud.apks.software/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://nextcloud.apks.software/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这里我下载了Nextcloud 3.29.2才能使用&lt;/p&gt;
+&lt;h3 id=&#34;其他参考&#34;&gt;其他参考
+&lt;/h3&gt;&lt;p&gt;docker安装nextcloud的方法
+&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/yijian0645/article/details/137109351&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nextcloud个人云盘搭建与基本使用-CSDN博客&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;近期准备把原来的动态自动部署暂停，统一转到github的blog上。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>本地笔记本安装win11和ubuntu22.04双系统</title>
-        <link>https://wjy2018.github.io/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
+        <link>https://blog.lastfantasy.top/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
         <pubDate>Sun, 08 Dec 2024 10:15:43 +0800</pubDate>
         
-        <guid>https://wjy2018.github.io/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</guid>
+        <guid>https://blog.lastfantasy.top/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</guid>
         <description>&lt;h1 id=&#34;heading&#34;&gt;
 &lt;/h1&gt;&lt;h2 id=&#34;实现windows11及ubuntu2204双系统联想thinkbook-15-iil&#34;&gt;实现windows11及ubuntu22.04双系统（联想thinkbook 15 iil）
 &lt;/h2&gt;&lt;h3 id=&#34;背景&#34;&gt;背景
@@ -75,10 +252,10 @@
         </item>
         <item>
         <title>Cloudflare相关部署配置</title>
-        <link>https://wjy2018.github.io/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/</link>
+        <link>https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/</link>
         <pubDate>Sat, 30 Nov 2024 18:32:30 +0800</pubDate>
         
-        <guid>https://wjy2018.github.io/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/</guid>
+        <guid>https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/</guid>
         <description>&lt;h2 id=&#34;cloudflare-worker搭配meting-api配置&#34;&gt;cloudflare worker搭配meting-api配置
 &lt;/h2&gt;&lt;p&gt;网上能搜到的搭建教程大多都是github项目上自带的说明，最新的版本说明中只有docker、deno、本地node、vercel以及反向代理等。&lt;/p&gt;
 &lt;p&gt;具体原文如下：&lt;/p&gt;
@@ -124,10 +301,10 @@
 &lt;p&gt;方法可以参考上面这种，不过既然本地之前已经生成了对应文件，直接copy过来就可以了。&lt;/p&gt;
 &lt;p&gt;不过，按照上述流程操作完之后直接访问依旧是访问不了，因此我这边是反复删除和创建多次尝试，依旧不行。奇怪的是等了一段时间，我把worker自定义域配置了一下，通过自定义域居然就能访问了。&lt;/p&gt;
 &lt;p&gt;效果如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wjy2018.github.io/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api.png&#34;
 	width=&#34;670&#34;
 	height=&#34;437&#34;
-	srcset=&#34;https://wjy2018.github.io/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api_hu2679701382117244862.png 480w, https://wjy2018.github.io/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api_hu4374303704572110211.png 1024w&#34;
+	srcset=&#34;https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api_hu2679701382117244862.png 480w, https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api_hu4374303704572110211.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;meting-api&#34;
@@ -139,10 +316,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;相关test也是没有问题的：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://wjy2018.github.io/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test.png&#34;
 	width=&#34;1251&#34;
 	height=&#34;651&#34;
-	srcset=&#34;https://wjy2018.github.io/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test_hu7066125982939677387.png 480w, https://wjy2018.github.io/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test_hu15829411023214066252.png 1024w&#34;
+	srcset=&#34;https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test_hu7066125982939677387.png 480w, https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test_hu15829411023214066252.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;meting-api-test&#34;
