@@ -19,42 +19,42 @@
 &lt;p&gt;网上的数据现在多多少少都会有安全性问题，而当前本地闲置笔记本刚好没有怎么使用，前段时间还搞了个ubuntu系统，而个人对于后续可能会有配置本地服务器的打算（比如搞个群晖NAS），可以暂时用ubuntu练手。&lt;/p&gt;
 &lt;p&gt;当前主流的私有云盘有如下几个（摘抄自上述知乎链接）&lt;/p&gt;
 &lt;h3 id=&#34;alist&#34;&gt;AList：
-&lt;/h3&gt;&lt;p&gt;演示地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=https%3A//alist.nn.ci&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/h3&gt;&lt;p&gt;演示地址：&lt;a class=&#34;link&#34; href=&#34;https://alist.nn.ci&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://alist.nn.ci&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;下载地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=https%3A//github.com/alist-org/alist-web&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/alist-org/al&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载地址：&lt;a class=&#34;link&#34; href=&#34;https://github.com/alist-org/alist-web&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/alist-org/alist-web&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;nextcloud&#34;&gt;Nextcloud
-&lt;/h3&gt;&lt;p&gt;官网地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=https%3A//nextcloud.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/h3&gt;&lt;p&gt;官网地址：&lt;a class=&#34;link&#34; href=&#34;https://nextcloud.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://nextcloud.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;下载地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=https%3A//nextcloud.com/install/%23instructions-server&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://nextcloud.com/install/#&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载地址：&lt;a class=&#34;link&#34; href=&#34;https://nextcloud.com/install/#instructions-server&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://nextcloud.com/install/#instructions-server&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;cloudreve&#34;&gt;Cloudreve
-&lt;/h3&gt;&lt;p&gt;官网：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=https%3A//cloudreve.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/h3&gt;&lt;p&gt;官网：&lt;a class=&#34;link&#34; href=&#34;https://cloudreve.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://cloudreve.org&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;owncloud&#34;&gt;ownCloud
-&lt;/h3&gt;&lt;p&gt;了解更多：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=http%3A//www.iplaysoft.com/owncloud.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/h3&gt;&lt;p&gt;了解更多：&lt;a class=&#34;link&#34; href=&#34;http://www.iplaysoft.com/owncloud.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://www.iplaysoft.com/owncloud.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;官网地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=https%3A//owncloud.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;官网地址：&lt;a class=&#34;link&#34; href=&#34;https://owncloud.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://owncloud.org/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;下载地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=https%3A//owncloud.org/install/%23edition&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://owncloud.org/install/#&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载地址：&lt;a class=&#34;link&#34; href=&#34;https://owncloud.org/install/#edition&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://owncloud.org/install/#edition&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;seafile&#34;&gt;Seafile
-&lt;/h3&gt;&lt;p&gt;官网：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=https%3A//www.seafile.com/home/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/h3&gt;&lt;p&gt;官网：&lt;a class=&#34;link&#34; href=&#34;https://www.seafile.com/home/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://www.seafile.com/home/&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;dzzoffice-大桌子办公&#34;&gt;DzzOffice-大桌子办公
-&lt;/h3&gt;&lt;p&gt;官网地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=http%3A//www.dzzoffice.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/h3&gt;&lt;p&gt;官网地址：&lt;a class=&#34;link&#34; href=&#34;http://www.dzzoffice.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://www.dzzoffice.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;演示地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=http%3A//dev.dzzoffice.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;演示地址：&lt;a class=&#34;link&#34; href=&#34;http://dev.dzzoffice.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://dev.dzzoffice.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;下载地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=http%3A//www.dzzoffice.com/download.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;http://www.dzzoffice.com/download.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载地址：&lt;a class=&#34;link&#34; href=&#34;http://www.dzzoffice.com/download.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.dzzoffice.com/download.html&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;可道云&#34;&gt;可道云
-&lt;/h3&gt;&lt;p&gt;官网地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=http%3A//www.kalcaddle.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/h3&gt;&lt;p&gt;官网地址：&lt;a class=&#34;link&#34; href=&#34;http://www.kalcaddle.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://www.kalcaddle.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;演示地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=http%3A//demo.kalcaddle.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;演示地址：&lt;a class=&#34;link&#34; href=&#34;http://demo.kalcaddle.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://demo.kalcaddle.com/&lt;/a&gt;（登录用户名与密码都是demo）&lt;/p&gt;
-&lt;p&gt;下载地址：&lt;a class=&#34;link&#34; href=&#34;https://link.zhihu.com/?target=http%3A//www.kalcaddle.com/download.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;http://www.kalcaddle.com/download.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载地址：&lt;a class=&#34;link&#34; href=&#34;http://www.kalcaddle.com/download.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.kalcaddle.com/download.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;还有很多没完全抄下来，就这样吧，暂时先选了nextcloud来配置，原因就是在B站刚好刷到了&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1ac411w7Kg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://www.bilibili.com/video/BV1ac411w7Kg&lt;/a&gt;&lt;/p&gt;
@@ -181,7 +181,7 @@ ubuntu这边的配置需要根据实际情况先搭建sakura frp的服务&lt;/p&
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;move_snap_nextcloud.png&#34;
+		alt=&#34;move_snap_nextcloud&#34;
 	
 	
 &gt;&lt;/p&gt;

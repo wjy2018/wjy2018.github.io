@@ -10,7 +10,7 @@
 <meta property='og:description' content="在ubuntu22.04系统上搭建nextcloud个人私有云盘并实现安卓端访问">
 <meta property='og:url' content='https://blog.lastfantasy.top/p/ubuntu-22.04%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%A7%81%E6%9C%89%E4%BA%91%E7%9B%98nextcloud/'>
 <meta property='og:site_name' content='lastfantasy的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='ubuntu' /><meta property='article:tag' content='nextcloud' /><meta property='article:published_time' content='2024-12-22T15:59:05&#43;08:00'/><meta property='article:modified_time' content='2024-12-25T00:30:39&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='ubuntu' /><meta property='article:tag' content='nextcloud' /><meta property='article:published_time' content='2024-12-22T15:59:05&#43;08:00'/><meta property='article:modified_time' content='2024-12-25T00:42:59&#43;08:00'/>
 <meta name="twitter:title" content="ubuntu 22.04配置个人私有云盘NextCloud">
 <meta name="twitter:description" content="在ubuntu22.04系统上搭建nextcloud个人私有云盘并实现安卓端访问">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -394,7 +394,7 @@
 
 
             <time>
-                2024-12-25 00:30 &#43;0800
+                2024-12-25 00:42 &#43;0800
             </time>
         </div>
             <div>
@@ -429,42 +429,42 @@
 <p>网上的数据现在多多少少都会有安全性问题，而当前本地闲置笔记本刚好没有怎么使用，前段时间还搞了个ubuntu系统，而个人对于后续可能会有配置本地服务器的打算（比如搞个群晖NAS），可以暂时用ubuntu练手。</p>
 <p>当前主流的私有云盘有如下几个（摘抄自上述知乎链接）</p>
 <h3 id="alist">AList：
-</h3><p>演示地址：<a class="link" href="https://link.zhihu.com/?target=https%3A//alist.nn.ci"  target="_blank" rel="noopener"
+</h3><p>演示地址：<a class="link" href="https://alist.nn.ci"  target="_blank" rel="noopener"
     >https://alist.nn.ci</a></p>
-<p>下载地址：<a class="link" href="https://link.zhihu.com/?target=https%3A//github.com/alist-org/alist-web"  target="_blank" rel="noopener"
-    >https://github.com/alist-org/al</a></p>
+<p>下载地址：<a class="link" href="https://github.com/alist-org/alist-web"  target="_blank" rel="noopener"
+    >https://github.com/alist-org/alist-web</a></p>
 <h3 id="nextcloud">Nextcloud
-</h3><p>官网地址：<a class="link" href="https://link.zhihu.com/?target=https%3A//nextcloud.com/"  target="_blank" rel="noopener"
+</h3><p>官网地址：<a class="link" href="https://nextcloud.com/"  target="_blank" rel="noopener"
     >https://nextcloud.com/</a></p>
-<p>下载地址：<a class="link" href="https://link.zhihu.com/?target=https%3A//nextcloud.com/install/%23instructions-server"  target="_blank" rel="noopener"
-    >https://nextcloud.com/install/#</a></p>
+<p>下载地址：<a class="link" href="https://nextcloud.com/install/#instructions-server"  target="_blank" rel="noopener"
+    >https://nextcloud.com/install/#instructions-server</a></p>
 <h3 id="cloudreve">Cloudreve
-</h3><p>官网：<a class="link" href="https://link.zhihu.com/?target=https%3A//cloudreve.org/"  target="_blank" rel="noopener"
+</h3><p>官网：<a class="link" href="https://cloudreve.org"  target="_blank" rel="noopener"
     >https://cloudreve.org</a></p>
 <h3 id="owncloud">ownCloud
-</h3><p>了解更多：<a class="link" href="https://link.zhihu.com/?target=http%3A//www.iplaysoft.com/owncloud.html"  target="_blank" rel="noopener"
+</h3><p>了解更多：<a class="link" href="http://www.iplaysoft.com/owncloud.html"  target="_blank" rel="noopener"
     >http://www.iplaysoft.com/owncloud.html</a></p>
-<p>官网地址：<a class="link" href="https://link.zhihu.com/?target=https%3A//owncloud.org/"  target="_blank" rel="noopener"
+<p>官网地址：<a class="link" href="https://owncloud.org/"  target="_blank" rel="noopener"
     >https://owncloud.org/</a></p>
-<p>下载地址：<a class="link" href="https://link.zhihu.com/?target=https%3A//owncloud.org/install/%23edition"  target="_blank" rel="noopener"
-    >https://owncloud.org/install/#</a></p>
+<p>下载地址：<a class="link" href="https://owncloud.org/install/#edition"  target="_blank" rel="noopener"
+    >https://owncloud.org/install/#edition</a></p>
 <h3 id="seafile">Seafile
-</h3><p>官网：<a class="link" href="https://link.zhihu.com/?target=https%3A//www.seafile.com/home/"  target="_blank" rel="noopener"
+</h3><p>官网：<a class="link" href="https://www.seafile.com/home/"  target="_blank" rel="noopener"
     >https://www.seafile.com/home/</a></p>
 <h3 id="dzzoffice-大桌子办公">DzzOffice-大桌子办公
-</h3><p>官网地址：<a class="link" href="https://link.zhihu.com/?target=http%3A//www.dzzoffice.com/"  target="_blank" rel="noopener"
+</h3><p>官网地址：<a class="link" href="http://www.dzzoffice.com/"  target="_blank" rel="noopener"
     >http://www.dzzoffice.com/</a></p>
-<p>演示地址：<a class="link" href="https://link.zhihu.com/?target=http%3A//dev.dzzoffice.com/"  target="_blank" rel="noopener"
+<p>演示地址：<a class="link" href="http://dev.dzzoffice.com/"  target="_blank" rel="noopener"
     >http://dev.dzzoffice.com/</a></p>
-<p>下载地址：<a class="link" href="https://link.zhihu.com/?target=http%3A//www.dzzoffice.com/download.html"  target="_blank" rel="noopener"
-    >http://www.dzzoffice.com/download.</a></p>
+<p>下载地址：<a class="link" href="http://www.dzzoffice.com/download.html"  target="_blank" rel="noopener"
+    >http://www.dzzoffice.com/download.html</a></p>
 <h3 id="可道云">可道云
-</h3><p>官网地址：<a class="link" href="https://link.zhihu.com/?target=http%3A//www.kalcaddle.com/"  target="_blank" rel="noopener"
+</h3><p>官网地址：<a class="link" href="http://www.kalcaddle.com/"  target="_blank" rel="noopener"
     >http://www.kalcaddle.com/</a></p>
-<p>演示地址：<a class="link" href="https://link.zhihu.com/?target=http%3A//demo.kalcaddle.com/"  target="_blank" rel="noopener"
+<p>演示地址：<a class="link" href="http://demo.kalcaddle.com/"  target="_blank" rel="noopener"
     >http://demo.kalcaddle.com/</a>（登录用户名与密码都是demo）</p>
-<p>下载地址：<a class="link" href="https://link.zhihu.com/?target=http%3A//www.kalcaddle.com/download.html"  target="_blank" rel="noopener"
-    >http://www.kalcaddle.com/download.</a></p>
+<p>下载地址：<a class="link" href="http://www.kalcaddle.com/download.html"  target="_blank" rel="noopener"
+    >http://www.kalcaddle.com/download.html</a></p>
 <p>还有很多没完全抄下来，就这样吧，暂时先选了nextcloud来配置，原因就是在B站刚好刷到了</p>
 <p><a class="link" href="https://www.bilibili.com/video/BV1ac411w7Kg"  target="_blank" rel="noopener"
     >https://www.bilibili.com/video/BV1ac411w7Kg</a></p>
@@ -591,7 +591,7 @@ ubuntu这边的配置需要根据实际情况先搭建sakura frp的服务</p>
 	
 	loading="lazy"
 	
-		alt="move_snap_nextcloud.png"
+		alt="move_snap_nextcloud"
 	
 	
 ></p>
@@ -726,7 +726,7 @@ ubuntu这边的配置需要根据实际情况先搭建sakura frp的服务</p>
 
 
         <span>
-            最后更新于 2024-12-25 00:30 &#43;0800
+            最后更新于 2024-12-25 00:42 &#43;0800
         </span>
     </section></footer>
 
@@ -828,7 +828,7 @@ ubuntu这边的配置需要根据实际情况先搭建sakura frp的服务</p>
         
         
         
-        共发表 3 篇文章 · 总计 8.30 k 字
+        共发表 3 篇文章 · 总计 8.34 k 字
     </div>
     <div>
         
