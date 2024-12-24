@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Blog on lastfantasy的博客</title>
-        <link>https://blog.lastfantasy.top/tags/blog/</link>
+        <link>http://localhost:10480/tags/blog/</link>
         <description>Recent content in Blog on lastfantasy的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>liunianmolian@163.com</copyright>
-        <lastBuildDate>Sun, 15 Dec 2024 17:44:59 +0800</lastBuildDate><atom:link href="https://blog.lastfantasy.top/tags/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 15 Dec 2024 17:44:59 +0800</lastBuildDate><atom:link href="http://localhost:10480/tags/blog/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Cloudflare相关部署配置</title>
-        <link>https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/</link>
+        <link>http://localhost:10480/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/</link>
         <pubDate>Sat, 30 Nov 2024 18:32:30 +0800</pubDate>
         
-        <guid>https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/</guid>
+        <guid>http://localhost:10480/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/</guid>
         <description>&lt;h2 id=&#34;cloudflare-worker搭配meting-api配置&#34;&gt;cloudflare worker搭配meting-api配置
 &lt;/h2&gt;&lt;p&gt;网上能搜到的搭建教程大多都是github项目上自带的说明，最新的版本说明中只有docker、deno、本地node、vercel以及反向代理等。&lt;/p&gt;
 &lt;p&gt;具体原文如下：&lt;/p&gt;
@@ -58,10 +58,10 @@
 &lt;p&gt;方法可以参考上面这种，不过既然本地之前已经生成了对应文件，直接copy过来就可以了。&lt;/p&gt;
 &lt;p&gt;不过，按照上述流程操作完之后直接访问依旧是访问不了，因此我这边是反复删除和创建多次尝试，依旧不行。奇怪的是等了一段时间，我把worker自定义域配置了一下，通过自定义域居然就能访问了。&lt;/p&gt;
 &lt;p&gt;效果如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:10480/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api.png&#34;
 	width=&#34;670&#34;
 	height=&#34;437&#34;
-	srcset=&#34;https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api_hu2679701382117244862.png 480w, https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api_hu4374303704572110211.png 1024w&#34;
+	srcset=&#34;http://localhost:10480/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api_hu2679701382117244862.png 480w, http://localhost:10480/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api_hu4374303704572110211.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;meting-api&#34;
@@ -73,10 +73,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;相关test也是没有问题的：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:10480/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test.png&#34;
 	width=&#34;1251&#34;
 	height=&#34;651&#34;
-	srcset=&#34;https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test_hu7066125982939677387.png 480w, https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test_hu15829411023214066252.png 1024w&#34;
+	srcset=&#34;http://localhost:10480/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test_hu7066125982939677387.png 480w, http://localhost:10480/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test_hu15829411023214066252.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;meting-api-test&#34;

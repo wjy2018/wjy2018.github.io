@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Test on lastfantasy的博客</title>
-        <link>https://blog.lastfantasy.top/categories/test/</link>
+        <link>http://localhost:10480/categories/test/</link>
         <description>Recent content in Test on lastfantasy的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>liunianmolian@163.com</copyright><atom:link href="https://blog.lastfantasy.top/categories/test/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>liunianmolian@163.com</copyright><atom:link href="http://localhost:10480/categories/test/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>
