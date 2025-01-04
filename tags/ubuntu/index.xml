@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Ubuntu on lastfantasy的博客</title>
-        <link>http://localhost:10480/tags/ubuntu/</link>
+        <link>https://blog.lastfantasy.top/tags/ubuntu/</link>
         <description>Recent content in Ubuntu on lastfantasy的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>liunianmolian@163.com</copyright>
-        <lastBuildDate>Wed, 25 Dec 2024 01:28:15 +0800</lastBuildDate><atom:link href="http://localhost:10480/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 25 Dec 2024 01:30:53 +0800</lastBuildDate><atom:link href="https://blog.lastfantasy.top/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>ubuntu 22.04配置个人私有云盘NextCloud</title>
-        <link>http://localhost:10480/p/ubuntu-22.04%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%A7%81%E6%9C%89%E4%BA%91%E7%9B%98nextcloud/</link>
+        <link>https://blog.lastfantasy.top/p/ubuntu-22.04%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%A7%81%E6%9C%89%E4%BA%91%E7%9B%98nextcloud/</link>
         <pubDate>Sun, 22 Dec 2024 15:59:05 +0800</pubDate>
         
-        <guid>http://localhost:10480/p/ubuntu-22.04%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%A7%81%E6%9C%89%E4%BA%91%E7%9B%98nextcloud/</guid>
+        <guid>https://blog.lastfantasy.top/p/ubuntu-22.04%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%A7%81%E6%9C%89%E4%BA%91%E7%9B%98nextcloud/</guid>
         <description>&lt;h2 id=&#34;私有云盘选择&#34;&gt;私有云盘选择
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/44103820&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;如何搭建自己的私有云盘 - 知乎&lt;/a&gt;&lt;/p&gt;
@@ -176,7 +176,7 @@ ubuntu这边的配置需要根据实际情况先搭建sakura frp的服务&lt;/p&
 &lt;p&gt;试了很多方案，终于找到可靠信息。&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://help.nextcloud.com/t/changing-data-directory-location-with-snap-installation-procedures/23841/2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Changing data directory location with snap installation procedures - ℹ️ Support - Nextcloud community&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:10480/post/nextCloud_ubuntu/move-snap-nextcloud.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.lastfantasy.top/post/nextCloud_ubuntu/move-snap-nextcloud.png&#34;
 	
 	
 	
@@ -186,7 +186,7 @@ ubuntu这边的配置需要根据实际情况先搭建sakura frp的服务&lt;/p&
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;(同样的引用方式，为什么此图片显示不出来,必须写成)&lt;/p&gt;
+&lt;p&gt;(同样的引用方式，网页此图片显示不出来本地可以,必须写成post/xxxx/xxx.png的形式网页才会显示, 相对路径无法显示)&lt;/p&gt;
 &lt;p&gt;这里是说，通过snap命令安装的软件是没有权限访问外部目录的，之前ubuntu预留了将近60GB的空间，在一通操作下把对应存储空间挂在到了/ext-data目录下，不论怎么操作nextcloud都是无法访问的。所以问题出在snap这里而不是nextcloud这里。&lt;/p&gt;
 &lt;p&gt;根据官网的描述和操作，执行之后还是报错，一度陷入绝望。
 &lt;a class=&#34;link&#34; href=&#34;https://github.com/nextcloud-snap/nextcloud-snap/wiki/Change-data-directory-to-use-another-disk-partition&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -297,10 +297,10 @@ ubuntu这边的配置需要根据实际情况先搭建sakura frp的服务&lt;/p&
         </item>
         <item>
         <title>本地笔记本安装win11和ubuntu22.04双系统</title>
-        <link>http://localhost:10480/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
+        <link>https://blog.lastfantasy.top/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
         <pubDate>Sun, 08 Dec 2024 10:15:43 +0800</pubDate>
         
-        <guid>http://localhost:10480/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</guid>
+        <guid>https://blog.lastfantasy.top/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</guid>
         <description>&lt;h1 id=&#34;heading&#34;&gt;
 &lt;/h1&gt;&lt;h2 id=&#34;实现windows11及ubuntu2204双系统联想thinkbook-15-iil&#34;&gt;实现windows11及ubuntu22.04双系统（联想thinkbook 15 iil）
 &lt;/h2&gt;&lt;h3 id=&#34;背景&#34;&gt;背景
