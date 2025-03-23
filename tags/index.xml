@@ -2,65 +2,65 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on lastfantasy的博客</title>
-        <link>https://blog.lastfantasy.top/tags/</link>
+        <link>http://localhost:1313/tags/</link>
         <description>Recent content in Tags on lastfantasy的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>liunianmolian@163.com</copyright>
-        <lastBuildDate>Wed, 25 Dec 2024 01:30:53 +0800</lastBuildDate><atom:link href="https://blog.lastfantasy.top/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 02 Feb 2025 20:04:53 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Nextcloud</title>
-        <link>https://blog.lastfantasy.top/tags/nextcloud/</link>
+        <link>http://localhost:1313/tags/nextcloud/</link>
         <pubDate>Sun, 22 Dec 2024 15:59:05 +0800</pubDate>
         
-        <guid>https://blog.lastfantasy.top/tags/nextcloud/</guid>
+        <guid>http://localhost:1313/tags/nextcloud/</guid>
         <description></description>
         </item>
         <item>
         <title>Ubuntu</title>
-        <link>https://blog.lastfantasy.top/tags/ubuntu/</link>
+        <link>http://localhost:1313/tags/ubuntu/</link>
         <pubDate>Sun, 22 Dec 2024 15:59:05 +0800</pubDate>
         
-        <guid>https://blog.lastfantasy.top/tags/ubuntu/</guid>
+        <guid>http://localhost:1313/tags/ubuntu/</guid>
         <description></description>
         </item>
         <item>
         <title>双系统</title>
-        <link>https://blog.lastfantasy.top/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
+        <link>http://localhost:1313/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
         <pubDate>Sun, 08 Dec 2024 10:15:43 +0800</pubDate>
         
-        <guid>https://blog.lastfantasy.top/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/</guid>
+        <guid>http://localhost:1313/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/</guid>
         <description></description>
         </item>
         <item>
         <title>Blog</title>
-        <link>https://blog.lastfantasy.top/tags/blog/</link>
+        <link>http://localhost:1313/tags/blog/</link>
         <pubDate>Sat, 30 Nov 2024 18:32:30 +0800</pubDate>
         
-        <guid>https://blog.lastfantasy.top/tags/blog/</guid>
+        <guid>http://localhost:1313/tags/blog/</guid>
         <description></description>
         </item>
         <item>
         <title>Cloudflare</title>
-        <link>https://blog.lastfantasy.top/tags/cloudflare/</link>
+        <link>http://localhost:1313/tags/cloudflare/</link>
         <pubDate>Sat, 30 Nov 2024 18:32:30 +0800</pubDate>
         
-        <guid>https://blog.lastfantasy.top/tags/cloudflare/</guid>
+        <guid>http://localhost:1313/tags/cloudflare/</guid>
         <description></description>
         </item>
         <item>
         <title>Hugo</title>
-        <link>https://blog.lastfantasy.top/tags/hugo/</link>
+        <link>http://localhost:1313/tags/hugo/</link>
         <pubDate>Sat, 30 Nov 2024 18:32:30 +0800</pubDate>
         
-        <guid>https://blog.lastfantasy.top/tags/hugo/</guid>
+        <guid>http://localhost:1313/tags/hugo/</guid>
         <description></description>
         </item>
         <item>
         <title>Meting-Api</title>
-        <link>https://blog.lastfantasy.top/tags/meting-api/</link>
+        <link>http://localhost:1313/tags/meting-api/</link>
         <pubDate>Sat, 30 Nov 2024 18:32:30 +0800</pubDate>
         
-        <guid>https://blog.lastfantasy.top/tags/meting-api/</guid>
+        <guid>http://localhost:1313/tags/meting-api/</guid>
         <description></description>
         </item>
         
