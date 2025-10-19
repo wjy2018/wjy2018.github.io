@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>liunianmolian@163.com</copyright>
-        <lastBuildDate>Sat, 14 Dec 2024 13:49:35 +0800</lastBuildDate><atom:link href="https://blog.lastfantasy.top/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 19 Oct 2025 11:44:49 +0800</lastBuildDate><atom:link href="https://blog.lastfantasy.top/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>归档</title>
         <link>https://blog.lastfantasy.top/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
@@ -30,7 +30,45 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://blog.lastfantasy.top/plan/</guid>
-        <description>&lt;p&gt;近期学习计划有些乱，经常为了一两个小事情搞一晚上，尤其是装双系统搭建ubuntu服务器这几天搞到两三点，有点扛不住。为了后续学习能够有效进行，这里需要列出一些当下做的还有计划做的事情。&lt;/p&gt;
+        <description>&lt;table border=&#34;2&#34;&gt;
+&lt;tr&gt;
+&lt;th width=&#34;15%&#34; &gt;计划实现功能&lt;/th&gt;
+&lt;th width=&#34;40%&#34; align=&#34;left&#34;&gt;具体功能细节&lt;/th&gt;
+&lt;th width=&#34;20%&#34; &gt;涉及技术栈&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt; 实现状态 &lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34; bgcolor=&#34;#ffffffff&#34;&gt;个人博客&lt;/td&gt;
+&lt;td bgcolor=&#34;#ffffffff&#34;&gt; 1. 2D模型&lt;br/&gt; 2. 自定鼠标&lt;br/&gt; 3.音乐插件&lt;br/&gt; 4.评论系统&lt;br/&gt;&lt;/td&gt;
+&lt;td bgcolor=&#34;#ffffffff&#34;&gt; JavaScript + css + html&lt;/td&gt;
+&lt;td bgcolor=&#34;#7CFC00&#34;&gt; 已完成&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34; bgcolor=&#34;#ffffffff&#34;&gt;网页版音乐播放器&lt;/td&gt;
+&lt;td bgcolor=&#34;#ffffffff&#34;&gt; 1. 进度条功能 &lt;br/&gt; 2. 歌词多元化&lt;br/&gt; 3. 播放列表&lt;br/&gt; 4. 随机播放功能&lt;br/&gt;&lt;/td&gt;
+&lt;td bgcolor=&#34;#FFFF00&#34;&gt;待定&lt;/td&gt;
+&lt;td bgcolor=&#34;#FFB6C1&#34;&gt; 未开始&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34; bgcolor=&#34;#ffffffff&#34;&gt;个人自定义导航&lt;/td&gt;
+&lt;td bgcolor=&#34;#ffffffff&#34;&gt; 1. 导航栏&lt;br/&gt; 2. 导航项&lt;br/&gt; 3. 导航项点击事件&lt;br/&gt;&lt;/td&gt;
+&lt;td bgcolor=&#34;#FFFF00&#34;&gt;待定&lt;/td&gt;
+&lt;td bgcolor=&#34;#FFB6C1&#34;&gt; 未开始&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34; bgcolor=&#34;#ffffffff&#34;&gt;网站监测&lt;/td&gt;
+&lt;td bgcolor=&#34;#ffffffff&#34;&gt; 1. 网站访问量统计&lt;br/&gt; 2. 网站访问时间统计&lt;br/&gt; 3. 网站访问ip统计&lt;br/&gt;&lt;/td&gt;
+&lt;td bgcolor=&#34;#FFFF00&#34;&gt;待定&lt;/td&gt;
+&lt;td bgcolor=&#34;#FFB6C1&#34;&gt; 未开始&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34; bgcolor=&#34;#ffffffff&#34;&gt;博客动态背景&lt;/td&gt;
+&lt;td bgcolor=&#34;#ffffffff&#34;&gt; 1. 动态加载动画&lt;br/&gt; 2. 动态背景&lt;br/&gt; 3. 鼠标动态交互&lt;br/&gt;&lt;/td&gt;
+&lt;td bgcolor=&#34;#FFFF00&#34;&gt;待定&lt;/td&gt;
+&lt;td bgcolor=&#34;#00FFFF&#34;&gt; 进行中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;近期学习计划有些乱，经常为了一两个小事情搞一晚上，尤其是装双系统搭建ubuntu服务器这几天搞到两三点，有点扛不住。为了后续学习能够有效进行，这里需要列出一些当下做的还有计划做的事情。&lt;/p&gt;
 &lt;p&gt;目前的很多东西都是网上开源的东西，涉及到的技术栈多而杂，个人精力实在有限，趁着还有兴趣，规划一下后续的技术发展方向。&lt;/p&gt;
 &lt;p&gt;当前需要做几个网站来学习前后端：&lt;/p&gt;
 &lt;ol&gt;
@@ -121,7 +159,8 @@
 &lt;td align=&#34;left&#34;&gt;强调-&gt;反引号(`)&lt;/td&gt;
 &lt;td align=&#34;right&#34; bgcolor=&#34;#AFEEEE&#34;&gt;列-&gt;&lt;font color=&#34;red&#34;&gt;td&lt;/font&gt;标签&lt;/td&gt;
 &lt;/tr&gt;
-&lt;/table&gt;</description>
+&lt;/table&gt;
+</description>
         </item>
         <item>
         <title>搜索</title>

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="第一步:下载IDM\n目前最新版本的IDM是6.42版本，本文的激活方法也是基于这个版本。\n官网链接：Internet Download Manager: The fastest download accelerator\n第二步：powershell\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="函数名功能简介参数详细说明pinMode(pin, mode)设置某引脚为输入(INPUT)、输出(OUTPUT)或上拉输入(INPUT_PULLUP)pin：引脚号；mode：引脚模式(INPUT、OUTPUT、INPUT_PULLUP)digitalWrite(pin, val)将引脚输出设为高(HIGH)或低(LOW)电平pin：引脚号；val：电平值(HIGH或LOW)digitalRead(pin)读取引脚电平（HIGH/LOW）pin：引脚号；返回HIGH或LOWdelay(ms)延时函数，单位毫秒ms：延时时间（毫秒）Serial.begin(baud)初始化串口通讯baud：串口波特率，常用115200Serial.print()/println()向串口输出数据，print不换行，println自动换行输出的字符串或变量analogRead(pin)读取模拟电压（返回0~4095）pin：模拟输入引脚号；返回值范围0~4095ledcSetup(channel, freq, resolution)配置PWM通道的频率与精度channel：PWM通道号；freq：PWM频率（Hz）；resolution：PWM分辨率（位数）ledcAttachPin(pin, channel)将某个GPIO引脚绑定到PWM通道pin：GPIO引脚号；channel：PWM通道号ledcWrite(channel, duty)输出PWM信号，占空比为duty（0~255）channel：PWM通道号；duty：PWM占空比（0~255）attachInterrupt(pin, ISR, mode)设置中断服务函数（ISR）和触发方式（如FALLING）pin：引脚号；ISR：中断服务函数名；mode：中断触发模式(RISING、FALLING、CHANGE) 嵌入式物联网在线仿真平台Wokwi使用配置笔记教程_wokwi仿真平台-CSDN博客\n">
 <title></title>
 
 <link rel='canonical' href='http://localhost:1313/p/'>
 
 <link rel="stylesheet" href="/scss/style.min.5bfd1eb83bd0a5a4a3d05a6dccf11f26cad8be99f53b2486fc4704909d9d7e67.css"><meta property='og:title' content="">
-<meta property='og:description' content="第一步:下载IDM\n目前最新版本的IDM是6.42版本，本文的激活方法也是基于这个版本。\n官网链接：Internet Download Manager: The fastest download accelerator\n第二步：powershell\n">
+<meta property='og:description' content="函数名功能简介参数详细说明pinMode(pin, mode)设置某引脚为输入(INPUT)、输出(OUTPUT)或上拉输入(INPUT_PULLUP)pin：引脚号；mode：引脚模式(INPUT、OUTPUT、INPUT_PULLUP)digitalWrite(pin, val)将引脚输出设为高(HIGH)或低(LOW)电平pin：引脚号；val：电平值(HIGH或LOW)digitalRead(pin)读取引脚电平（HIGH/LOW）pin：引脚号；返回HIGH或LOWdelay(ms)延时函数，单位毫秒ms：延时时间（毫秒）Serial.begin(baud)初始化串口通讯baud：串口波特率，常用115200Serial.print()/println()向串口输出数据，print不换行，println自动换行输出的字符串或变量analogRead(pin)读取模拟电压（返回0~4095）pin：模拟输入引脚号；返回值范围0~4095ledcSetup(channel, freq, resolution)配置PWM通道的频率与精度channel：PWM通道号；freq：PWM频率（Hz）；resolution：PWM分辨率（位数）ledcAttachPin(pin, channel)将某个GPIO引脚绑定到PWM通道pin：GPIO引脚号；channel：PWM通道号ledcWrite(channel, duty)输出PWM信号，占空比为duty（0~255）channel：PWM通道号；duty：PWM占空比（0~255）attachInterrupt(pin, ISR, mode)设置中断服务函数（ISR）和触发方式（如FALLING）pin：引脚号；ISR：中断服务函数名；mode：中断触发模式(RISING、FALLING、CHANGE) 嵌入式物联网在线仿真平台Wokwi使用配置笔记教程_wokwi仿真平台-CSDN博客\n">
 <meta property='og:url' content='http://localhost:1313/p/'>
 <meta property='og:site_name' content='lastfantasy的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:modified_time' content='2025-02-02T20:06:21&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:modified_time' content='2025-06-07T18:21:37&#43;08:00'/>
 <meta name="twitter:title" content="">
-<meta name="twitter:description" content="第一步:下载IDM\n目前最新版本的IDM是6.42版本，本文的激活方法也是基于这个版本。\n官网链接：Internet Download Manager: The fastest download accelerator\n第二步：powershell\n">
+<meta name="twitter:description" content="函数名功能简介参数详细说明pinMode(pin, mode)设置某引脚为输入(INPUT)、输出(OUTPUT)或上拉输入(INPUT_PULLUP)pin：引脚号；mode：引脚模式(INPUT、OUTPUT、INPUT_PULLUP)digitalWrite(pin, val)将引脚输出设为高(HIGH)或低(LOW)电平pin：引脚号；val：电平值(HIGH或LOW)digitalRead(pin)读取引脚电平（HIGH/LOW）pin：引脚号；返回HIGH或LOWdelay(ms)延时函数，单位毫秒ms：延时时间（毫秒）Serial.begin(baud)初始化串口通讯baud：串口波特率，常用115200Serial.print()/println()向串口输出数据，print不换行，println自动换行输出的字符串或变量analogRead(pin)读取模拟电压（返回0~4095）pin：模拟输入引脚号；返回值范围0~4095ledcSetup(channel, freq, resolution)配置PWM通道的频率与精度channel：PWM通道号；freq：PWM频率（Hz）；resolution：PWM分辨率（位数）ledcAttachPin(pin, channel)将某个GPIO引脚绑定到PWM通道pin：GPIO引脚号；channel：PWM通道号ledcWrite(channel, duty)输出PWM信号，占空比为duty（0~255）channel：PWM通道号；duty：PWM占空比（0~255）attachInterrupt(pin, ISR, mode)设置中断服务函数（ISR）和触发方式（如FALLING）pin：引脚号；ISR：中断服务函数名；mode：中断触发模式(RISING、FALLING、CHANGE) 嵌入式物联网在线仿真平台Wokwi使用配置笔记教程_wokwi仿真平台-CSDN博客\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -305,7 +305,7 @@
 
 
             <time>
-                2025-02-02 20:06 &#43;0800
+                2025-06-07 18:21 &#43;0800
             </time>
         </div>
             <div>
@@ -318,7 +318,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    阅读时长: 2 分钟
                 </time>
             </div>
         
@@ -333,62 +333,11 @@
     <section class="article-content">
     
     
-    <p><strong>第一步:下载IDM</strong></p>
-<p>目前最新版本的IDM是6.42版本，本文的激活方法也是基于这个版本。</p>
-<p>官网链接：<a class="link" href="https://www.internetdownloadmanager.com/"  title="Internet Download Manager: The fastest download accelerator"
-     target="_blank" rel="noopener"
-    >Internet Download Manager: The fastest download accelerator</a></p>
-<p><strong>第二步：powershell</strong></p>
-<p>右键单击Windows开始菜单并选择终端（非CMD）或win+r快捷键调出运行窗口输入powershell并运行。输入 </p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cobol" data-lang="cobol"><span class="line"><span class="cl"><span class="c"> irm h</span><span class="nv">ttps</span><span class="p">:</span><span class="o">//</span><span class="nv">raw</span><span class="p">.</span><span class="nv">githubusercontent</span><span class="p">.</span><span class="nv">com</span><span class="o">/</span><span class="nv">lstprjct</span><span class="o">/</span><span class="nv">IDM-Activation-Script</span><span class="o">/</span><span class="nv">main</span><span class="o">/</span><span class="nv">IAS</span><span class="p">.</span><span class="nv">ps1</span> <span class="err">|</span> <span class="nv">iex</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><p>并运行。</p>
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/71dba03adabdecce2bf0b727b9a392dc.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<p>注：如果出现问题，可以试试去看github作者的更新，<a class="link" href="https://github.com/lstprjct/IDM-Activation-Script"  title="https://github.com/lstprjct/IDM-Activation-Script"
-     target="_blank" rel="noopener"
-    >https://github.com/lstprjct/IDM-Activation-Script</a></p>
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/3e14a554d5310a5453dfff076ded9e58.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<p>运行中的选择，输入1即可。</p>
-<p><strong>第三步：检查是否成功</strong></p>
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/bd78811de89e603ebf314b9880489151.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/8ff7207870fe3f98a3b677aae4682f51.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<p>这样已经注册成功，然后就可以开始使用了。希望有所帮助。</p>
-<p><a class="link" href="https://blog.csdn.net/qq_52681318/article/details/139159409"  target="_blank" rel="noopener"
-    >IDM最新版本激活方法_idm激活-CSDN博客</a></p>
+    <div class="table-wrapper"><table><thead><tr><th>函数名</th><th>功能简介</th><th>参数详细说明</th></tr></thead><tbody><tr><td><code>pinMode(pin, mode)</code></td><td>设置某引脚为输入(INPUT)、输出(OUTPUT)或上拉输入(INPUT_PULLUP)</td><td>pin：引脚号；mode：引脚模式(INPUT、OUTPUT、INPUT_PULLUP)</td></tr><tr><td><code>digitalWrite(pin, val)</code></td><td>将引脚输出设为高(HIGH)或低(LOW)电平</td><td>pin：引脚号；val：电平值(HIGH或LOW)</td></tr><tr><td><code>digitalRead(pin)</code></td><td>读取引脚电平（HIGH/LOW）</td><td>pin：引脚号；返回HIGH或LOW</td></tr><tr><td><code>delay(ms)</code></td><td>延时函数，单位毫秒</td><td>ms：延时时间（毫秒）</td></tr><tr><td><code>Serial.begin(baud)</code></td><td>初始化串口通讯</td><td>baud：串口波特率，常用115200</td></tr><tr><td><code>Serial.print()/println()</code></td><td>向串口输出数据，print不换行，println自动换行</td><td>输出的字符串或变量</td></tr><tr><td><code>analogRead(pin)</code></td><td>读取模拟电压（返回0~4095）</td><td>pin：模拟输入引脚号；返回值范围0~4095</td></tr><tr><td><code>ledcSetup(channel, freq, resolution)</code></td><td>配置PWM通道的频率与精度</td><td>channel：PWM通道号；freq：PWM频率（Hz）；resolution：PWM分辨率（位数）</td></tr><tr><td><code>ledcAttachPin(pin, channel)</code></td><td>将某个GPIO引脚绑定到PWM通道</td><td>pin：GPIO引脚号；channel：PWM通道号</td></tr><tr><td><code>ledcWrite(channel, duty)</code></td><td>输出PWM信号，占空比为duty（0~255）</td><td>channel：PWM通道号；duty：PWM占空比（0~255）</td></tr><tr><td><code>attachInterrupt(pin, ISR, mode)</code></td><td>设置中断服务函数（ISR）和触发方式（如FALLING）</td><td>pin：引脚号；ISR：中断服务函数名；mode：中断触发模式(RISING、FALLING、CHANGE)</td></tr></tbody></table></div>
+<p><a class="link" href="https://blog.csdn.net/weixin_49337111/article/details/136479524"  target="_blank" rel="noopener"
+    >嵌入式物联网在线仿真平台Wokwi使用配置笔记教程_wokwi仿真平台-CSDN博客</a></p>
+<p>[<a class="link" href="https://blog.csdn.net/weixin_73987691/article/details/147013203"  target="_blank" rel="noopener"
+    >Wokwi模拟器] ESP32无实物入门教程（一）：GPIO + PWM + 时间片轮询三合一实战_esp32实战教程-CSDN博客</a></p>
 
 </section>
 
@@ -406,7 +355,7 @@
 
 
         <span>
-            最后更新于 2025-02-02 20:06 &#43;0800
+            最后更新于 2025-06-07 18:21 &#43;0800
         </span>
     </section></footer>
 
@@ -477,7 +426,9 @@
         
         
         
-        共发表 4 篇文章 · 总计 8.70 k 字
+        
+        
+        共发表 5 篇文章 · 总计 10.18 k 字
     </div>
     <div>
         
@@ -904,5 +855,25 @@
       }
     }
 </script></div>
+
+<div id="particles-js"></div>
+
+<script src=http://localhost:1313/background/particles.min.js></script>
+<script>
+  particlesJS.load('particles-js', "http://localhost:1313/background/particlesjs-config.json", function() {
+    console.log('particles.js loaded - callback');
+  });
+</script>
+
+<style>
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+</style>
+
     </body>
 </html>

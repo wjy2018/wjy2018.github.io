@@ -7,7 +7,83 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>liunianmolian@163.com</copyright>
-        <lastBuildDate>Sun, 15 Dec 2024 17:44:51 +0800</lastBuildDate><atom:link href="https://blog.lastfantasy.top/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 19 Oct 2025 11:01:21 +0800</lastBuildDate><atom:link href="https://blog.lastfantasy.top/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ubuntu和windows双系统grub修复</title>
+        <link>https://blog.lastfantasy.top/p/ubuntu%E5%92%8Cwindows%E5%8F%8C%E7%B3%BB%E7%BB%9Fgrub%E4%BF%AE%E5%A4%8D/</link>
+        <pubDate>Sun, 19 Oct 2025 10:59:15 +0800</pubDate>
+        
+        <guid>https://blog.lastfantasy.top/p/ubuntu%E5%92%8Cwindows%E5%8F%8C%E7%B3%BB%E7%BB%9Fgrub%E4%BF%AE%E5%A4%8D/</guid>
+        <description>&lt;p&gt;近期系统自动更新导致grub引导出现异常，开机时候提示：
+Minimal BASH-like line editing is supported.For the first word.TAB lists possible command completions.Anywhere else TAB lists possible device or file completions.&lt;/p&gt;
+&lt;p&gt;类似下图：
+![[Pasted image 20250511141716.png]]&lt;/p&gt;
+&lt;p&gt;本地1确认了一下，大概率是win11这边系统导致的，win11提示意料之外的异常导致无法启动设备。&lt;/p&gt;
+&lt;p&gt;反复折腾半天疑难解答几个选项都没有用，然后调整开机启动顺序，让优先启动ubuntu，结果就出现上述的提示。&lt;/p&gt;
+&lt;p&gt;处理方法参考&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/395608033&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;电脑开机出现GNU GRUB Minimal BASH-like line editing is supported - 知乎&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/weixin_39638464/article/details/113896650&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;grub ubuntu关闭gnu_grub ubuntu关闭gnu_Ubuntu开机进入GRUB手动引导-CSDN博客&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;处理方案&lt;/p&gt;
+&lt;p&gt;第一步：找到根目录和GRUB&lt;/p&gt;
+&lt;p&gt;在grub界面&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;先确认本地磁盘有哪些，比如&lt;/p&gt;
+&lt;p&gt;(hd0), (hd0, msdos7), (hd0, msdos6), (hd0, msdos5), (hd0, msdos3), &amp;hellip;&lt;/p&gt;
+&lt;p&gt;继续使用ls查看每个扇区的信息，需要注意：&lt;/p&gt;
+&lt;p&gt;(hd0)≠hd0&lt;/p&gt;
+&lt;p&gt;(hd0,msdos5)⇔(hd0,5)&lt;/p&gt;
+&lt;p&gt;ls (hd0)⇒查看(hd0)扇区信息(盘符、空间&amp;hellip;)&lt;/p&gt;
+&lt;p&gt;ls (hd0)/⇒查看(hd0)扇区下内容(多了一个`/``)&lt;/p&gt;
+&lt;p&gt;通过挨个打印子目录内容，我们可能遇到以下两种情况：&lt;/p&gt;
+&lt;p&gt;A目录下有boot/，boot/下还有grub/&lt;/p&gt;
+&lt;p&gt;A目录下有boot/，B目录下有grub/&lt;/p&gt;
+&lt;p&gt;去寻找grub所在的linux盘&lt;/p&gt;
+&lt;p&gt;本地由于linux安装时专门对grub建了分区，因此boot和grub的分区方式属于上述第二种&lt;/p&gt;
+&lt;p&gt;本地的(hd0,5)下有boot/, (hd0,6)下有grub/&lt;/p&gt;
+&lt;p&gt;按照知乎的描述&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;hd0,6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;prefix&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=(&lt;/span&gt;hd0,6&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;/grub
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;insmod normal
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;normal
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;执行之后，成功启动ubuntu。&lt;/p&gt;
+&lt;p&gt;但是此时不可以直接重启，需要对于grub进行修复&lt;/p&gt;
+&lt;p&gt;第三步：修复引导&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo update-grub &lt;span class=&#34;c1&#34;&gt;#grub情况下命令，具体参考之前的设置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo update-grub2 &lt;span class=&#34;c1&#34;&gt;#grub2命令(高版本使用grub2)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo grub-install /dev/sda
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;执行结束后引导算是修复完成了。&lt;/p&gt;
+&lt;p&gt;不过windows因为自己升级导致无法正常使用也需要修复。因此需要额外制作一下windows启动盘来修复当前的windows镜像。&lt;/p&gt;
+&lt;p&gt;后面双系统引导又崩了，windows彻底进不去了，后面发现好像是固态挂了，然后ubuntu也出问题了，引导异常，用安装盘修复grub也失败了，按照boot-repair的那个方式搞，结果又扯出什么GPT分区的问题，疯了。&lt;/p&gt;
+&lt;p&gt;直接重装一下根目录，保留之前的home数据&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>本地笔记本安装win11和ubuntu22.04双系统</title>
         <link>https://blog.lastfantasy.top/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
         <pubDate>Sun, 08 Dec 2024 10:15:43 +0800</pubDate>

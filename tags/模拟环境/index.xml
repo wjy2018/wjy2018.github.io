@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>模拟环境 on lastfantasy的博客</title>
+        <link>https://blog.lastfantasy.top/tags/%E6%A8%A1%E6%8B%9F%E7%8E%AF%E5%A2%83/</link>
+        <description>Recent content in 模拟环境 on lastfantasy的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>liunianmolian@163.com</copyright>
+        <lastBuildDate>Sun, 19 Oct 2025 10:57:43 +0800</lastBuildDate><atom:link href="https://blog.lastfantasy.top/tags/%E6%A8%A1%E6%8B%9F%E7%8E%AF%E5%A2%83/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>wokwi模拟环境搭建</title>
+        <link>https://blog.lastfantasy.top/p/wokwi%E6%A8%A1%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</link>
+        <pubDate>Sun, 19 Oct 2025 10:57:43 +0800</pubDate>
+        
+        <guid>https://blog.lastfantasy.top/p/wokwi%E6%A8%A1%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</guid>
+        <description>&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;函数名&lt;/th&gt;&lt;th&gt;功能简介&lt;/th&gt;&lt;th&gt;参数详细说明&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;pinMode(pin, mode)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;设置某引脚为输入(INPUT)、输出(OUTPUT)或上拉输入(INPUT_PULLUP)&lt;/td&gt;&lt;td&gt;pin：引脚号；mode：引脚模式(INPUT、OUTPUT、INPUT_PULLUP)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;digitalWrite(pin, val)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;将引脚输出设为高(HIGH)或低(LOW)电平&lt;/td&gt;&lt;td&gt;pin：引脚号；val：电平值(HIGH或LOW)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;digitalRead(pin)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;读取引脚电平（HIGH/LOW）&lt;/td&gt;&lt;td&gt;pin：引脚号；返回HIGH或LOW&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;delay(ms)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;延时函数，单位毫秒&lt;/td&gt;&lt;td&gt;ms：延时时间（毫秒）&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;Serial.begin(baud)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;初始化串口通讯&lt;/td&gt;&lt;td&gt;baud：串口波特率，常用115200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;Serial.print()/println()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;向串口输出数据，print不换行，println自动换行&lt;/td&gt;&lt;td&gt;输出的字符串或变量&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;analogRead(pin)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;读取模拟电压（返回0~4095）&lt;/td&gt;&lt;td&gt;pin：模拟输入引脚号；返回值范围0~4095&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;ledcSetup(channel, freq, resolution)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;配置PWM通道的频率与精度&lt;/td&gt;&lt;td&gt;channel：PWM通道号；freq：PWM频率（Hz）；resolution：PWM分辨率（位数）&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;ledcAttachPin(pin, channel)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;将某个GPIO引脚绑定到PWM通道&lt;/td&gt;&lt;td&gt;pin：GPIO引脚号；channel：PWM通道号&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;ledcWrite(channel, duty)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;输出PWM信号，占空比为duty（0~255）&lt;/td&gt;&lt;td&gt;channel：PWM通道号；duty：PWM占空比（0~255）&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;attachInterrupt(pin, ISR, mode)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;设置中断服务函数（ISR）和触发方式（如FALLING）&lt;/td&gt;&lt;td&gt;pin：引脚号；ISR：中断服务函数名；mode：中断触发模式(RISING、FALLING、CHANGE)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/weixin_49337111/article/details/136479524&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;嵌入式物联网在线仿真平台Wokwi使用配置笔记教程_wokwi仿真平台-CSDN博客&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/weixin_73987691/article/details/147013203&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Wokwi模拟器] ESP32无实物入门教程（一）：GPIO + PWM + 时间片轮询三合一实战_esp32实战教程-CSDN博客&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
