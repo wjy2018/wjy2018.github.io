@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Ubuntu on lastfantasy的博客</title>
-        <link>https://blog.lastfantasy.top/tags/ubuntu/</link>
+        <link>http://localhost:1313/tags/ubuntu/</link>
         <description>Recent content in Ubuntu on lastfantasy的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>liunianmolian@163.com</copyright>
-        <lastBuildDate>Sun, 19 Oct 2025 11:01:21 +0800</lastBuildDate><atom:link href="https://blog.lastfantasy.top/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 25 Oct 2025 14:34:52 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>ubuntu和windows双系统grub修复</title>
-        <link>https://blog.lastfantasy.top/p/ubuntu%E5%92%8Cwindows%E5%8F%8C%E7%B3%BB%E7%BB%9Fgrub%E4%BF%AE%E5%A4%8D/</link>
+        <link>http://localhost:1313/p/ubuntu%E5%92%8Cwindows%E5%8F%8C%E7%B3%BB%E7%BB%9Fgrub%E4%BF%AE%E5%A4%8D/</link>
         <pubDate>Sun, 19 Oct 2025 10:59:15 +0800</pubDate>
         
-        <guid>https://blog.lastfantasy.top/p/ubuntu%E5%92%8Cwindows%E5%8F%8C%E7%B3%BB%E7%BB%9Fgrub%E4%BF%AE%E5%A4%8D/</guid>
+        <guid>http://localhost:1313/p/ubuntu%E5%92%8Cwindows%E5%8F%8C%E7%B3%BB%E7%BB%9Fgrub%E4%BF%AE%E5%A4%8D/</guid>
         <description>&lt;p&gt;近期系统自动更新导致grub引导出现异常，开机时候提示：
 Minimal BASH-like line editing is supported.For the first word.TAB lists possible command completions.Anywhere else TAB lists possible device or file completions.&lt;/p&gt;
 &lt;p&gt;类似下图：
@@ -81,14 +81,31 @@ Minimal BASH-like line editing is supported.For the first word.TAB lists possibl
 &lt;p&gt;不过windows因为自己升级导致无法正常使用也需要修复。因此需要额外制作一下windows启动盘来修复当前的windows镜像。&lt;/p&gt;
 &lt;p&gt;后面双系统引导又崩了，windows彻底进不去了，后面发现好像是固态挂了，然后ubuntu也出问题了，引导异常，用安装盘修复grub也失败了，按照boot-repair的那个方式搞，结果又扯出什么GPT分区的问题，疯了。&lt;/p&gt;
 &lt;p&gt;直接重装一下根目录，保留之前的home数据&lt;/p&gt;
+&lt;p&gt;==============================================================&lt;/p&gt;
+&lt;p&gt;书接上回，windows自动更新动不动就自己打开了，导致双系统的引导又一次失效了，因此这次需要找一个彻底的解决方案。&lt;/p&gt;
+&lt;p&gt;目前有两个方向：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!双系统引导问题修复方案]&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;windows禁止自动更新&lt;/li&gt;
+&lt;li&gt;换一个靠谱的grub引导方案&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;针对第一点，网上可以搜到教程。核心点就是注册表修改，把下次更新日期延长到很长时间之后&lt;/p&gt;
+&lt;p&gt;可以参考下列链接中的注册表相关的处理方法&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.ceacer.cn/disable-win10-auto-update-permanently&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;关闭Win10自动更新最强方法，彻底禁止win10更新&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;第二点，这里找到了一个好用的软件rEFInd，这个软件在windows和ubuntu都可以下载根据相关教程设置配置就可以了&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/67114559&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;rEFInd引导使用教程 - 知乎&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>ubuntu 22.04配置个人私有云盘NextCloud</title>
-        <link>https://blog.lastfantasy.top/p/ubuntu-22.04%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%A7%81%E6%9C%89%E4%BA%91%E7%9B%98nextcloud/</link>
+        <link>http://localhost:1313/p/ubuntu-22.04%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%A7%81%E6%9C%89%E4%BA%91%E7%9B%98nextcloud/</link>
         <pubDate>Sun, 22 Dec 2024 15:59:05 +0800</pubDate>
         
-        <guid>https://blog.lastfantasy.top/p/ubuntu-22.04%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%A7%81%E6%9C%89%E4%BA%91%E7%9B%98nextcloud/</guid>
+        <guid>http://localhost:1313/p/ubuntu-22.04%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%A7%81%E6%9C%89%E4%BA%91%E7%9B%98nextcloud/</guid>
         <description>&lt;h2 id=&#34;私有云盘选择&#34;&gt;私有云盘选择
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/44103820&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;如何搭建自己的私有云盘 - 知乎&lt;/a&gt;&lt;/p&gt;
@@ -252,7 +269,7 @@ ubuntu这边的配置需要根据实际情况先搭建sakura frp的服务&lt;/p&
 &lt;p&gt;试了很多方案，终于找到可靠信息。&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://help.nextcloud.com/t/changing-data-directory-location-with-snap-installation-procedures/23841/2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Changing data directory location with snap installation procedures - ℹ️ Support - Nextcloud community&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.lastfantasy.top/post/nextCloud_ubuntu/move-snap-nextcloud.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/nextCloud_ubuntu/move-snap-nextcloud.png&#34;
 	
 	
 	
@@ -373,10 +390,10 @@ ubuntu这边的配置需要根据实际情况先搭建sakura frp的服务&lt;/p&
         </item>
         <item>
         <title>本地笔记本安装win11和ubuntu22.04双系统</title>
-        <link>https://blog.lastfantasy.top/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
+        <link>http://localhost:1313/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
         <pubDate>Sun, 08 Dec 2024 10:15:43 +0800</pubDate>
         
-        <guid>https://blog.lastfantasy.top/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</guid>
+        <guid>http://localhost:1313/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</guid>
         <description>&lt;h1 id=&#34;heading&#34;&gt;
 &lt;/h1&gt;&lt;h2 id=&#34;实现windows11及ubuntu2204双系统联想thinkbook-15-iil&#34;&gt;实现windows11及ubuntu22.04双系统（联想thinkbook 15 iil）
 &lt;/h2&gt;&lt;h3 id=&#34;背景&#34;&gt;背景

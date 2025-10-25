@@ -2,34 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Pages on lastfantasy的博客</title>
-        <link>https://blog.lastfantasy.top/page/</link>
+        <link>http://localhost:1313/page/</link>
         <description>Recent content in Pages on lastfantasy的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>liunianmolian@163.com</copyright>
-        <lastBuildDate>Sun, 19 Oct 2025 11:44:49 +0800</lastBuildDate><atom:link href="https://blog.lastfantasy.top/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 25 Oct 2025 14:44:14 +0800</lastBuildDate><atom:link href="http://localhost:1313/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>归档</title>
-        <link>https://blog.lastfantasy.top/archives/</link>
+        <link>http://localhost:1313/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.lastfantasy.top/archives/</guid>
+        <guid>http://localhost:1313/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>关于</title>
-        <link>https://blog.lastfantasy.top/about/</link>
+        <link>http://localhost:1313/about/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.lastfantasy.top/about/</guid>
+        <guid>http://localhost:1313/about/</guid>
         <description>&lt;p&gt;人生不是一条轨道，而是一片旷野。如果有想法，就尝试去做，趁着你还有激情还有梦。&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>近期计划</title>
-        <link>https://blog.lastfantasy.top/plan/</link>
+        <link>http://localhost:1313/plan/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.lastfantasy.top/plan/</guid>
+        <guid>http://localhost:1313/plan/</guid>
         <description>&lt;table border=&#34;2&#34;&gt;
 &lt;tr&gt;
 &lt;th width=&#34;15%&#34; &gt;计划实现功能&lt;/th&gt;
@@ -64,6 +64,12 @@
 &lt;tr&gt;
 &lt;td align=&#34;left&#34; bgcolor=&#34;#ffffffff&#34;&gt;博客动态背景&lt;/td&gt;
 &lt;td bgcolor=&#34;#ffffffff&#34;&gt; 1. 动态加载动画&lt;br/&gt; 2. 动态背景&lt;br/&gt; 3. 鼠标动态交互&lt;br/&gt;&lt;/td&gt;
+&lt;td bgcolor=&#34;#FFFF00&#34;&gt;待定&lt;/td&gt;
+&lt;td bgcolor=&#34;#00FFFF&#34;&gt; 进行中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34; bgcolor=&#34;#ffffffff&#34;&gt;博客主题优化&lt;/td&gt;
+&lt;td bgcolor=&#34;#ffffffff&#34;&gt; 1. 文章目录折叠&amp;展开&lt;br/&gt; 2. 添加’返回顶部’按钮（似乎没用）&lt;br/&gt; 3. macOS风格的代码块（红绿灯）&lt;br/&gt; 4. 自定义MD引用块颜色模板（markdown文本note|err）&lt;br/&gt;&lt;/td&gt;
 &lt;td bgcolor=&#34;#FFFF00&#34;&gt;待定&lt;/td&gt;
 &lt;td bgcolor=&#34;#00FFFF&#34;&gt; 进行中&lt;/td&gt;
 &lt;/tr&gt;
@@ -164,18 +170,18 @@
         </item>
         <item>
         <title>搜索</title>
-        <link>https://blog.lastfantasy.top/search/</link>
+        <link>http://localhost:1313/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.lastfantasy.top/search/</guid>
+        <guid>http://localhost:1313/search/</guid>
         <description></description>
         </item>
         <item>
         <title>友情链接</title>
-        <link>https://blog.lastfantasy.top/links/</link>
+        <link>http://localhost:1313/links/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.lastfantasy.top/links/</guid>
+        <guid>http://localhost:1313/links/</guid>
         <description></description>
         </item>
         

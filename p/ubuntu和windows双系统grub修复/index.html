@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
-    <head><meta charset='utf-8'>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="由于windows和ubuntu双系统中，windows经常自己更新，导致grub引导会被损坏，无法进入ubuntu子系统，因此需要进行grub修复">
 <title>ubuntu和windows双系统grub修复</title>
 
-<link rel='canonical' href='https://blog.lastfantasy.top/p/ubuntu%E5%92%8Cwindows%E5%8F%8C%E7%B3%BB%E7%BB%9Fgrub%E4%BF%AE%E5%A4%8D/'>
+<link rel='canonical' href='http://localhost:1313/p/ubuntu%E5%92%8Cwindows%E5%8F%8C%E7%B3%BB%E7%BB%9Fgrub%E4%BF%AE%E5%A4%8D/'>
 
-<link rel="stylesheet" href="/scss/style.min.5bfd1eb83bd0a5a4a3d05a6dccf11f26cad8be99f53b2486fc4704909d9d7e67.css"><meta property='og:title' content="ubuntu和windows双系统grub修复">
+<link rel="stylesheet" href="/scss/style.min.51c65ed8a692258a81d7649e0854a4093bf0db3e07b7699d60b52adfaad5098e.css"><meta property='og:title' content="ubuntu和windows双系统grub修复">
 <meta property='og:description' content="由于windows和ubuntu双系统中，windows经常自己更新，导致grub引导会被损坏，无法进入ubuntu子系统，因此需要进行grub修复">
-<meta property='og:url' content='https://blog.lastfantasy.top/p/ubuntu%E5%92%8Cwindows%E5%8F%8C%E7%B3%BB%E7%BB%9Fgrub%E4%BF%AE%E5%A4%8D/'>
+<meta property='og:url' content='http://localhost:1313/p/ubuntu%E5%92%8Cwindows%E5%8F%8C%E7%B3%BB%E7%BB%9Fgrub%E4%BF%AE%E5%A4%8D/'>
 <meta property='og:site_name' content='lastfantasy的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='ubuntu' /><meta property='article:tag' content='双系统' /><meta property='article:tag' content='grub修复' /><meta property='article:published_time' content='2025-10-19T10:59:15&#43;08:00'/><meta property='article:modified_time' content='2025-10-19T11:01:21&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='ubuntu' /><meta property='article:tag' content='双系统' /><meta property='article:tag' content='grub修复' /><meta property='article:published_time' content='2025-10-19T10:59:15&#43;08:00'/><meta property='article:modified_time' content='2025-10-25T14:34:52&#43;08:00'/>
 <meta name="twitter:title" content="ubuntu和windows双系统grub修复">
 <meta name="twitter:description" content="由于windows和ubuntu双系统中，windows经常自己更新，导致grub引导会被损坏，无法进入ubuntu子系统，因此需要进行grub修复">
     <link rel="shortcut icon" href="/star512.ico" />
@@ -330,7 +330,7 @@
 
 
             <time>
-                2025-10-19 11:01 &#43;0800
+                2025-10-25 14:34 &#43;0800
             </time>
         </div>
             <div>
@@ -343,7 +343,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 2 分钟
+                    阅读时长: 3 分钟
                 </time>
             </div>
         
@@ -426,6 +426,23 @@ Minimal BASH-like line editing is supported.For the first word.TAB lists possibl
 <p>不过windows因为自己升级导致无法正常使用也需要修复。因此需要额外制作一下windows启动盘来修复当前的windows镜像。</p>
 <p>后面双系统引导又崩了，windows彻底进不去了，后面发现好像是固态挂了，然后ubuntu也出问题了，引导异常，用安装盘修复grub也失败了，按照boot-repair的那个方式搞，结果又扯出什么GPT分区的问题，疯了。</p>
 <p>直接重装一下根目录，保留之前的home数据</p>
+<p>==============================================================</p>
+<p>书接上回，windows自动更新动不动就自己打开了，导致双系统的引导又一次失效了，因此这次需要找一个彻底的解决方案。</p>
+<p>目前有两个方向：</p>
+<blockquote>
+<p>[!双系统引导问题修复方案]</p>
+<ol>
+<li>windows禁止自动更新</li>
+<li>换一个靠谱的grub引导方案</li>
+</ol>
+</blockquote>
+<p>针对第一点，网上可以搜到教程。核心点就是注册表修改，把下次更新日期延长到很长时间之后</p>
+<p>可以参考下列链接中的注册表相关的处理方法</p>
+<p><a class="link" href="https://blog.ceacer.cn/disable-win10-auto-update-permanently"  target="_blank" rel="noopener"
+    >关闭Win10自动更新最强方法，彻底禁止win10更新</a></p>
+<p>第二点，这里找到了一个好用的软件rEFInd，这个软件在windows和ubuntu都可以下载根据相关教程设置配置就可以了</p>
+<p><a class="link" href="https://zhuanlan.zhihu.com/p/67114559"  target="_blank" rel="noopener"
+    >rEFInd引导使用教程 - 知乎</a></p>
 
 </section>
 
@@ -453,7 +470,7 @@ Minimal BASH-like line editing is supported.For the first word.TAB lists possibl
 
 
         <span>
-            最后更新于 2025-10-19 11:01 &#43;0800
+            最后更新于 2025-10-25 14:34 &#43;0800
         </span>
     </section></footer>
 
@@ -587,7 +604,7 @@ Minimal BASH-like line editing is supported.For the first word.TAB lists possibl
         
         
         
-        共发表 5 篇文章 · 总计 10.36 k 字
+        共发表 5 篇文章 · 总计 10.72 k 字
     </div>
     <div>
         
@@ -706,7 +723,7 @@ Minimal BASH-like line editing is supported.For the first word.TAB lists possibl
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.99ce1801c4bad426a42fc436add4721e149159dbb598636e9578fd59cf778c83.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.acb860605b1ae6c7821826c8f24d0360e3f636134b76d6255ec9d85aa54253e9.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
@@ -740,7 +757,7 @@ Minimal BASH-like line editing is supported.For the first word.TAB lists possibl
 
 
 
-    const musicDir = "https://blog.lastfantasy.top/" + 'music/';
+    const musicDir = "http://localhost:1313/" + 'music/';
     
     const songs = [
         '8 Legged Dreams - Unlike Pluto',
@@ -805,10 +822,10 @@ Minimal BASH-like line editing is supported.For the first word.TAB lists possibl
     
     const live2d_path = "https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/";
     
-    const cssPath = "https://blog.lastfantasy.top/waifu/waifu.css";
-    const tipsJsonPath = "https://blog.lastfantasy.top/waifu/waifu-tips.json";
-    const tipsJsPath = "https://blog.lastfantasy.top/waifu/waifu-tips.js"
-    const live2dMinJsPath = "https://blog.lastfantasy.top/waifu/live2d.min.js";
+    const cssPath = "http://localhost:1313/waifu/waifu.css";
+    const tipsJsonPath = "http://localhost:1313/waifu/waifu-tips.json";
+    const tipsJsPath = "http://localhost:1313/waifu/waifu-tips.js"
+    const live2dMinJsPath = "http://localhost:1313/waifu/live2d.min.js";
     
     
     function loadExternalResource(url, type) {
@@ -914,7 +931,7 @@ Minimal BASH-like line editing is supported.For the first word.TAB lists possibl
 
 
     
-    <script src=https://blog.lastfantasy.top/js/topbar.min.js></script>
+    <script src=http://localhost:1313/js/topbar.min.js></script>
 
 
 <script>
@@ -971,7 +988,7 @@ Minimal BASH-like line editing is supported.For the first word.TAB lists possibl
 <style>
     @font-face {
       font-family: '爱点风雅黑';
-      src: url(https://blog.lastfantasy.top/font/%E7%88%B1%E7%82%B9%E9%A3%8E%E9%9B%85%E9%BB%91.ttf) format('truetype');
+      src: url(http://localhost:1313/font/%E7%88%B1%E7%82%B9%E9%A3%8E%E9%9B%85%E9%BB%91.ttf) format('truetype');
     }
   
     :root {
@@ -995,7 +1012,7 @@ Minimal BASH-like line editing is supported.For the first word.TAB lists possibl
     
     function addCommentScript(comment) {
       let script = document.createElement('script');
-      let url = 'https:\/\/blog.lastfantasy.top\/js\/gitalkNew.js';
+      let url = 'http:\/\/localhost:1313\/js\/gitalkNew.js';
       script.type = 'text/javascript';
       script.src = url;
       if (script) {
@@ -1006,7 +1023,7 @@ Minimal BASH-like line editing is supported.For the first word.TAB lists possibl
     
     function updateRuntime(timeText) {
       let script = document.createElement('script');
-      let url = 'https:\/\/blog.lastfantasy.top\/js\/updateRuntime.js';
+      let url = 'http:\/\/localhost:1313\/js\/updateRuntime.js';
       script.type = 'text/javascript';
       script.src = url;
       if (script) {
@@ -1017,9 +1034,9 @@ Minimal BASH-like line editing is supported.For the first word.TAB lists possibl
 
 <div id="particles-js"></div>
 
-<script src=https://blog.lastfantasy.top/background/particles.min.js></script>
+<script src=http://localhost:1313/background/particles.min.js></script>
 <script>
-  particlesJS.load('particles-js', 'https:\/\/blog.lastfantasy.top\/background\/particlesjs-config.json', function(){
+  particlesJS.load('particles-js', 'http:\/\/localhost:1313\/background\/particlesjs-config.json', function(){
     console.log('particles.js loaded - callback');
   });
 </script>
@@ -1033,6 +1050,101 @@ Minimal BASH-like line editing is supported.For the first word.TAB lists possibl
     z-index: -1;
   }
 </style>
+
+// 文章目录折叠
+<style>
+    #TableOfContents > ul, ol {
+        ul, ol {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    function initTocHide() {
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function() {
+            
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+              openUl.forEach((ul) => {
+                ul.classList.remove("open")
+              })
+            }
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+        });
+    }
+    initTocHide()
+</script>
+
+// 返回顶部按钮
+<style>
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url(http://localhost:1313/icons/backTop.svg);
+    }
+</style>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+</script>
 
     </body>
 </html>
