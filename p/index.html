@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="函数名功能简介参数详细说明pinMode(pin, mode)设置某引脚为输入(INPUT)、输出(OUTPUT)或上拉输入(INPUT_PULLUP)pin：引脚号；mode：引脚模式(INPUT、OUTPUT、INPUT_PULLUP)digitalWrite(pin, val)将引脚输出设为高(HIGH)或低(LOW)电平pin：引脚号；val：电平值(HIGH或LOW)digitalRead(pin)读取引脚电平（HIGH/LOW）pin：引脚号；返回HIGH或LOWdelay(ms)延时函数，单位毫秒ms：延时时间（毫秒）Serial.begin(baud)初始化串口通讯baud：串口波特率，常用115200Serial.print()/println()向串口输出数据，print不换行，println自动换行输出的字符串或变量analogRead(pin)读取模拟电压（返回0~4095）pin：模拟输入引脚号；返回值范围0~4095ledcSetup(channel, freq, resolution)配置PWM通道的频率与精度channel：PWM通道号；freq：PWM频率（Hz）；resolution：PWM分辨率（位数）ledcAttachPin(pin, channel)将某个GPIO引脚绑定到PWM通道pin：GPIO引脚号；channel：PWM通道号ledcWrite(channel, duty)输出PWM信号，占空比为duty（0~255）channel：PWM通道号；duty：PWM占空比（0~255）attachInterrupt(pin, ISR, mode)设置中断服务函数（ISR）和触发方式（如FALLING）pin：引脚号；ISR：中断服务函数名；mode：中断触发模式(RISING、FALLING、CHANGE) 嵌入式物联网在线仿真平台Wokwi使用配置笔记教程_wokwi仿真平台-CSDN博客\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="">
 <title></title>
 
 <link rel='canonical' href='http://localhost:1313/p/'>
 
-<link rel="stylesheet" href="/scss/style.min.5bfd1eb83bd0a5a4a3d05a6dccf11f26cad8be99f53b2486fc4704909d9d7e67.css"><meta property='og:title' content="">
-<meta property='og:description' content="函数名功能简介参数详细说明pinMode(pin, mode)设置某引脚为输入(INPUT)、输出(OUTPUT)或上拉输入(INPUT_PULLUP)pin：引脚号；mode：引脚模式(INPUT、OUTPUT、INPUT_PULLUP)digitalWrite(pin, val)将引脚输出设为高(HIGH)或低(LOW)电平pin：引脚号；val：电平值(HIGH或LOW)digitalRead(pin)读取引脚电平（HIGH/LOW）pin：引脚号；返回HIGH或LOWdelay(ms)延时函数，单位毫秒ms：延时时间（毫秒）Serial.begin(baud)初始化串口通讯baud：串口波特率，常用115200Serial.print()/println()向串口输出数据，print不换行，println自动换行输出的字符串或变量analogRead(pin)读取模拟电压（返回0~4095）pin：模拟输入引脚号；返回值范围0~4095ledcSetup(channel, freq, resolution)配置PWM通道的频率与精度channel：PWM通道号；freq：PWM频率（Hz）；resolution：PWM分辨率（位数）ledcAttachPin(pin, channel)将某个GPIO引脚绑定到PWM通道pin：GPIO引脚号；channel：PWM通道号ledcWrite(channel, duty)输出PWM信号，占空比为duty（0~255）channel：PWM通道号；duty：PWM占空比（0~255）attachInterrupt(pin, ISR, mode)设置中断服务函数（ISR）和触发方式（如FALLING）pin：引脚号；ISR：中断服务函数名；mode：中断触发模式(RISING、FALLING、CHANGE) 嵌入式物联网在线仿真平台Wokwi使用配置笔记教程_wokwi仿真平台-CSDN博客\n">
+<link rel="stylesheet" href="/scss/style.min.51c65ed8a692258a81d7649e0854a4093bf0db3e07b7699d60b52adfaad5098e.css"><meta property='og:title' content="">
+<meta property='og:description' content="">
 <meta property='og:url' content='http://localhost:1313/p/'>
 <meta property='og:site_name' content='lastfantasy的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:modified_time' content='2025-06-07T18:21:37&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:modified_time' content='2025-11-02T11:55:39&#43;08:00'/>
 <meta name="twitter:title" content="">
-<meta name="twitter:description" content="函数名功能简介参数详细说明pinMode(pin, mode)设置某引脚为输入(INPUT)、输出(OUTPUT)或上拉输入(INPUT_PULLUP)pin：引脚号；mode：引脚模式(INPUT、OUTPUT、INPUT_PULLUP)digitalWrite(pin, val)将引脚输出设为高(HIGH)或低(LOW)电平pin：引脚号；val：电平值(HIGH或LOW)digitalRead(pin)读取引脚电平（HIGH/LOW）pin：引脚号；返回HIGH或LOWdelay(ms)延时函数，单位毫秒ms：延时时间（毫秒）Serial.begin(baud)初始化串口通讯baud：串口波特率，常用115200Serial.print()/println()向串口输出数据，print不换行，println自动换行输出的字符串或变量analogRead(pin)读取模拟电压（返回0~4095）pin：模拟输入引脚号；返回值范围0~4095ledcSetup(channel, freq, resolution)配置PWM通道的频率与精度channel：PWM通道号；freq：PWM频率（Hz）；resolution：PWM分辨率（位数）ledcAttachPin(pin, channel)将某个GPIO引脚绑定到PWM通道pin：GPIO引脚号；channel：PWM通道号ledcWrite(channel, duty)输出PWM信号，占空比为duty（0~255）channel：PWM通道号；duty：PWM占空比（0~255）attachInterrupt(pin, ISR, mode)设置中断服务函数（ISR）和触发方式（如FALLING）pin：引脚号；ISR：中断服务函数名；mode：中断触发模式(RISING、FALLING、CHANGE) 嵌入式物联网在线仿真平台Wokwi使用配置笔记教程_wokwi仿真平台-CSDN博客\n">
-    <link rel="shortcut icon" href="/favicon.ico" />
+<meta name="twitter:description" content="">
+    <link rel="shortcut icon" href="/star512.ico" />
 
     </head>
     <body class="
@@ -305,7 +305,7 @@
 
 
             <time>
-                2025-06-07 18:21 &#43;0800
+                2025-11-02 11:55 &#43;0800
             </time>
         </div>
             <div>
@@ -318,7 +318,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 2 分钟
+                    阅读时长: 0 分钟
                 </time>
             </div>
         
@@ -333,12 +333,7 @@
     <section class="article-content">
     
     
-    <div class="table-wrapper"><table><thead><tr><th>函数名</th><th>功能简介</th><th>参数详细说明</th></tr></thead><tbody><tr><td><code>pinMode(pin, mode)</code></td><td>设置某引脚为输入(INPUT)、输出(OUTPUT)或上拉输入(INPUT_PULLUP)</td><td>pin：引脚号；mode：引脚模式(INPUT、OUTPUT、INPUT_PULLUP)</td></tr><tr><td><code>digitalWrite(pin, val)</code></td><td>将引脚输出设为高(HIGH)或低(LOW)电平</td><td>pin：引脚号；val：电平值(HIGH或LOW)</td></tr><tr><td><code>digitalRead(pin)</code></td><td>读取引脚电平（HIGH/LOW）</td><td>pin：引脚号；返回HIGH或LOW</td></tr><tr><td><code>delay(ms)</code></td><td>延时函数，单位毫秒</td><td>ms：延时时间（毫秒）</td></tr><tr><td><code>Serial.begin(baud)</code></td><td>初始化串口通讯</td><td>baud：串口波特率，常用115200</td></tr><tr><td><code>Serial.print()/println()</code></td><td>向串口输出数据，print不换行，println自动换行</td><td>输出的字符串或变量</td></tr><tr><td><code>analogRead(pin)</code></td><td>读取模拟电压（返回0~4095）</td><td>pin：模拟输入引脚号；返回值范围0~4095</td></tr><tr><td><code>ledcSetup(channel, freq, resolution)</code></td><td>配置PWM通道的频率与精度</td><td>channel：PWM通道号；freq：PWM频率（Hz）；resolution：PWM分辨率（位数）</td></tr><tr><td><code>ledcAttachPin(pin, channel)</code></td><td>将某个GPIO引脚绑定到PWM通道</td><td>pin：GPIO引脚号；channel：PWM通道号</td></tr><tr><td><code>ledcWrite(channel, duty)</code></td><td>输出PWM信号，占空比为duty（0~255）</td><td>channel：PWM通道号；duty：PWM占空比（0~255）</td></tr><tr><td><code>attachInterrupt(pin, ISR, mode)</code></td><td>设置中断服务函数（ISR）和触发方式（如FALLING）</td><td>pin：引脚号；ISR：中断服务函数名；mode：中断触发模式(RISING、FALLING、CHANGE)</td></tr></tbody></table></div>
-<p><a class="link" href="https://blog.csdn.net/weixin_49337111/article/details/136479524"  target="_blank" rel="noopener"
-    >嵌入式物联网在线仿真平台Wokwi使用配置笔记教程_wokwi仿真平台-CSDN博客</a></p>
-<p>[<a class="link" href="https://blog.csdn.net/weixin_73987691/article/details/147013203"  target="_blank" rel="noopener"
-    >Wokwi模拟器] ESP32无实物入门教程（一）：GPIO + PWM + 时间片轮询三合一实战_esp32实战教程-CSDN博客</a></p>
-
+    
 </section>
 
 
@@ -355,7 +350,7 @@
 
 
         <span>
-            最后更新于 2025-06-07 18:21 &#43;0800
+            最后更新于 2025-11-02 11:55 &#43;0800
         </span>
     </section></footer>
 
@@ -428,7 +423,11 @@
         
         
         
-        共发表 5 篇文章 · 总计 10.18 k 字
+        
+        
+        
+        
+        共发表 7 篇文章 · 总计 11.57 k 字
     </div>
     <div>
         
@@ -812,7 +811,7 @@
 <style>
     @font-face {
       font-family: '爱点风雅黑';
-      src: url(http://localhost:1313/font/%E7%88%B1%E7%82%B9%E9%A3%8E%E9%9B%85%E9%BB%91.ttf) format('truetype');
+      src: url('http://localhost:1313/font/%E7%88%B1%E7%82%B9%E9%A3%8E%E9%9B%85%E9%BB%91.ttf') format('truetype');
     }
   
     :root {
@@ -860,7 +859,7 @@
 
 <script src=http://localhost:1313/background/particles.min.js></script>
 <script>
-  particlesJS.load('particles-js', "http://localhost:1313/background/particlesjs-config.json", function() {
+  particlesJS.load('particles-js', 'http:\/\/localhost:1313\/background\/particlesjs-config.json', function(){
     console.log('particles.js loaded - callback');
   });
 </script>
@@ -874,6 +873,101 @@
     z-index: -1;
   }
 </style>
+
+// 文章目录折叠
+<style>
+    #TableOfContents > ul, ol {
+        ul, ol {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    function initTocHide() {
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function() {
+            
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+              openUl.forEach((ul) => {
+                ul.classList.remove("open")
+              })
+            }
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+        });
+    }
+    initTocHide()
+</script>
+
+// 返回顶部按钮
+<style>
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url( 'http://localhost:1313/icons/backTop.svg' );
+    }
+</style>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+</script>
 
     </body>
 </html>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>常用 on lastfantasy的博客</title>
+        <link>https://blog.lastfantasy.top/categories/%E5%B8%B8%E7%94%A8/</link>
+        <description>Recent content in 常用 on lastfantasy的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>liunianmolian@163.com</copyright>
+        <lastBuildDate>Sun, 02 Nov 2025 12:36:53 +0800</lastBuildDate><atom:link href="https://blog.lastfantasy.top/categories/%E5%B8%B8%E7%94%A8/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>常用资源整合收集</title>
+        <link>https://blog.lastfantasy.top/p/%E5%B8%B8%E7%94%A8%E8%B5%84%E6%BA%90%E6%95%B4%E5%90%88%E6%94%B6%E9%9B%86/</link>
+        <pubDate>Sun, 02 Nov 2025 11:48:15 +0800</pubDate>
+        
+        <guid>https://blog.lastfantasy.top/p/%E5%B8%B8%E7%94%A8%E8%B5%84%E6%BA%90%E6%95%B4%E5%90%88%E6%94%B6%E9%9B%86/</guid>
+        <description>&lt;h1 id=&#34;资源整合&#34;&gt;资源整合
+&lt;/h1&gt;&lt;h2 id=&#34;markdown&#34;&gt;markdown
+&lt;/h2&gt;&lt;h3 id=&#34;改字体颜色&#34;&gt;改字体颜色
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;代码&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;效果&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;颜色&lt;/th&gt;
+          &lt;th style=&#34;text-align: right&#34;&gt;进制表示&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=Aqua&amp;gt;测试\&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=Aqua&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Aqua&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#00FFFF&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=Black&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=Black&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Black&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#000000&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=Blue&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=Blue&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Blue&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#0000FF&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=BlueViolet&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=BlueViolet&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;BlueViolet&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#8A2BE2&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=Brown&amp;gt; 测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=Brown&gt; 测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Brown&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#A52A2A&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=BurlyWood&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=BurlyWood&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;BurlyWood&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#DEB887&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=CadetBlue&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=CadetBlue&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;CadetBlue&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#5F9EA0&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=Chocolate&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=Chocolate&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Chocolate&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#D2691E&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=Coral&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=Coral&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Coral&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#FF7F50&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=CornflowerBlue&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=CornflowerBlue&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;CornflowerBlue&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#6495ED&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=Crimson&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=Crimson&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Crimson&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#DC143C&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=Cyan&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=Cyan&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Cyan&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#00FFFF&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=DarkBlue&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=DarkBlue&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;DarkBlue&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#00008B&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=DarkCyan&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=DarkCyan&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;DarkCyan&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#008B8B&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=DarkGoldenRod&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=DarkGoldenRod&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;DarkGoldenRod&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#B8860B&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=DarkGreen&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=DarkGreen&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;DarkGreen&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#006400&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=DarkKhaki&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=DarkKhaki&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;DarkKhaki&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#BDB76B&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=DarkMagenta&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=DarkMagenta&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;DarkMagenta&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#8B008B&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=DarkOliveGreen&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=DarkOliveGreen&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;DarkOliveGreen&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#556B2F&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=Darkorange&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=Darkorange&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Darkorange&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#FF8C00&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=DarkOrchid&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=DarkOrchid&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;DarkOrchid&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#9932CC&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=DarkRed&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=DarkRed&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;DarkRed&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#8B0000&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=DarkSalmon&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=DarkSalmon&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;DarkSalmon&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#E9967A&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=DarkSeaGreen&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=DarkSeaGreen&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;DarkSeaGreen&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#8FBC8F&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=DarkSlateBlue&amp;gt; 测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=DarkSlateBlue&gt; 测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;DarkSlateBlue&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#483D8B&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;&amp;lt;font color=DarkSlateGray&amp;gt;测试&amp;lt;font&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;font color=DarkSlateGray&gt;测试&lt;font&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;DarkSlateGray&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;#2F4F4F&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+    &lt;p&gt;相关数据来自：&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/m0_62965736/article/details/148528590&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Markdown入门（1）：一招修改字体颜色，附代码和常用颜色！！！_markdown 颜色-CSDN博客&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其中做此部分文档参考了如下链接技术：（涉及markdown表格及原生html显示方法）&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/jamieblue1/article/details/89247751&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Markdown中原格式显示html标签_从apache2 下载的makrdown 打开是html样式-CSDN博客&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/139007418&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Markdown更改字体、颜色、大小，设置文字背景色，调整图片大小设置居中，插入表格等方法 - 知乎&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
