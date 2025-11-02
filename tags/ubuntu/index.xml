@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Ubuntu on lastfantasy的博客</title>
-        <link>http://localhost:1313/tags/ubuntu/</link>
+        <link>https://blog.lastfantasy.top/tags/ubuntu/</link>
         <description>Recent content in Ubuntu on lastfantasy的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>liunianmolian@163.com</copyright>
-        <lastBuildDate>Sat, 25 Oct 2025 14:34:52 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 25 Oct 2025 14:34:52 +0800</lastBuildDate><atom:link href="https://blog.lastfantasy.top/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>ubuntu和windows双系统grub修复</title>
-        <link>http://localhost:1313/p/ubuntu%E5%92%8Cwindows%E5%8F%8C%E7%B3%BB%E7%BB%9Fgrub%E4%BF%AE%E5%A4%8D/</link>
+        <link>https://blog.lastfantasy.top/p/ubuntu%E5%92%8Cwindows%E5%8F%8C%E7%B3%BB%E7%BB%9Fgrub%E4%BF%AE%E5%A4%8D/</link>
         <pubDate>Sun, 19 Oct 2025 10:59:15 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/ubuntu%E5%92%8Cwindows%E5%8F%8C%E7%B3%BB%E7%BB%9Fgrub%E4%BF%AE%E5%A4%8D/</guid>
+        <guid>https://blog.lastfantasy.top/p/ubuntu%E5%92%8Cwindows%E5%8F%8C%E7%B3%BB%E7%BB%9Fgrub%E4%BF%AE%E5%A4%8D/</guid>
         <description>&lt;p&gt;近期系统自动更新导致grub引导出现异常，开机时候提示：
 Minimal BASH-like line editing is supported.For the first word.TAB lists possible command completions.Anywhere else TAB lists possible device or file completions.&lt;/p&gt;
 &lt;p&gt;类似下图：
@@ -102,10 +102,10 @@ Minimal BASH-like line editing is supported.For the first word.TAB lists possibl
         </item>
         <item>
         <title>ubuntu 22.04配置个人私有云盘NextCloud</title>
-        <link>http://localhost:1313/p/ubuntu-22.04%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%A7%81%E6%9C%89%E4%BA%91%E7%9B%98nextcloud/</link>
+        <link>https://blog.lastfantasy.top/p/ubuntu-22.04%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%A7%81%E6%9C%89%E4%BA%91%E7%9B%98nextcloud/</link>
         <pubDate>Sun, 22 Dec 2024 15:59:05 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/ubuntu-22.04%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%A7%81%E6%9C%89%E4%BA%91%E7%9B%98nextcloud/</guid>
+        <guid>https://blog.lastfantasy.top/p/ubuntu-22.04%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%A7%81%E6%9C%89%E4%BA%91%E7%9B%98nextcloud/</guid>
         <description>&lt;h2 id=&#34;私有云盘选择&#34;&gt;私有云盘选择
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/44103820&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;如何搭建自己的私有云盘 - 知乎&lt;/a&gt;&lt;/p&gt;
@@ -269,7 +269,7 @@ ubuntu这边的配置需要根据实际情况先搭建sakura frp的服务&lt;/p&
 &lt;p&gt;试了很多方案，终于找到可靠信息。&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://help.nextcloud.com/t/changing-data-directory-location-with-snap-installation-procedures/23841/2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Changing data directory location with snap installation procedures - ℹ️ Support - Nextcloud community&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/nextCloud_ubuntu/move-snap-nextcloud.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.lastfantasy.top/post/nextCloud_ubuntu/move-snap-nextcloud.png&#34;
 	
 	
 	
@@ -390,10 +390,10 @@ ubuntu这边的配置需要根据实际情况先搭建sakura frp的服务&lt;/p&
         </item>
         <item>
         <title>本地笔记本安装win11和ubuntu22.04双系统</title>
-        <link>http://localhost:1313/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
+        <link>https://blog.lastfantasy.top/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
         <pubDate>Sun, 08 Dec 2024 10:15:43 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</guid>
+        <guid>https://blog.lastfantasy.top/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</guid>
         <description>&lt;h1 id=&#34;heading&#34;&gt;
 &lt;/h1&gt;&lt;h2 id=&#34;实现windows11及ubuntu2204双系统联想thinkbook-15-iil&#34;&gt;实现windows11及ubuntu22.04双系统（联想thinkbook 15 iil）
 &lt;/h2&gt;&lt;h3 id=&#34;背景&#34;&gt;背景

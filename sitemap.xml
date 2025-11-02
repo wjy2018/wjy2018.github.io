@@ -2,85 +2,94 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://blog.lastfantasy.top/tags/bettafish/</loc>
+    <lastmod>2025-11-02T11:27:08+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.lastfantasy.top/categories/</loc>
+    <lastmod>2025-11-02T11:27:08+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.lastfantasy.top/post/</loc>
+    <lastmod>2025-11-02T11:27:08+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.lastfantasy.top/tags/</loc>
+    <lastmod>2025-11-02T11:27:08+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.lastfantasy.top/tags/%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2025-11-02T11:27:08+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.lastfantasy.top/p/%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAbettafish%E8%88%86%E8%AE%BA%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2025-11-02T11:27:08+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.lastfantasy.top/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</loc>
+    <lastmod>2025-11-02T11:27:08+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.lastfantasy.top/tags/grub%E4%BF%AE%E5%A4%8D/</loc>
     <lastmod>2025-10-25T14:34:52+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/grub%E4%BF%AE%E5%A4%8D/</loc>
+    <loc>https://blog.lastfantasy.top/tags/ubuntu/</loc>
     <lastmod>2025-10-25T14:34:52+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/</loc>
+    <loc>https://blog.lastfantasy.top/p/ubuntu%E5%92%8Cwindows%E5%8F%8C%E7%B3%BB%E7%BB%9Fgrub%E4%BF%AE%E5%A4%8D/</loc>
     <lastmod>2025-10-25T14:34:52+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://blog.lastfantasy.top/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2025-10-25T14:34:52+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ubuntu/</loc>
-    <lastmod>2025-10-25T14:34:52+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/p/ubuntu%E5%92%8Cwindows%E5%8F%8C%E7%B3%BB%E7%BB%9Fgrub%E4%BF%AE%E5%A4%8D/</loc>
-    <lastmod>2025-10-25T14:34:52+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</loc>
-    <lastmod>2025-10-25T14:34:52+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2025-10-25T14:34:52+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/wokwi/</loc>
+    <loc>https://blog.lastfantasy.top/tags/wokwi/</loc>
     <lastmod>2025-10-25T14:07:33+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/wokwi%E6%A8%A1%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
+    <loc>https://blog.lastfantasy.top/p/wokwi%E6%A8%A1%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2025-10-25T14:07:33+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E6%A8%A1%E6%8B%9F%E7%8E%AF%E5%A2%83/</loc>
+    <loc>https://blog.lastfantasy.top/tags/%E6%A8%A1%E6%8B%9F%E7%8E%AF%E5%A2%83/</loc>
     <lastmod>2025-10-25T14:07:33+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/nextcloud/</loc>
+    <loc>https://blog.lastfantasy.top/tags/nextcloud/</loc>
     <lastmod>2025-02-02T20:04:53+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/ubuntu-22.04%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%A7%81%E6%9C%89%E4%BA%91%E7%9B%98nextcloud/</loc>
+    <loc>https://blog.lastfantasy.top/p/ubuntu-22.04%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%A7%81%E6%9C%89%E4%BA%91%E7%9B%98nextcloud/</loc>
     <lastmod>2025-02-02T20:04:53+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>https://blog.lastfantasy.top/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2024-12-15T17:44:51+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/blog/</loc>
+    <loc>https://blog.lastfantasy.top/tags/blog/</loc>
     <lastmod>2024-12-15T17:44:59+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cloudflare/</loc>
+    <loc>https://blog.lastfantasy.top/tags/cloudflare/</loc>
     <lastmod>2024-12-15T17:44:59+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/</loc>
+    <loc>https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2024-12-15T17:44:59+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hugo/</loc>
+    <loc>https://blog.lastfantasy.top/tags/hugo/</loc>
     <lastmod>2024-12-15T17:44:59+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/meting-api/</loc>
+    <loc>https://blog.lastfantasy.top/tags/meting-api/</loc>
     <lastmod>2024-12-15T17:44:59+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/page/</loc>
+    <loc>https://blog.lastfantasy.top/page/</loc>
     <lastmod>2025-10-25T14:44:14+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/archives/</loc>
+    <loc>https://blog.lastfantasy.top/archives/</loc>
     <lastmod>2024-11-30T22:32:09+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://blog.lastfantasy.top/</loc>
     <lastmod>2024-12-11T02:37:22+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/test/</loc>
+    <loc>https://blog.lastfantasy.top/categories/test/</loc>
     <lastmod>2024-10-20T16:05:45+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://blog.lastfantasy.top/about/</loc>
     <lastmod>2024-12-14T13:46:37+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/plan/</loc>
+    <loc>https://blog.lastfantasy.top/plan/</loc>
     <lastmod>2025-10-25T14:44:14+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>https://blog.lastfantasy.top/search/</loc>
     <lastmod>2024-11-30T03:05:15+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/links/</loc>
+    <loc>https://blog.lastfantasy.top/links/</loc>
     <lastmod>2024-12-11T02:28:59+08:00</lastmod>
   </url>
 </urlset>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>本地搭建 on lastfantasy的博客</title>
+        <link>https://blog.lastfantasy.top/tags/%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA/</link>
+        <description>Recent content in 本地搭建 on lastfantasy的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>liunianmolian@163.com</copyright>
+        <lastBuildDate>Sun, 02 Nov 2025 11:27:08 +0800</lastBuildDate><atom:link href="https://blog.lastfantasy.top/tags/%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>本地环境搭建BettaFish舆论查询工具</title>
+        <link>https://blog.lastfantasy.top/p/%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAbettafish%E8%88%86%E8%AE%BA%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%85%B7/</link>
+        <pubDate>Sun, 02 Nov 2025 10:30:15 +0800</pubDate>
+        
+        <guid>https://blog.lastfantasy.top/p/%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAbettafish%E8%88%86%E8%AE%BA%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%85%B7/</guid>
+        <description>&lt;h1 id=&#34;本地搭建前提环境准备&#34;&gt;本地搭建前提环境准备
+&lt;/h1&gt;&lt;h2 id=&#34;conda命令安装&#34;&gt;conda命令安装
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/ViatorSun/article/details/118578818&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;「详解」conda 安装与使用-CSDN博客&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;简单来说可以直接参考上述文档进行。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!conda的安装]
+miniconda 官网：https://conda.io/miniconda.html
+anaconda 官网：https://www.anaconda.com/download&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;miniconda为精简版的conda，这里无需安装过多功能，因此直接选择miniconda.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.anaconda.com/docs/getting-started/miniconda/install#windows-powershell&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Installing Miniconda - Anaconda&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;进入相关网站可以找到对应的下载方式，这里采用powershell的方式进行&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!powershell安装miniconda]
+Invoke-WebRequest -Uri &amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe%22&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe&#34;&lt;/a&gt; -outfile &amp;ldquo;.\miniconda.exe&amp;rdquo;
+Start-Process -FilePath &amp;ldquo;.\miniconda.exe&amp;rdquo; -ArgumentList &amp;ldquo;/S&amp;rdquo; -Wait
+del .\miniconda.exe&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在powershell中完成安装conda，这里预备安装的第一步已经完成。&lt;/p&gt;
+&lt;p&gt;注意，如果按照此方式安装完之后，在普通的powershell中还是无法直接使用conda命令（显示如下报错），本地尝试将miniconda3（上述命令行安装的目录）加入环境变量也是不行的。&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20251102104816.png]]&lt;/p&gt;
+&lt;p&gt;后续发现在执行完上述命令后，系统的开始菜单已经多出了两个终端窗口文件&amp;quot;Anaconda PowerShell Prompt&amp;quot;和“Anaconda Prompt”，点击进入就可以直接使用conda了。
+![[Pasted image 20251102105150.png]]&lt;/p&gt;
+&lt;h2 id=&#34;bettafish源码下载&#34;&gt;BettaFish源码下载
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/666ghj/BettaFish/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/666ghj/BettaFish/releases&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;进入开源项目的release页面下载源码并进行解压。
+解压好本地目录进入下一步。&lt;/p&gt;
+&lt;h2 id=&#34;基于conda的python环境处理&#34;&gt;基于conda的python环境处理
+&lt;/h2&gt;&lt;p&gt;这里首先通过&amp;quot;Anaconda PowerShell Prompt&amp;quot;进入相应环境，跳转到解压好的本地BettaFish目录后开始进行python环境创建。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 创建conda环境&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda create -n pytorch_python11 &lt;span class=&#34;nv&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;3.11
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda activate pytorch_python11
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;![[Pasted image 20251102110033.png]]&lt;/p&gt;
+&lt;p&gt;出现上述命令显示状态即可。&lt;/p&gt;
+&lt;p&gt;随后我们需要根据自己的需求定制requirements.txt文件，定制完成后可以进行依赖安装。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 安装依赖&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install -r requirements.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;等待所有依赖包安装完成即可
+![[Pasted image 20251102110947.png]]&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 安装浏览器驱动&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;playwright install chromium
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;![[Pasted image 20251102111050.png]]&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 启动系统&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python app.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这里使用该命令就可以用 &lt;a class=&#34;link&#34; href=&#34;http://localhost:5000/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://localhost:5000&lt;/a&gt; 访问系统了，但是实际上还是用不了的，因为这个需要用到AI，因此需要大模型的API进行配置。这里就先不做具体描述了。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

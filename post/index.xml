@@ -2,17 +2,108 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on lastfantasy的博客</title>
-        <link>http://localhost:1313/post/</link>
+        <link>https://blog.lastfantasy.top/post/</link>
         <description>Recent content in Posts on lastfantasy的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>liunianmolian@163.com</copyright>
-        <lastBuildDate>Sat, 25 Oct 2025 14:34:52 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 02 Nov 2025 11:27:08 +0800</lastBuildDate><atom:link href="https://blog.lastfantasy.top/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>本地环境搭建BettaFish舆论查询工具</title>
+        <link>https://blog.lastfantasy.top/p/%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAbettafish%E8%88%86%E8%AE%BA%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%85%B7/</link>
+        <pubDate>Sun, 02 Nov 2025 10:30:15 +0800</pubDate>
+        
+        <guid>https://blog.lastfantasy.top/p/%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAbettafish%E8%88%86%E8%AE%BA%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%85%B7/</guid>
+        <description>&lt;h1 id=&#34;本地搭建前提环境准备&#34;&gt;本地搭建前提环境准备
+&lt;/h1&gt;&lt;h2 id=&#34;conda命令安装&#34;&gt;conda命令安装
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/ViatorSun/article/details/118578818&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;「详解」conda 安装与使用-CSDN博客&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;简单来说可以直接参考上述文档进行。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!conda的安装]
+miniconda 官网：https://conda.io/miniconda.html
+anaconda 官网：https://www.anaconda.com/download&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;miniconda为精简版的conda，这里无需安装过多功能，因此直接选择miniconda.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.anaconda.com/docs/getting-started/miniconda/install#windows-powershell&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Installing Miniconda - Anaconda&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;进入相关网站可以找到对应的下载方式，这里采用powershell的方式进行&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!powershell安装miniconda]
+Invoke-WebRequest -Uri &amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe%22&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe&#34;&lt;/a&gt; -outfile &amp;ldquo;.\miniconda.exe&amp;rdquo;
+Start-Process -FilePath &amp;ldquo;.\miniconda.exe&amp;rdquo; -ArgumentList &amp;ldquo;/S&amp;rdquo; -Wait
+del .\miniconda.exe&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在powershell中完成安装conda，这里预备安装的第一步已经完成。&lt;/p&gt;
+&lt;p&gt;注意，如果按照此方式安装完之后，在普通的powershell中还是无法直接使用conda命令（显示如下报错），本地尝试将miniconda3（上述命令行安装的目录）加入环境变量也是不行的。&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20251102104816.png]]&lt;/p&gt;
+&lt;p&gt;后续发现在执行完上述命令后，系统的开始菜单已经多出了两个终端窗口文件&amp;quot;Anaconda PowerShell Prompt&amp;quot;和“Anaconda Prompt”，点击进入就可以直接使用conda了。
+![[Pasted image 20251102105150.png]]&lt;/p&gt;
+&lt;h2 id=&#34;bettafish源码下载&#34;&gt;BettaFish源码下载
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/666ghj/BettaFish/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/666ghj/BettaFish/releases&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;进入开源项目的release页面下载源码并进行解压。
+解压好本地目录进入下一步。&lt;/p&gt;
+&lt;h2 id=&#34;基于conda的python环境处理&#34;&gt;基于conda的python环境处理
+&lt;/h2&gt;&lt;p&gt;这里首先通过&amp;quot;Anaconda PowerShell Prompt&amp;quot;进入相应环境，跳转到解压好的本地BettaFish目录后开始进行python环境创建。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 创建conda环境&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda create -n pytorch_python11 &lt;span class=&#34;nv&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;3.11
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda activate pytorch_python11
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;![[Pasted image 20251102110033.png]]&lt;/p&gt;
+&lt;p&gt;出现上述命令显示状态即可。&lt;/p&gt;
+&lt;p&gt;随后我们需要根据自己的需求定制requirements.txt文件，定制完成后可以进行依赖安装。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 安装依赖&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install -r requirements.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;等待所有依赖包安装完成即可
+![[Pasted image 20251102110947.png]]&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 安装浏览器驱动&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;playwright install chromium
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;![[Pasted image 20251102111050.png]]&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 启动系统&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python app.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这里使用该命令就可以用 &lt;a class=&#34;link&#34; href=&#34;http://localhost:5000/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://localhost:5000&lt;/a&gt; 访问系统了，但是实际上还是用不了的，因为这个需要用到AI，因此需要大模型的API进行配置。这里就先不做具体描述了。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>ubuntu和windows双系统grub修复</title>
-        <link>http://localhost:1313/p/ubuntu%E5%92%8Cwindows%E5%8F%8C%E7%B3%BB%E7%BB%9Fgrub%E4%BF%AE%E5%A4%8D/</link>
+        <link>https://blog.lastfantasy.top/p/ubuntu%E5%92%8Cwindows%E5%8F%8C%E7%B3%BB%E7%BB%9Fgrub%E4%BF%AE%E5%A4%8D/</link>
         <pubDate>Sun, 19 Oct 2025 10:59:15 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/ubuntu%E5%92%8Cwindows%E5%8F%8C%E7%B3%BB%E7%BB%9Fgrub%E4%BF%AE%E5%A4%8D/</guid>
+        <guid>https://blog.lastfantasy.top/p/ubuntu%E5%92%8Cwindows%E5%8F%8C%E7%B3%BB%E7%BB%9Fgrub%E4%BF%AE%E5%A4%8D/</guid>
         <description>&lt;p&gt;近期系统自动更新导致grub引导出现异常，开机时候提示：
 Minimal BASH-like line editing is supported.For the first word.TAB lists possible command completions.Anywhere else TAB lists possible device or file completions.&lt;/p&gt;
 &lt;p&gt;类似下图：
@@ -102,10 +193,10 @@ Minimal BASH-like line editing is supported.For the first word.TAB lists possibl
         </item>
         <item>
         <title>wokwi模拟环境搭建</title>
-        <link>http://localhost:1313/p/wokwi%E6%A8%A1%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</link>
+        <link>https://blog.lastfantasy.top/p/wokwi%E6%A8%A1%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</link>
         <pubDate>Sun, 19 Oct 2025 10:57:43 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/wokwi%E6%A8%A1%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</guid>
+        <guid>https://blog.lastfantasy.top/p/wokwi%E6%A8%A1%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</guid>
         <description>&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;函数名&lt;/th&gt;&lt;th&gt;功能简介&lt;/th&gt;&lt;th&gt;参数详细说明&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;pinMode(pin, mode)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;设置某引脚为输入(INPUT)、输出(OUTPUT)或上拉输入(INPUT_PULLUP)&lt;/td&gt;&lt;td&gt;pin：引脚号；mode：引脚模式(INPUT、OUTPUT、INPUT_PULLUP)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;digitalWrite(pin, val)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;将引脚输出设为高(HIGH)或低(LOW)电平&lt;/td&gt;&lt;td&gt;pin：引脚号；val：电平值(HIGH或LOW)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;digitalRead(pin)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;读取引脚电平（HIGH/LOW）&lt;/td&gt;&lt;td&gt;pin：引脚号；返回HIGH或LOW&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;delay(ms)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;延时函数，单位毫秒&lt;/td&gt;&lt;td&gt;ms：延时时间（毫秒）&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;Serial.begin(baud)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;初始化串口通讯&lt;/td&gt;&lt;td&gt;baud：串口波特率，常用115200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;Serial.print()/println()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;向串口输出数据，print不换行，println自动换行&lt;/td&gt;&lt;td&gt;输出的字符串或变量&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;analogRead(pin)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;读取模拟电压（返回0~4095）&lt;/td&gt;&lt;td&gt;pin：模拟输入引脚号；返回值范围0~4095&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;ledcSetup(channel, freq, resolution)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;配置PWM通道的频率与精度&lt;/td&gt;&lt;td&gt;channel：PWM通道号；freq：PWM频率（Hz）；resolution：PWM分辨率（位数）&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;ledcAttachPin(pin, channel)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;将某个GPIO引脚绑定到PWM通道&lt;/td&gt;&lt;td&gt;pin：GPIO引脚号；channel：PWM通道号&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;ledcWrite(channel, duty)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;输出PWM信号，占空比为duty（0~255）&lt;/td&gt;&lt;td&gt;channel：PWM通道号；duty：PWM占空比（0~255）&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;attachInterrupt(pin, ISR, mode)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;设置中断服务函数（ISR）和触发方式（如FALLING）&lt;/td&gt;&lt;td&gt;pin：引脚号；ISR：中断服务函数名；mode：中断触发模式(RISING、FALLING、CHANGE)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/weixin_49337111/article/details/136479524&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;嵌入式物联网在线仿真平台Wokwi使用配置笔记教程_wokwi仿真平台-CSDN博客&lt;/a&gt;&lt;/p&gt;
@@ -115,10 +206,10 @@ Minimal BASH-like line editing is supported.For the first word.TAB lists possibl
         </item>
         <item>
         <title>ubuntu 22.04配置个人私有云盘NextCloud</title>
-        <link>http://localhost:1313/p/ubuntu-22.04%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%A7%81%E6%9C%89%E4%BA%91%E7%9B%98nextcloud/</link>
+        <link>https://blog.lastfantasy.top/p/ubuntu-22.04%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%A7%81%E6%9C%89%E4%BA%91%E7%9B%98nextcloud/</link>
         <pubDate>Sun, 22 Dec 2024 15:59:05 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/ubuntu-22.04%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%A7%81%E6%9C%89%E4%BA%91%E7%9B%98nextcloud/</guid>
+        <guid>https://blog.lastfantasy.top/p/ubuntu-22.04%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E7%A7%81%E6%9C%89%E4%BA%91%E7%9B%98nextcloud/</guid>
         <description>&lt;h2 id=&#34;私有云盘选择&#34;&gt;私有云盘选择
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/44103820&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;如何搭建自己的私有云盘 - 知乎&lt;/a&gt;&lt;/p&gt;
@@ -282,7 +373,7 @@ ubuntu这边的配置需要根据实际情况先搭建sakura frp的服务&lt;/p&
 &lt;p&gt;试了很多方案，终于找到可靠信息。&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://help.nextcloud.com/t/changing-data-directory-location-with-snap-installation-procedures/23841/2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Changing data directory location with snap installation procedures - ℹ️ Support - Nextcloud community&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/nextCloud_ubuntu/move-snap-nextcloud.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.lastfantasy.top/post/nextCloud_ubuntu/move-snap-nextcloud.png&#34;
 	
 	
 	
@@ -403,10 +494,10 @@ ubuntu这边的配置需要根据实际情况先搭建sakura frp的服务&lt;/p&
         </item>
         <item>
         <title>本地笔记本安装win11和ubuntu22.04双系统</title>
-        <link>http://localhost:1313/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
+        <link>https://blog.lastfantasy.top/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
         <pubDate>Sun, 08 Dec 2024 10:15:43 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</guid>
+        <guid>https://blog.lastfantasy.top/p/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%AE%89%E8%A3%85win11%E5%92%8Cubuntu22.04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</guid>
         <description>&lt;h1 id=&#34;heading&#34;&gt;
 &lt;/h1&gt;&lt;h2 id=&#34;实现windows11及ubuntu2204双系统联想thinkbook-15-iil&#34;&gt;实现windows11及ubuntu22.04双系统（联想thinkbook 15 iil）
 &lt;/h2&gt;&lt;h3 id=&#34;背景&#34;&gt;背景
@@ -469,10 +560,10 @@ ubuntu这边的配置需要根据实际情况先搭建sakura frp的服务&lt;/p&
         </item>
         <item>
         <title>Cloudflare相关部署配置</title>
-        <link>http://localhost:1313/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/</link>
+        <link>https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/</link>
         <pubDate>Sat, 30 Nov 2024 18:32:30 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/</guid>
+        <guid>https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/</guid>
         <description>&lt;h2 id=&#34;cloudflare-worker搭配meting-api配置&#34;&gt;cloudflare worker搭配meting-api配置
 &lt;/h2&gt;&lt;p&gt;网上能搜到的搭建教程大多都是github项目上自带的说明，最新的版本说明中只有docker、deno、本地node、vercel以及反向代理等。&lt;/p&gt;
 &lt;p&gt;具体原文如下：&lt;/p&gt;
@@ -518,10 +609,10 @@ ubuntu这边的配置需要根据实际情况先搭建sakura frp的服务&lt;/p&
 &lt;p&gt;方法可以参考上面这种，不过既然本地之前已经生成了对应文件，直接copy过来就可以了。&lt;/p&gt;
 &lt;p&gt;不过，按照上述流程操作完之后直接访问依旧是访问不了，因此我这边是反复删除和创建多次尝试，依旧不行。奇怪的是等了一段时间，我把worker自定义域配置了一下，通过自定义域居然就能访问了。&lt;/p&gt;
 &lt;p&gt;效果如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api.png&#34;
 	width=&#34;670&#34;
 	height=&#34;437&#34;
-	srcset=&#34;http://localhost:1313/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api_hu2679701382117244862.png 480w, http://localhost:1313/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api_hu4374303704572110211.png 1024w&#34;
+	srcset=&#34;https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api_hu2679701382117244862.png 480w, https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api_hu4374303704572110211.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;meting-api&#34;
@@ -533,10 +624,10 @@ ubuntu这边的配置需要根据实际情况先搭建sakura frp的服务&lt;/p&
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;相关test也是没有问题的：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test.png&#34;
 	width=&#34;1251&#34;
 	height=&#34;651&#34;
-	srcset=&#34;http://localhost:1313/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test_hu7066125982939677387.png 480w, http://localhost:1313/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test_hu15829411023214066252.png 1024w&#34;
+	srcset=&#34;https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test_hu7066125982939677387.png 480w, https://blog.lastfantasy.top/p/cloudflare%E7%9B%B8%E5%85%B3%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/meting-api-test_hu15829411023214066252.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;meting-api-test&#34;
